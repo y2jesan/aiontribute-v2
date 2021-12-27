@@ -1,0 +1,248 @@
+.wishlistsection {
+    margin-bottom: length(48);
+
+    &-content {
+        @include flex-column;
+        gap: length(24);
+        padding-top: length(24);
+
+        &-header {
+            padding-bottom: length(17);
+            @include border-single(bottom, solid, 1, rgba($submitBg, 0.5));
+
+            .wishlist-title {
+                @include font-24-17-medium;
+                color: $primaryDark;
+            }
+        }
+    }
+
+    .wishlistinfo {
+        @include radius(6);
+        overflow: hidden;
+        background: $white;
+
+        &-header {
+            padding: length(16) length(32);
+            @include border-single(bottom, solid, 1, rgba($submitBg, 0.5));
+
+            .wishlistinfotitle {
+                @include font-24-17-medium;
+                color: $primaryDark;
+            }
+        }
+
+        &-body {
+            @include flex-column;
+
+            .card-wishlist {
+                display: flex;
+                gap: length(24);
+                padding: length(24) length(32);
+                @include radius(6);
+                overflow: hidden;
+
+                @include breakpoint(phone575) {
+                    flex-direction: column;
+                }
+
+                &:nth-child(odd) {
+                    background: $cardBg;
+                }
+
+                &-cap {
+                    width: length(144);
+                    height: length(104);
+                    @include flex-center;
+                    overflow: hidden;
+
+                    @include breakpoint(phone575) {
+                        @include w100;
+                        height: length(160);
+                    }
+
+                    .card-thumbnail {
+                        @include square(length(100));
+                        overflow: hidden;
+                        @include flex-center;
+
+                        @include breakpoint(phone575) {
+                            @include wh100;
+                        }
+
+                        img {
+                            @include wh100;
+                            object-fit: cover;
+
+                            @include breakpoint(phone575) {
+                                width: auto;
+                                max-height: 100%;
+                            }
+                        }
+                    }
+                }
+
+                &-details {
+                    width: calc(100% - 10.5rem);
+                    @include flex-center-between;
+
+                    @include breakpoint(desktop1199) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: length(14);
+                    }
+
+                    @include breakpoint(phone575) {
+                        @include w100;
+                    }
+
+                    .details {
+                        @include flex-column;
+                        gap: length(4);
+
+                        .material {
+                            @include font-15-11-medium;
+                            color: $textSecondary;
+                        }
+
+                        hgroup {
+                            margin-bottom: length(8);
+                            @include flex-column;
+                            gap: length(4);
+
+                            .model {
+                                @include font-24-14-medium;
+                                color: $primaryDark;
+                            }
+
+                            .size {
+                                @include font-16-12-medium;
+                                color: $primary;
+
+                                &-title {
+                                    @include font-16-12-medium;
+                                    color: $textSecondary;
+                                }
+                            }
+
+                            .price {
+                                @include font-16-14-medium;
+                                color: $textWarning;
+                            }
+                        }
+
+                        .alertmessage {
+                            @include flex-center-vert;
+                            gap: length(4);
+                            background: $grayBg;
+                            padding: length(4) length(8);
+                            @include radius(4);
+
+                            .icon {
+                                @include square(length(12));
+                                @include flex-center;
+                                overflow: hidden;
+                            }
+
+                            .text {
+                                width: calc(100% - 1rem);
+                                color: $textPrimary;
+                                @include font-16-10-normal;
+                            }
+                        }
+                    }
+
+                    .selectdelete {
+                        @include flex-center-vert;
+                        gap: length(20);
+
+                        @include breakpoint(phone768) {
+                            gap: length(8);
+                        }
+
+                        .delete {
+                            .btn-delete {
+                                padding: length(4);
+                                @include flex-center;
+                                gap: length(4);
+                                @include setBgColor(transparent, $primary);
+
+                                .icon {
+                                    @include square(length(16));
+                                    @include flex-center;
+                                    margin-top: length(-2);
+
+                                    svg {
+                                        path {
+                                            @include transitions;
+                                        }
+                                    }
+                                }
+
+                                .text {
+                                    @include font-24-13-normal;
+                                    width: calc(100% - 1.25rem);
+                                    @include transitions;
+                                }
+
+                                @include hover {
+                                    .icon {
+                                        svg {
+                                            path {
+                                                fill: $breadcrumbActive;
+                                            }
+                                        }
+                                    }
+
+                                    .text {
+                                        color: $breadcrumbActive;
+                                    }
+                                }
+                            }
+                        }
+
+                        .selectoptions {
+                            .btn-select {
+                                padding: length(4);
+                                @include flex-center;
+                                gap: length(4);
+                                @include setBgColor(transparent, $primary);
+
+                                .icon {
+                                    @include square(length(16));
+                                    @include flex-center;
+
+                                    svg {
+                                        path {
+                                            @include transitions;
+                                        }
+                                    }
+                                }
+
+                                .text {
+                                    @include font-24-13-normal;
+                                    width: calc(100% - 1.25rem);
+                                    @include transitions;
+                                }
+
+                                @include hover {
+                                    .icon {
+                                        svg {
+                                            path {
+                                                fill: $gold;
+                                            }
+                                        }
+                                    }
+
+                                    .text {
+                                        color: $gold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

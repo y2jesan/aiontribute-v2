@@ -1,0 +1,795 @@
+.mobile-filter {
+    padding: length(0);
+    border: 0;
+
+    .offcanvas-header {
+        border: 0;
+
+        .offcanvas-title {
+            @include setBgColor($white, $primaryDark);
+            @include flex-center-vert;
+            gap: length(16);
+            padding: length(16) length(24);
+
+            .icon {
+                @include square(length(24));
+                @include flex-center;
+            }
+
+            .text {
+                width: calc(100% - 1.5rem);
+                @include font-16-13-medium;
+                color: $primaryDark;
+            }
+        }
+
+        .btn-close {
+            @include square(length(24));
+            background: transparent;
+            @include circle;
+            margin: 0;
+            padding: 0;
+            @include flex-center;
+        }
+    }
+
+    .offcanvas-body {
+        padding: length(0) length(0) length(20);
+        @include flex-column;
+        gap: length(4);
+
+        &::-webkit-scrollbar {
+            background: transparent;
+            width: length(8);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $primary;
+            @include radius(8);
+        }
+
+        .category {
+            @include flex-column;
+            @include border-single(bottom, solid, 2, $grayBg);
+
+            &-header {
+                @include flex-center-between;
+                padding: length(24) length(24) length(18);
+
+                .title {
+                    @include font-16-13-medium;
+                    color: $textPrimary;
+                }
+
+                .btn-showall {
+                    @include transparent-button;
+                    @include font-15-11-medium;
+                    color: $secondary;
+                    @include transitions;
+
+                    @include hover {
+                        color: $gold;
+                    }
+                }
+            }
+
+            &-body {
+                .radiobox {
+                    padding: length(14) length(24);
+
+                    &:nth-child(odd) {
+                        background: $lightGrayBg;
+                    }
+
+                    input[type="radio"]:checked~.radiolabel {
+                        color: $secondary;
+
+                        &::before {
+                            background: $secondary;
+                            border-color: $secondary;
+                        }
+
+                        &::after {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    .radiolabel {
+                        position: relative;
+                        padding-left: length(34);
+                        @include font-24-14-medium;
+                        color: $primaryDark;
+                        cursor: pointer;
+                        @include w100;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            left: 0;
+                            @include square(length(20));
+                            @include circle;
+                            @include border(solid, 1.43, $textSecondary);
+                            background: $white;
+                            @include transitions;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            left: length(5);
+                            @include square(length(10));
+                            @include circle;
+                            background: $white;
+                            opacity: 0;
+                            visibility: hidden;
+                            @include transitions;
+                        }
+                    }
+                }
+            }
+        }
+
+        .colors {
+            @include flex-column;
+            @include border-single(bottom, solid, 2, $grayBg);
+
+            &-header {
+                @include flex-center-between;
+                padding: length(24) length(24) length(18);
+
+                .title {
+                    @include font-16-13-medium;
+                    color: $textPrimary;
+                }
+
+                .btn-showall {
+                    @include transparent-button;
+                    @include font-15-11-medium;
+                    color: $secondary;
+                    @include transitions;
+
+                    @include hover {
+                        color: $gold;
+                    }
+                }
+            }
+
+            &-body {
+                .colorinfobox {
+                    padding: length(14) length(24);
+                    @include flex-center-between;
+
+                    &:nth-child(odd) {
+                        background: $lightGrayBg;
+                    }
+
+                    .colorinfo {
+                        width: calc(100% - 1.125rem);
+
+                        input[type="checkbox"]:checked~.checklabel {
+                            &::before {
+                                background: $secondary;
+                                border-color: $secondary;
+                            }
+
+                            &::after {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+
+                        .checklabel {
+                            position: relative;
+                            padding-left: length(34);
+                            @include font-24-14-medium;
+                            color: $primaryDark;
+                            cursor: pointer;
+                            @include w100;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                @include transform(translateY(-50%));
+                                left: 0;
+                                @include square(length(20));
+                                @include circle;
+                                @include border(solid, 1.43, $textSecondary);
+                                @include radius(4.28571);
+                                background: $white;
+                                @include transitions;
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 45%;
+                                width: length(5);
+                                height: length(12);
+                                @include transform(translateY(-50%) rotate(45deg));
+                                @include border(solid, 2, $white);
+                                border-left: 0;
+                                border-top: 0;
+                                left: length(8);
+                                opacity: 0;
+                                visibility: hidden;
+                                @include transitions;
+                            }
+                        }
+                    }
+
+                    .colorbox {
+                        @include square(length(18));
+                        @include circle;
+                        @include border(solid, 1, transparent);
+                    }
+                }
+            }
+        }
+
+        .sizes {
+            @include flex-column;
+            @include border-single(bottom, solid, 2, $grayBg);
+
+            &-header {
+                @include flex-center-between;
+                padding: length(24) length(24) length(18);
+
+                .title {
+                    @include font-16-13-medium;
+                    color: $textPrimary;
+                }
+
+                .btn-showall {
+                    @include transparent-button;
+                    @include font-15-11-medium;
+                    color: $secondary;
+                    @include transitions;
+
+                    @include hover {
+                        color: $gold;
+                    }
+                }
+            }
+
+            &-body {
+                padding: length(0) length(24) length(24);
+                @include flex-center;
+                flex-wrap: wrap;
+                gap: length(8);
+
+                .btn-size {
+                    @include border(solid, 1, $dividerBg);
+                    @include radius(3);
+                    @include setBgColor($white, $primaryDark);
+                    @include font-18-13-medium;
+                    padding: length(8) length(10);
+                    text-align: center;
+                    @include transitions;
+                    width: calc(25% - .5rem);
+
+                    @include hover {
+                        border-color: $secondary;
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+
+        .sortby {
+            @include flex-column;
+
+            &-header {
+                padding: length(24) length(24) length(18);
+
+                .title {
+                    @include font-16-13-medium;
+                    color: $textPrimary;
+                }
+            }
+
+            &-body {
+                .radiobox {
+                    padding: length(14) length(24);
+
+                    &:nth-child(odd) {
+                        background: $lightGrayBg;
+                    }
+
+                    input[type="radio"]:checked~.radiolabel {
+                        color: $secondary;
+
+                        &::before {
+                            background: $secondary;
+                            border-color: $secondary;
+                        }
+
+                        &::after {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    .radiolabel {
+                        position: relative;
+                        padding-left: length(34);
+                        @include font-24-14-medium;
+                        color: $primaryDark;
+                        cursor: pointer;
+                        @include w100;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            left: 0;
+                            @include square(length(20));
+                            @include circle;
+                            @include border(solid, 1.43, $textSecondary);
+                            background: $white;
+                            @include transitions;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            left: length(5);
+                            @include square(length(10));
+                            @include circle;
+                            background: $white;
+                            opacity: 0;
+                            visibility: hidden;
+                            @include transitions;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offcanvas-end {
+    border-left: 0;
+}
+
+.offcanvas-start {
+    border-right: 0;
+}
+
+.offcanvas {
+    background: $product-border;
+
+    &-header {
+        @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+        padding: length(24);
+
+        .btn-close {
+            @include square(length(24));
+            background: transparent;
+            @include circle;
+            margin: 0;
+            padding: 0;
+            @include flex-center;
+        }
+
+        .offcanvas-title {
+            @include font-24-17-medium;
+            color: $primaryDark;
+        }
+    }
+
+    &-body {
+        padding: length(24);
+
+        &::-webkit-scrollbar {
+            background: transparent;
+            width: length(8);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $primary;
+            @include radius(8);
+        }
+
+        // REPORT CONTENT START
+        .reportform {
+            @include flex-column;
+            gap: length(20);
+
+            .inputbox {
+                @include flex-column;
+                gap: length(12);
+
+                .inputlabel {
+                    @include font-18-13-medium;
+                    color: $black;
+                }
+
+                .inputfield {
+                    @include border(solid, 1, transparent);
+                    @include radius(8);
+                    overflow: hidden;
+                    @include setBgColor($product-border, $primaryDark);
+                    padding: length(12) length(16);
+                    @include font-18-13-normal;
+                    @include transitions;
+
+                    &::placeholder {
+                        color: $textPrimary;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                        border-color: $input-border;
+                    }
+                }
+
+                .form-select {
+                    @include border(solid, 1, transparent);
+                    @include radius(8);
+                    overflow: hidden;
+                    background-color: $product-border;
+                    color: $primaryDark;
+                    padding: length(12) length(16);
+                    @include transitions;
+                    @include font-18-13-normal;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                        border-color: $input-border;
+                    }
+                }
+            }
+
+            .submitbox {
+                @include flex-end;
+                gap: length(16);
+
+                .btn-cancel {
+                    @include border(solid, 1, $submitBg);
+                    @include radius(8);
+                    @include setBgColor($white, $textSecondary);
+                    @include font-18-13-medium;
+                    text-align: center;
+                    @include transitions;
+                    padding: length(12) length(32);
+                    box-shadow: $box-shadow-9;
+
+                    @include hover {
+                        @include setBgColor($textSecondary, $submitBg);
+                        border-color: $textSecondary;
+                    }
+                }
+
+                .btn-submit {
+                    @include border(solid, 1, $textWarning);
+                    @include radius(8);
+                    @include setBgColor($textWarning, $white);
+                    @include font-18-13-medium;
+                    text-align: center;
+                    @include transitions;
+                    padding: length(12) length(32);
+                    box-shadow: $box-shadow-9;
+
+                    @include hover {
+                        @include setBgColor($gold, $white);
+                        border-color: $gold;
+                    }
+                }
+            }
+        }
+
+        // CART CONTENT START
+        .cartsidebarinfo {
+            .cartdetails {
+                .shoppinginfo {
+                    @include flex-center;
+                    gap: length(8);
+                    margin-top: length(24);
+
+                    .btn-continue {
+                        width: 50%;
+                        @include border(solid, 1, $white);
+                        box-shadow: $box-shadow-9;
+                        @include radius(8);
+                        @include setBgColor($white, $primaryDark);
+                        @include font-18-13-medium;
+                        text-align: center;
+                        @include transitions;
+                        padding: length(12);
+                        box-shadow: $box-shadow-9;
+
+                        @include breakpoint(phone768) {
+                            padding: length(12) length(8);
+                        }
+
+                        @include hover {
+                            @include setBgColor($primaryDark, $white);
+                            border-color: $primaryDark;
+                        }
+                    }
+
+                    .btn-checkout {
+                        width: 50%;
+                        @include border(solid, 1, $textWarning);
+                        @include radius(8);
+                        @include setBgColor($textWarning, $white);
+                        @include font-18-13-medium;
+                        text-align: center;
+                        @include transitions;
+                        padding: length(12);
+                        box-shadow: $box-shadow-9;
+
+                        @include hover {
+                            @include setBgColor($gold, $white);
+                            border-color: $gold;
+                        }
+                    }
+                }
+
+                .divider {
+                    background: rgba($menu-border, 0.2);
+                    @include w100;
+                    height: length(1);
+                    margin: length(24) length(0);
+                }
+
+                .totalinfo {
+                    @include flex-center-between;
+                    align-items: flex-start;
+                    margin-bottom: length(28);
+
+                    .totalcart {
+                        .title {
+                            @include font-24-14-medium;
+                            color: $textSecondary;
+                        }
+
+                        .count {
+                            @include font-24-14-medium;
+                            color: $primary;
+                        }
+
+                        .text {
+                            @include font-24-14-medium;
+                            color: $primary;
+                        }
+                    }
+
+                    .totalprice {
+                        .title {
+                            @include font-24-14-medium;
+                            color: $textSecondary;
+                        }
+
+                        .price {
+                            @include font-24-14-medium;
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+
+            .viewmore {
+                @include flex-column;
+                gap: length(8);
+
+                &-title {
+                    @include font-16-13-medium;
+                    color: $primaryDark;
+                }
+
+                &-body {
+                    @include flex-column;
+                    gap: length(8);
+                }
+            }
+        }
+
+        .cartsideinfo {
+            @include flex-column;
+            gap: length(64);
+
+            .cardcart {}
+        }
+
+        // GIVE REVIEW START
+        .reviewdetail {
+            &-header {
+                @include flex-column;
+                gap: length(8);
+                margin-bottom: length(24);
+
+                .title {
+                    @include font-28-21-medium;
+                    color: $textTitle;
+                }
+
+                .text {
+                    @include font-18-13-normal;
+                    color: $textColor;
+                }
+            }
+
+            &-body {
+                @include flex-column;
+                gap: length(8);
+
+                .reviewrating {
+                    padding: length(16) length(24);
+                    @include flex-center-between;
+
+                    &-info {
+                        width: calc(100% - 6rem);
+
+                        .reviewragingtitle {
+                            @include font-15-11-medium;
+                            color: $primaryDark;
+                        }
+                    }
+
+                    &-list {
+                        @include flex-center-vert;
+                        gap: length(4);
+                        width: length(96);
+                        margin-top: length(-6);
+
+                        .btn-review {
+                            @include transparent-button;
+
+                            &.active {
+                                svg {
+                                    path {
+                                        fill: $textWarning;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .reviewcomment {
+                    @include border(solid, 1, $white);
+                    @include radius(8);
+                    background: $white;
+                    padding: length(16);
+                    display: flex;
+                    gap: length(16);
+
+                    .icon {
+                        @include square(length(22));
+                        @include flex-center;
+                        overflow: hidden;
+                    }
+
+                    .commentfield {
+                        width: calc(100% - 2.375rem);
+                        border: 0;
+                        @include setBgColor($white, $textPrimary);
+                        @include font-18-13-normal;
+                        padding-right: length(5);
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &::-webkit-scrollbar {
+                            background: transparent;
+                            width: length(8);
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: $primary;
+                            @include radius(8);
+                        }
+                    }
+                }
+
+                .recommended {
+                    padding: length(16) length(24);
+                    @include flex-center-between;
+
+                    &-title {
+                        @include font-16-12-medium;
+                        color: $primaryDark;
+                    }
+
+                    &-box {
+                        @include flex-center-vert;
+                        gap: length(32);
+
+                        .recommend {
+                            @include flex-center-vert;
+
+                            .radiofield {
+                                &:checked~.radiolabel {
+                                    &::before {
+                                        background: $checkBoxBg;
+                                        border-color: $checkBoxBg;
+                                    }
+
+                                    &::after {
+                                        opacity: 1;
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+
+                            .radiolabel {
+                                position: relative;
+                                cursor: pointer;
+                                padding-left: length(28);
+                                @include font-18-13-medium;
+                                color: $primary;
+
+                                &::selection {
+                                    color: $primaryDark;
+                                    background: transparent;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    @include square(length(20));
+                                    @include border(solid, 1.42857, $textSecondary);
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    @include transform(translateY(-50%));
+                                    @include circle;
+                                    background: $white;
+                                    @include transitions;
+                                }
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 35%;
+                                    left: length(8);
+                                    @include transitions;
+                                    width: length(5);
+                                    height: length(10);
+                                    @include border(solid, 1.5, $white);
+                                    border-top: 0;
+                                    border-left: 0;
+                                    @include transform(translateY(-40%) rotate(45deg));
+                                    @include transitions;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-footer {
+        padding: length(24) length(24) length(32);
+
+        .btn-submit {
+            box-shadow: $box-shadow-9;
+            padding: length(14);
+            text-align: center;
+            @include setBgColor($textWarning, $white);
+            @include radius(8);
+            @include w100;
+            box-shadow: $box-shadow-9;
+            @include transitions;
+
+            @include hover {
+                @include setBgColor($gold, $white);
+            }
+        }
+    }
+}

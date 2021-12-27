@@ -1,0 +1,153 @@
+.pricerange {
+    @include flex-column;
+    gap: length(24);
+    padding: length(24);
+    @include border-single(bottom, solid, 2, $grayBg);
+
+    &-title {
+        .rangetitle {
+            @include font-16-13-medium;
+            color: $textPrimary;
+        }
+    }
+
+    .ranger {
+        @include flex-column;
+        gap: length(18);
+
+        .amounts {
+            @include flex-center-vert;
+            overflow: hidden;
+
+            .inputbox {
+                width: 50%;
+                @include flex-center-vert;
+                gap: length(8);
+
+                &:last-child {
+                    justify-content: flex-end;
+                }
+
+                .inputlabel {
+                    @include font-16-10-medium;
+                    color: $textPrimary;
+                    width: length(24);
+                }
+
+                .amount {
+                    @include font-15-11-medium;
+                    color: $primary;
+                    width: length(52);
+                }
+            }
+        }
+    }
+
+    .rangefromto {
+        display: flex;
+        gap: length(16);
+
+        .rangefrom {
+            @include flex-column;
+            gap: length(12);
+            width: 50%;
+
+            .rangelabel {
+                @include font-15-11-medium;
+                color: $primary;
+            }
+
+            .rangeinput {
+                padding: length(15) length(16);
+                @include setBgColor($product-border, $secondary);
+                @include radius(8);
+                @include font-18-13-medium;
+                @include border(solid, 1.2, transparent);
+                @include transitions;
+
+                &::placeholder {
+                    color: $textPrimary;
+                }
+
+                &:focus {
+                    border-color: $input-border;
+                }
+            }
+        }
+
+        .rangeto {
+            @include flex-column;
+            gap: length(12);
+            width: 50%;
+
+            .rangelabel {
+                @include font-15-11-medium;
+                color: $primary;
+            }
+
+            .rangeinput {
+                padding: length(15) length(16);
+                @include setBgColor($product-border, $secondary);
+                @include radius(8);
+                @include font-18-13-medium;
+                @include border(solid, 1.2, transparent);
+                @include transitions;
+
+                &::placeholder {
+                    color: $textPrimary;
+                }
+
+                &:focus {
+                    border-color: $input-border;
+                }
+            }
+        }
+    }
+
+    .rangego {
+        .btn-go {
+            @include font-18-13-medium;
+            @include setBgColor($secondary, $white);
+            @include radius(8);
+            box-shadow: 0rem .0625rem .25rem rgba($black, 0.03);
+            text-align: center;
+            padding: length(17);
+            @include w100;
+            @include transitions;
+
+            @include hover {
+                @include setBgColor($gold, $white);
+            }
+        }
+    }
+}
+
+.ui-widget.ui-widget-content {
+    border-color: $grayBg;
+}
+
+.ui-slider-horizontal {
+    height: length(1);
+    background: $grayBg;
+}
+
+.ui-state-default {
+    border: 0;
+}
+
+.ui-slider .ui-slider-handle {
+    border: 0;
+    @include square(length(24));
+    @include circle;
+    background: $secondary;
+    top: length(-12);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.ui-slider .ui-slider-range {
+    height: length(3);
+    background: $secondary;
+}

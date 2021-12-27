@@ -1,0 +1,1341 @@
+// PRODUCT DETAILS START
+.product-details {
+    margin: length(24) length(0);
+
+    &-content {
+        padding: length(32);
+        // background: chartreuse;
+
+        @include breakpoint(phone768) {
+            padding: length(0);
+        }
+
+        .product-slider {
+            &-for {
+                margin-bottom: length(16);
+
+                .slider-thumbnail {
+                    width: length(520);
+                    height: length(472);
+
+                    @include breakpoint(phone768) {
+                        @include w100;
+                        height: length(300);
+                    }
+
+                    img {
+                        @include wh100;
+                    }
+                }
+            }
+
+            &-nav {
+                @include flex-center-vert;
+                gap: length(16);
+
+                @include breakpoint(phone768) {
+                    gap: length(8);
+                }
+
+                .slick-list {
+                    .slick-track {
+                        @include flex-center-vert;
+                        gap: length(16);
+
+                        @include breakpoint(phone768) {
+                            gap: length(8);
+                            width: 100% !important;
+                        }
+                    }
+                }
+
+                .slider-indicator {
+                    width: length(118) !important;
+                    height: length(130);
+                    @include border(solid, 1, transparent);
+                    cursor: pointer;
+                    padding: length(5);
+
+                    @include breakpoint(phone768) {
+                        width: length(70) !important;
+                        height: length(80);
+                    }
+
+
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+
+                .slick-current {
+                    border-color: $primaryDark;
+                }
+            }
+
+            .slider-navigation {
+                display: flex;
+
+                .btn-more {
+                    @include transparent-button;
+                    width: length(118);
+                    height: length(131);
+                    @include flex-center;
+                    overflow: hidden;
+                    position: relative;
+
+                    @include breakpoint(phone768) {
+                        width: length(70);
+                        height: length(80);
+                    }
+
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        @include wh100;
+                        background: $overlayBg;
+                        @include flex-center;
+                        text-align: center;
+                        z-index: 2;
+
+                        .text {
+                            @include font-24-14-normal;
+                            color: $white;
+                            letter-spacing: length(-1);
+                        }
+                    }
+                }
+            }
+
+            @include breakpoint(tablet991) {
+                margin-bottom: length(40);
+            }
+        }
+
+        .product-detail {
+            .badges-crumb {
+                margin-bottom: length(32);
+                @include flex-center-between;
+
+                .crumb {
+                    .breadcrumb {
+                        margin-bottom: 0;
+
+                        &-item {
+                            @include font-18-13-medium;
+                            color: $textPrimary;
+
+                            a {
+                                @include font-18-13-medium;
+                                color: $textPrimary;
+                            }
+
+                            &.active {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+
+                .badges {
+                    .productbadge {
+                        padding: length(4) length(6);
+                        @include radius(2);
+                        text-align: center;
+                        @include font-16-12-medium;
+                        @include setBgColor($percentOffBg, $white);
+                    }
+                }
+            }
+
+            .details {
+                @include flex-column;
+                justify-content: space-between;
+                gap: length(40);
+
+                &-body {
+                    .product-design {
+                        margin-bottom: length(6);
+
+                        .detailstitle {
+                            @include font-18-13-medium;
+                            letter-spacing: length(0.2);
+                            color: $textSecondary;
+                        }
+                    }
+
+                    .modelnumber-shareprod {
+                        @include flex-center-between;
+                        margin-bottom: length(24);
+
+                        .modelnumber {
+                            .model {
+                                @include font-32-29-medium;
+                                color: $primaryDark;
+
+                                @include breakpoint(phone768) {
+                                    @include font-28-20-medium;
+                                }
+                            }
+                        }
+
+                        .shareprod {
+                            @include flex-center-vert;
+                            gap: length(24);
+
+                            .productshare {
+                                margin-bottom: length(0);
+
+                                .btn-socialshare {
+                                    @include transparent-button;
+                                    @include square(length(24));
+                                    @include flex-center;
+                                    overflow: hidden;
+                                }
+                            }
+
+                            .wishes {
+                                .buttonwish {
+                                    @include transparent-button;
+                                    @include square(length(24));
+                                    @include flex-center;
+                                    overflow: hidden;
+                                }
+                            }
+                        }
+                    }
+
+                    .materials-reviews {
+                        @include flex-column;
+                        gap: length(16);
+                        margin-bottom: length(24);
+
+                        .materials {
+                            .title {
+                                @include font-24-15-normal;
+                                color: $textPrimary;
+                                letter-spacing: length(0.3);
+                            }
+
+                            .text {
+                                @include font-24-15-normal;
+                                color: $textPrimary;
+                                letter-spacing: length(0.3);
+                            }
+                        }
+
+                        .reviews {
+                            @include flex-center-vert;
+                            gap: length(8);
+
+                            .reviewlist {
+                                @include list-horizontal;
+                                gap: length(4);
+                                margin-top: length(-4);
+
+                                &-item {
+                                    @include square(length(16));
+                                    @include flex-center;
+                                    overflow: hidden;
+                                }
+                            }
+
+                            .reviewtext {
+                                @include font-16-10-normal;
+                                color: $textPrimary;
+                            }
+                        }
+                    }
+
+                    .productprices-productsizes-productcolors {
+                        .productprices {
+                            margin-bottom: length(24);
+                            padding-bottom: length(24);
+                            @include border-single(bottom, solid, 1, $grayBg);
+
+                            .prices-vad {
+                                @include flex-center-between;
+
+                                .prices {
+                                    @include flex-center-vert;
+                                    gap: length(16);
+
+                                    .current-price {
+                                        @include font-28-21-medium;
+                                        color: $primaryDark;
+                                    }
+
+                                    .previous-price {
+                                        @include font-24-13-medium;
+                                        color: $textSecondary;
+                                        text-decoration: line-through;
+                                    }
+                                }
+
+                                .vat {
+                                    &-text {
+                                        @include font-16-12-medium;
+                                        color: $textSecondary;
+                                    }
+                                }
+                            }
+                        }
+
+                        .productsizes {
+                            margin-bottom: length(24);
+                            @include flex-column;
+                            gap: length(16);
+
+                            .sizeheader {
+                                @include flex-center-between;
+
+                                .title {
+                                    @include font-24-14-medium;
+                                    color: $primaryDark;
+                                    letter-spacing: length(-1);
+                                }
+
+                                .link {
+                                    @include flex-center-vert;
+
+                                    .text {
+                                        @include font-24-14-normal;
+                                        color: $textWarning;
+                                        letter-spacing: length(-1);
+                                        @include transitions;
+                                    }
+
+                                    .icon {
+                                        @include square(length(24));
+                                        @include flex-center;
+
+                                        svg {
+                                            path {
+                                                @include transitions;
+                                            }
+                                        }
+                                    }
+
+                                    @include hover {
+                                        .text {
+                                            color: $gold;
+                                        }
+
+                                        .icon {
+                                            svg {
+                                                path {
+                                                    fill: $gold;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .sizebody {
+                                @include flex-center-vert;
+                                gap: length(8);
+
+                                .btn-size {
+                                    @include border(solid, 1, $dividerBg);
+                                    @include radius(6);
+                                    padding: length(8);
+                                    @include font-16-12-medium;
+                                    line-height: 1;
+                                    text-align: center;
+                                    @include setBgColor($white, $paginatinonText);
+
+                                    &.active {
+                                        @include setBgColor($white, $textWarning);
+                                        border-color: $textWarning;
+                                    }
+                                }
+                            }
+                        }
+
+                        .productcolors {
+                            margin-bottom: length(24);
+                            padding-bottom: length(24);
+                            @include border-single(bottom, solid, 1, $grayBg);
+                            @include flex-column;
+                            gap: length(16);
+
+                            .colortitle {
+                                @include font-18-13-medium;
+                                color: $colorText;
+                            }
+
+                            .colors {
+                                @include flex-center-vert;
+                                gap: length(20);
+
+                                .colorbox {
+                                    @include border(solid, 1, transparent);
+                                    @include square(length(32));
+                                    @include flex-center;
+                                    @include circle;
+
+                                    .color {
+                                        @include square(length(24));
+                                        @include circle;
+                                        cursor: pointer;
+                                        padding: length(4);
+                                        @include flex-center;
+                                        overflow: hidden;
+
+                                        .icon {
+                                            @include square(length(18));
+                                            overflow: hidden;
+                                            display: none;
+                                        }
+                                    }
+
+                                    &.active {
+                                        .color {
+                                            .icon {
+                                                @include flex-center;
+                                            }
+                                        }
+                                    }
+
+                                    &.nullcolor {
+                                        .color {
+                                            .icon {
+                                                @include flex-center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .colorsbox {
+                                @include flex-center-vert;
+                                gap: length(8);
+
+                                .colorbox {
+                                    padding: length(10) length(14);
+                                    @include radius(10);
+                                    @include flex-center-column;
+                                    gap: length(12);
+                                    @include border(solid, 1, $dividerBg);
+                                    @include radius(8);
+                                    cursor: pointer;
+
+                                    .color-thumbnail {
+                                        width: length(68);
+                                        height: length(92);
+
+                                        @include breakpoint(phone768) {
+                                            width: length(48);
+                                            height: length(62);
+                                        }
+
+                                        img {
+                                            @include wh100;
+                                        }
+                                    }
+
+                                    .color-info {
+                                        .title {
+                                            @include font-16-12-medium;
+                                            color: $paginatinonText;
+                                        }
+                                    }
+
+                                    &.active {
+                                        border-color: $textWarning;
+
+                                        .color-info {
+                                            .title {
+                                                color: $textWarning;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .productcartinfo {
+                        @include flex-column;
+                        gap: length(16);
+
+                        .productaddtocart {
+                            display: flex;
+                            gap: length(28);
+
+                            .productcounter {
+                                @include flex-center-vert;
+                                width: length(108);
+
+                                .count {
+                                    @include font-24-13-normal;
+                                    @include setBgColor(transparent, $paginatinonText);
+                                    text-align: center;
+                                    width: length(40);
+                                    height: length(50);
+                                }
+
+                                .btn-decrement,
+                                .btn-increment {
+                                    background: transparent;
+                                    padding: length(8);
+                                    @include border(solid, 1, $dividerBg);
+                                    @include radius(6);
+                                    @include flex-center;
+                                    text-align: center;
+                                    width: length(34);
+                                    height: length(50);
+                                }
+                            }
+
+                            .addtocartinfo {
+                                width: calc(100% - 6.75rem);
+
+                                .addcart {
+                                    .btn-addtocart {
+                                        @include w100;
+                                        padding: length(16);
+                                        text-align: center;
+                                        @include setBgColor($textWarning, $white);
+                                        box-shadow: $box-shadow-9;
+                                        @include font-18-13-medium;
+                                        @include radius(8);
+                                        @include transitions;
+
+                                        @include hover {
+                                            @include setBgColor($gold, $white);
+                                        }
+                                    }
+                                }
+
+                                .stockout {
+                                    @include flex-column;
+                                    gap: length(18);
+
+                                    .btn-outofstock {
+                                        @include w100;
+                                        padding: length(16);
+                                        text-align: center;
+                                        @include setBgColor($submitBg, $textSecondary);
+                                        box-shadow: $box-shadow-9;
+                                        @include font-18-13-medium;
+                                        @include radius(8);
+                                        cursor: no-drop;
+                                    }
+                                }
+                            }
+                        }
+
+                        .notifyinfo {
+                            @include flex-center-column;
+
+                            .btn-outofstock {
+                                @include flex-center-vert;
+                                gap: length(4);
+                                @include transparent-button;
+
+                                .icon {
+                                    @include square(length(16));
+                                    @include flex-center;
+                                    overflow: hidden;
+
+                                    svg {
+                                        path {
+                                            @include transitions;
+                                        }
+                                    }
+                                }
+
+                                .text {
+                                    @include font-14-11-normal;
+                                    color: $textWarning;
+                                    @include transitions;
+                                }
+
+                                @include hover {
+                                    .icon {
+                                        svg {
+                                            path {
+                                                fill: $red;
+                                            }
+                                        }
+                                    }
+
+                                    .text {
+                                        color: $red;
+                                    }
+                                }
+                            }
+
+                            .btn-notify {
+                                @include flex-center-vert;
+                                gap: length(4);
+                                @include transparent-button;
+
+                                .icon {
+                                    @include square(length(16));
+                                    @include flex-center;
+                                    overflow: hidden;
+
+                                    svg {
+                                        path {
+                                            @include transitions;
+                                        }
+                                    }
+                                }
+
+                                .text {
+                                    @include font-14-11-normal;
+                                    color: $textWarning;
+                                    @include transitions;
+                                }
+
+                                @include hover {
+                                    .icon {
+                                        svg {
+                                            path {
+                                                fill: $red;
+                                            }
+                                        }
+                                    }
+
+                                    .text {
+                                        color: $red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-footer {
+                    .deliveryinfo {
+                        .text {
+                            @include font-16-10-medium;
+                            color: $textPrimary;
+
+                            .time,
+                            .date {
+                                @include font-16-10-bold;
+                                color: $checkBoxBg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PRODUCT DESCRIPTIONS START
+.product-descriptions {
+    margin-bottom: length(24);
+    background: $white;
+
+    &-content {
+        @include flex-column;
+        gap: length(24);
+
+        .nav-tabs {
+            @include border-single(bottom, solid, 1, $grayBg);
+
+            .nav-link {
+                border: 0;
+                @include font-24-13-medium;
+                color: $textSecondary;
+                padding: length(16) length(24);
+                @include border-single(bottom, solid, 1, transparent);
+
+                @include breakpoint(phone768) {
+                    padding: length(16);
+                }
+
+                &.active {
+                    border-color: $textWarning;
+                    color: $textWarning;
+                }
+            }
+        }
+
+        .tab-content {
+            padding-left: length(32);
+            padding-right: length(32);
+
+            @include breakpoint(phone768) {
+                padding-left: length(0);
+                padding-right: length(0);
+            }
+
+            .productdescription {
+                @include flex-column;
+                gap: length(24);
+
+                .description {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .title {
+                        @include font-24-14-medium;
+                        color: $primaryDark;
+                    }
+
+                    .text {
+                        @include font-24-15-normal;
+                        color: $textPrimary;
+                        letter-spacing: length(0.3);
+                    }
+                }
+
+                .features {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .title {
+                        @include font-24-14-medium;
+                        color: $primaryDark;
+                    }
+
+                    .featurelist {
+                        @include flex-column;
+                        gap: length(2);
+
+                        &-item {
+                            @include flex-center-vert;
+                            align-items: flex-start;
+
+                            .icon {
+                                @include square(length(16));
+                                @include flex-center;
+                                @include font-24-15-normal;
+                                color: $textPrimary;
+                                margin-top: length(4);
+                            }
+
+                            .text {
+                                @include font-24-15-normal;
+                                color: $textPrimary;
+                                letter-spacing: length(0.3);
+                                width: calc(100% - 1rem);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .productspecifications {
+                .specificationlist {
+                    &-item {
+                        @include flex-center-between;
+                        padding: length(16) length(24);
+
+                        &:nth-child(odd) {
+                            background: $cardBg;
+                        }
+
+                        .specificationtitle {
+                            width: 50%;
+
+                            .title {
+                                @include font-24-13-normal;
+                                color: $primaryDark;
+                            }
+                        }
+
+                        .specificationname {
+                            width: 50%;
+
+                            .name {
+                                @include font-24-14-normal;
+                                color: $primaryDark;
+                                letter-spacing: length(-1);
+                            }
+                        }
+                    }
+                }
+
+                .specificlist {
+                    &-item {
+                        @include flex-center-between;
+                        padding: length(16) length(24);
+
+                        &:nth-child(even) {
+                            background: $cardBg;
+                        }
+
+                        .specifictitle {
+                            width: 50%;
+
+                            .title {
+                                @include font-24-13-normal;
+                                color: $primaryDark;
+                            }
+                        }
+
+                        .specificname {
+                            width: 50%;
+
+                            .name {
+                                @include font-24-14-normal;
+                                color: $primaryDark;
+                                letter-spacing: length(-1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .productreviews {
+                @include flex-column;
+                gap: length(60);
+                padding: length(24) length(0);
+
+                .reviewinfo {
+
+                    @include breakpoint(tablet991) {
+                        margin-bottom: length(24);
+                        border-right: 0;
+                    }
+
+                    &-header {
+                        @include flex-column;
+                        gap: length(10);
+
+                        .reviewaverage {
+                            @include flex-column;
+                            gap: length(8);
+
+                            .average {
+                                @include flex-center-vert;
+                                gap: length(4);
+
+                                &-title {
+                                    @include font-40-35-semibold;
+                                    color: $ratingText;
+                                    letter-spacing: length(0.02);
+                                }
+
+                                &-from {
+                                    @include font-24-17-semibold;
+                                    color: $rateText;
+                                }
+                            }
+
+                            .reviewcount {
+                                &-text {
+                                    @include font-16-10-normal;
+                                    color: $textSecondary;
+
+                                    .count {
+                                        @include font-16-10-normal;
+                                        color: $textSecondary;
+                                    }
+                                }
+                            }
+                        }
+
+                        .reviewlist {
+                            @include list-horizontal;
+                            gap: length(8);
+
+                            &-item {
+                                @include square(length(24));
+                                @include flex-center;
+                                cursor: pointer;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+
+                    .divider {
+                        @include w100;
+                        height: length(1);
+                        background: $grayBg;
+                        margin: length(16) length(0);
+                    }
+
+                    &-body {
+                        @include flex-column;
+                        gap: length(24);
+                        padding-right: length(32);
+
+                        @include breakpoint(tablet991) {
+                            padding-right: length(0);
+                        }
+
+                        .reviewstarlist {
+                            &-item {
+                                @include flex-center-vert;
+                                gap: length(20);
+
+                                .reviewcounter {
+                                    width: length(36);
+
+                                    .countnumber {
+                                        @include font-15-11-medium;
+                                        color: $textPrimary;
+                                    }
+
+                                    .text {
+                                        @include font-15-11-medium;
+                                        color: $textPrimary;
+                                    }
+                                }
+
+                                .progress {
+                                    width: calc(100% - 3.5rem);
+                                    height: length(10);
+                                    @include radius(100);
+                                    background: $grayBg;
+
+                                    &-bar {
+                                        background: $terTiari;
+                                        @include radius(100);
+                                    }
+                                }
+                            }
+                        }
+
+                        .btn-review {
+                            padding: length(18);
+                            @include radius(8);
+                            @include font-18-13-medium;
+                            text-align: center;
+                            @include setBgColor($textWarning, $white);
+                            @include transitions;
+
+                            @include hover {
+                                @include setBgColor($gold, $white);
+                            }
+                        }
+                    }
+                }
+
+                .review-content {
+                    @include flex-column;
+                    gap: length(24);
+
+                    &-header {
+                        @include flex-center-between;
+
+                        .showresult {
+                            @include font-14-11-medium;
+                            color: $textSecondary;
+
+                            .result {
+                                @include font-14-11-medium;
+                                color: $textSecondary;
+                            }
+
+                            .total {
+                                @include font-14-11-medium;
+                                color: $textSecondary;
+                            }
+                        }
+                    }
+
+                    &-body {
+                        .reviewdescription {
+                            @include flex-column;
+                            gap: length(16);
+                            padding: length(14) length(32);
+
+                            &-header {
+                                @include flex-column;
+                                gap: length(16);
+
+                                .descript-ratelist {
+                                    @include flex-center-between;
+
+                                    .descript {
+                                        @include flex-column;
+                                        gap: length(4);
+
+                                        .nameinfo-badgeinfo {
+                                            @include flex-center-vert;
+                                            gap: length(4);
+
+                                            .nameinfo {
+                                                .name {
+                                                    @include font-15-11-medium;
+                                                    color: $primary;
+                                                }
+                                            }
+
+                                            .badgeinfo {
+                                                margin-top: length(-4);
+                                                display: none;
+
+                                                .verifybadge {
+                                                    padding: length(2) length(4);
+                                                    @include radius(2);
+                                                    @include font-16-12-medium;
+                                                    text-align: center;
+
+                                                    &-success {
+                                                        @include setBgColor($checkBoxBg, $white);
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .time {
+                                            @include font-16-10-normal;
+                                            color: $textPrimary;
+                                        }
+                                    }
+
+                                    .ratelist {
+                                        @include list-horizontal;
+                                        gap: length(4);
+
+                                        &-item {
+                                            @include square(length(14));
+                                            @include flex-center;
+                                            overflow: hidden;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+
+                                .text {
+                                    @include font-18-13-normal;
+                                    color: $textPrimary;
+                                }
+                            }
+
+                            &-body {
+                                @include flex-column;
+
+                                .divider {
+                                    @include w100;
+                                    height: length(1);
+                                    background: $grayBg;
+                                }
+
+                                .reviewdescript {
+                                    padding: length(16);
+                                    @include flex-center-vert;
+                                    gap: length(16);
+
+                                    .icon {
+                                        @include square(length(28));
+                                        @include circle;
+                                        @include flex-center;
+                                        overflow: hidden;
+                                    }
+
+                                    .text {
+                                        width: calc(100% - 2.75rem);
+                                        color: $primary;
+                                        @include font-24-14-normal;
+                                        letter-spacing: length(-1);
+                                    }
+                                }
+                            }
+
+                            &-footer {
+                                @include flex-center-between;
+
+                                @include breakpoint(phone768) {
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    gap: length(10);
+                                }
+
+                                .texthelp {
+                                    @include font-24-14-normal;
+                                    color: $primary;
+                                    letter-spacing: length(-1);
+                                }
+
+                                .helpbox {
+                                    @include flex-center-vert;
+                                    gap: length(32);
+
+                                    .react {
+                                        @include flex-center-vert;
+                                        gap: length(8);
+
+                                        .btn-like {
+                                            @include transparent-button;
+                                            @include flex-center;
+                                            @include square(length(16));
+                                            overflow: hidden;
+
+                                            .regularicon {
+                                                path {
+                                                    @include transitions;
+                                                }
+                                            }
+
+                                            .activeicon {
+                                                display: none;
+                                            }
+
+                                            &.active {
+                                                .regularicon {
+                                                    display: none;
+                                                }
+
+                                                .activeicon {
+                                                    display: block;
+                                                }
+                                            }
+
+                                            &:hover:not(.active) {
+                                                svg {
+                                                    path {
+                                                        stroke: $textWarning;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .btn-dislike {
+                                            @include transparent-button;
+                                            @include flex-center;
+                                            @include square(length(16));
+                                            overflow: hidden;
+
+                                            .regularicon {
+                                                path {
+                                                    @include transitions;
+                                                }
+                                            }
+
+                                            .activeicon {
+                                                display: none;
+                                            }
+
+                                            &.active {
+                                                .regularicon {
+                                                    display: none;
+                                                }
+
+                                                .activeicon {
+                                                    display: block;
+                                                }
+                                            }
+
+                                            &:hover:not(.active) {
+                                                svg {
+                                                    path {
+                                                        stroke: $textWarning;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .count {
+                                            @include font-24-14-normal;
+                                            color: $primary;
+                                            letter-spacing: length(-1);
+                                        }
+                                    }
+
+                                    .btn-report {
+                                        @include transparent-button;
+                                        @include flex-center-vert;
+                                        gap: length(8);
+
+                                        .icon {
+                                            @include flex-center;
+                                            overflow: hidden;
+
+                                            svg {
+                                                path {
+                                                    @include transitions;
+                                                }
+                                            }
+                                        }
+
+                                        .text {
+                                            @include font-24-13-semibold;
+                                            color: $primary;
+                                            @include transitions;
+                                        }
+
+                                        @include hover {
+                                            .icon {
+                                                svg {
+                                                    path {
+                                                        stroke: $textWarning;
+                                                    }
+                                                }
+                                            }
+
+                                            .text {
+                                                color: $textWarning;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.verifiedreview {
+                                background: $cardBg;
+
+                                .reviewdescription-header {
+                                    .descript-ratelist {
+
+                                        @include breakpoint(phone768) {
+                                            flex-direction: column;
+                                            align-items: flex-start;
+                                            gap: length(10);
+                                        }
+
+                                        .descript {
+                                            .nameinfo-badgeinfo {
+                                                .badgeinfo {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .text {
+                                        @include font-18-13-normal;
+                                        color: $textPrimary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PRODUCT POLICY
+.policysection {
+    margin-bottom: length(40);
+
+    &-content {
+        padding: length(16) length(48);
+
+        @include breakpoint(phone768) {
+            padding: length(0);
+        }
+
+        .policyinfo {
+            @include flex-column;
+            gap: length(16);
+
+            &-header {
+                .icon {
+                    @include square(length(32));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            &-body {
+                @include flex-column;
+                gap: length(8);
+
+                .policytitle {
+                    @include font-16-13-medium;
+                    color: $primary;
+                }
+
+                .policytext {
+                    @include font-15-11-medium;
+                    color: $textSecondary;
+                }
+            }
+        }
+    }
+}
+
+// RELATED PRODUCT START
+.related-product {
+    margin-bottom: length(80);
+
+    @include breakpoint(phone768) {
+        margin-bottom: length(40);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(32);
+    }
+
+    &-header {
+        @include flex-center-vert;
+
+        .producttitle {
+            @include font-28-21-semibold;
+            color: $primaryDark;
+        }
+    }
+
+    &-info {
+        @include flex-center-vert;
+        gap: length(8);
+        flex-wrap: wrap;
+
+        .product-card {
+            width: calc((100% / 6) - 8px);
+
+            @include breakpoint(desktop1400) {
+                width: calc((100% / 5) - 8px);
+            }
+
+            @include breakpoint(desktop1200) {
+                width: calc((100% / 4) - 8px);
+            }
+
+            @include breakpoint(tablet991) {
+                width: calc((100% / 3) - 8px);
+            }
+
+            @include breakpoint(phone575) {
+                width: calc((100% / 2) - 8px);
+            }
+
+            @include breakpoint(phone359) {
+                @include w100;
+            }
+        }
+    }
+}
+
+.filterby {
+    @include flex-center-vert;
+    gap: length(6);
+    width: length(200);
+
+    label {
+        @include font-16-13-medium;
+        color: $textPrimary;
+        width: length(65);
+    }
+
+    .form-select {
+        @include font-16-13-medium;
+        color: $primaryDark;
+        border: none;
+        @include radius(0);
+        cursor: pointer;
+        width: calc(100% - 65px);
+
+        &:focus {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,188 @@
+// SITE FOOTER START
+.footer {
+    background: $white;
+
+    &-content {
+        padding: length(35) length(0) length(45);
+        @include flex-center;
+        gap: length(24);
+        flex-wrap: wrap;
+
+        .contentfooter {
+            @include flex-center;
+            gap: length(24);
+
+            @include breakpoint(phone768) {
+                width: 50%;
+            }
+
+            @include breakpoint(phone500) {
+                width: 85%;
+            }
+
+            @include breakpoint(tab991) {
+                width: calc(25% - 1.5rem);
+            }
+
+            .icon {
+                @include square(length(44));
+                @include circle;
+                @include flex-center;
+                margin-left: auto;
+
+                @include breakpoint(desktop1199) {
+                    @include square(length(36));
+                }
+            }
+
+            .details {
+                width: 68%;
+
+                @include breakpoint(desktop1199) {
+                    width: 85%;
+                }
+
+                .title {
+                    @include font-24-13-normal;
+                    color: $textPrimary;
+                }
+
+                .link {
+                    color: $primaryDark;
+                    @include font-16-13-medium;
+                    @include transitions;
+
+                    @include hover {
+                        color: $textWarning;
+                    }
+                }
+
+                .applink {
+                    img {
+                        @include wh100;
+                    }
+                }
+            }
+        }
+    }
+
+    &-copyright {
+        padding: length(21) length(0);
+        @include border-single(top, solid, 1, $dividerBg);
+
+        &-content {
+            @include flex-center-between;
+            gap: length(24);
+            flex-wrap: wrap;
+
+            .privacy-policy {
+                @include w100;
+                @include flex-center;
+                gap: length(8);
+
+                @include breakpoint(tab991) {
+                    width: calc(33% - 1.5rem);
+                }
+
+                .policy-link {
+                    @include font-24-13-normal;
+                    color: $textPrimary;
+                    @include transitions;
+
+                    @include breakpoint(phone500) {
+                        @include font-16-12-normal;
+                    }
+
+                    @include hover {
+                        color: $textWarning;
+                    }
+                }
+
+                .span {
+                    @include font-24-13-normal;
+                    color: $textPrimary;
+                }
+            }
+
+            .social-links {
+                @include w100;
+                @include flex-center;
+                gap: length(24);
+
+                @include breakpoint(tab991) {
+                    width: calc(33% - 1.5rem);
+                }
+
+                .socicl-link {
+                    @include square(length(24));
+                    @include flex-center;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+
+            .copyright-text {
+                @include w100;
+                @include flex-center;
+
+                @include breakpoint(tab991) {
+                    width: calc(33% - 1.5rem);
+                    justify-content: flex-end;
+                }
+
+                .copyright {
+                    @include font-14-11-medium;
+                    color: $textPrimary;
+                }
+            }
+        }
+    }
+}
+
+// CHECKOUT FOOTER START
+.checkout-footer {
+    background: $white;
+    padding: length(16) length(0);
+
+    &-content {
+        @include flex-center-between;
+
+        @include breakpoint(tablet991) {
+            flex-direction: column;
+            gap: length(8);
+            text-align: center;
+        }
+
+        .footerlist {
+            @include list-horizontal;
+            gap: length(8);
+
+            &-link {
+                @include font-24-13-normal;
+                color: $textPrimary;
+                @include transitions;
+
+                @include breakpoint(phone500) {
+                    @include font-16-12-normal;
+                }
+
+                @include hover {
+                    color: $textWarning;
+                }
+            }
+
+            .divider {
+                @include font-24-13-normal;
+                color: $textPrimary;
+                margin-top: length(4);
+            }
+        }
+
+        .copyright-text {
+            @include font-14-11-medium;
+            color: $textPrimary;
+        }
+    }
+}

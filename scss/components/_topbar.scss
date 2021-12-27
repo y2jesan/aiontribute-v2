@@ -1,0 +1,117 @@
+.topbar {
+    background: $primary;
+    padding: length(8);
+
+    &-content {
+        @include flex-between;
+
+        .shipping-to {
+            @include flex-center-vert;
+            gap: length(8);
+
+            .shipping-text {
+                @include font-16-10-normal;
+                color: $white;
+            }
+
+            .dd-container {
+                width: length(48) !important;
+
+                .dd-select {
+                    border-radius: 0;
+                    border: 0;
+                    position: relative;
+                    cursor: pointer;
+                    width: length(70) !important;
+                    background: transparent !important;
+
+                    .dd-selected {
+                        overflow: hidden;
+                        display: block;
+                        padding: 0;
+                        font-weight: bold;
+
+                        .dd-option-image,
+                        .dd-selected-image {
+                            vertical-align: middle;
+                            float: left;
+                            margin-right: 0;
+                            max-width: 64px;
+                            width: length(41);
+                            height: length(24);
+                            object-fit: cover;
+                        }
+                    }
+
+                    .dd-pointer-up {
+                        border-bottom-color: $white !important;
+                    }
+
+                    .dd-pointer-down {
+                        border-top-color: $white;
+                    }
+                }
+
+                .dd-options {
+                    border: 0;
+                    border-top: none;
+                    list-style: none;
+                    box-shadow: 0px 1px 5px #ddd;
+                    display: none;
+                    position: absolute;
+                    z-index: 2000;
+                    margin: length(8) 0 0;
+                    padding: 0;
+                    background: #fff;
+                    overflow: auto;
+                    width: length(64) !important;
+
+                    .dd-option-selected {
+                        background: #f6f6f6;
+                    }
+
+                    .dd-option {
+                        padding: length(10);
+                        display: block;
+                        border-bottom: solid 1px #ddd;
+                        overflow: hidden;
+                        text-decoration: none;
+                        color: #333;
+                        cursor: pointer;
+
+                        .dd-option-image,
+                        .dd-selected-image {
+                            vertical-align: middle;
+                            float: left;
+                            margin-right: 0;
+                            max-width: length(64);
+                            width: length(41);
+                            height: length(24);
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+
+        .topbarlist {
+            gap: length(28);
+            display: none;
+
+            @include breakpoint(mobile768) {
+                @include list-horizontal;
+            }
+
+            &-item {
+                @include flex-center-vert;
+                gap: length(8);
+
+                .list-text {
+                    @include font-16-10-normal;
+                    color: $white;
+                    margin-top: length(5);
+                }
+            }
+        }
+    }
+}

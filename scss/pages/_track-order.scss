@@ -1,0 +1,1089 @@
+// TRACK ORDER START
+.trackorder {
+    padding: length(24) length(0) length(55);
+
+    // TRACK ORDER SHOWCASE
+    &-showcase {
+        @include flex-center;
+        padding: length(72) length(0) length(66);
+        background: $white;
+        @include radius(8);
+
+        &-info {
+            max-width: length(370);
+            @include flex-center-column;
+            gap: length(24);
+            text-align: center;
+        }
+
+        &-header {
+            @include flex-center-column;
+            gap: length(16);
+
+            .trackorder-thumb {
+                width: length(200);
+                height: length(124);
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                }
+            }
+
+            .headerinfo {
+                @include flex-center-column;
+                gap: length(4);
+                text-align: center;
+
+                &-title {
+                    @include font-24-14-normal;
+                    color: $primaryDark;
+                }
+
+                &-text {
+                    @include font-24-13-normal;
+                    color: $textPrimary;
+                }
+            }
+        }
+
+        &-body {
+            @include flex-column;
+            gap: length(16);
+            margin-bottom: length(8);
+
+            .infobox {
+                @include flex-center-vert;
+                background: $product-border;
+                @include radius(8);
+                height: length(50);
+                padding: length(15) length(16);
+                @include transitions;
+                @include border(solid, 1, transparent);
+
+                .input-field {
+                    @include setBgColor(transparent, $textPrimary);
+                    width: calc(100% - 1.25rem);
+                    padding: length(0) length(16);
+                    @include font-18-13-medium;
+
+                    &::placeholder {
+                        color: $textPrimary;
+                    }
+                }
+
+                &:focus-within {
+                    background: $product-border;
+                    border-color: $input-border;
+
+                    .icon {
+                        svg {
+                            path {
+                                fill: $textWarning;
+                            }
+                        }
+                    }
+                }
+
+                .flag-code {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    .code {
+                        @include font-22-14-normal;
+                        color: $primary;
+                    }
+                }
+            }
+
+            .btn-submit {
+                @include w100;
+                padding: length(16) length(24);
+                @include font-18-13-medium;
+                @include setBgColor($submitBg, $white);
+                @include radius(8);
+                box-shadow: $box-shadow-1;
+                text-align: center;
+                @include transitions;
+
+                @include hover {
+                    background: $gold;
+                }
+            }
+        }
+
+        &-footer {
+            @include flex-center-column;
+            gap: length(4);
+
+            .detailstitle {
+                @include font-24-14-medium;
+                color: $primaryDark;
+            }
+
+            .text {
+                @include font-24-13-normal;
+                color: $textPrimary;
+
+                @include breakpoint(phone575) {
+                    @include font-16-10-normal;
+                }
+
+                .link {
+                    @include font-24-13-medium;
+                    color: $textWarning;
+                    text-decoration: underline;
+
+                    @include breakpoint(phone575) {
+                        @include font-16-10-medium;
+                    }
+
+                    @include hover {
+                        text-decoration: none;
+                        color: $gold;
+                    }
+                }
+            }
+        }
+    }
+
+    // TRACK ORDER CONTENT
+    &-content {
+        max-width: length(840);
+        margin: length(0) auto;
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(tablet991) {
+            max-width: 100%;
+            margin: length(0);
+        }
+
+        &-header {
+            padding: length(40);
+            background: $white;
+            @include radius(8);
+            display: flex;
+            justify-content: space-between;
+
+            @include breakpoint(phone768) {
+                flex-direction: column;
+                gap: length(20);
+            }
+
+            @include breakpoint(tablet991) {
+                padding: length(24);
+            }
+
+            .findorderinfo {
+                width: 60%;
+                @include flex-column;
+                gap: length(16);
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                    order: 1;
+                    text-align: center;
+                }
+
+                &-header {
+                    @include flex-column;
+                    gap: length(4);
+
+                    .title {
+                        @include font-24-14-normal;
+                        color: $primaryDark;
+                    }
+
+                    .text {
+                        @include font-24-13-normal;
+                        color: $textPrimary;
+                    }
+                }
+
+                &-body {
+                    @include flex-column;
+                    gap: length(16);
+
+                    .infobox {
+                        @include flex-center-vert;
+                        background: $product-border;
+                        @include radius(8);
+                        height: length(50);
+                        padding: length(15) length(16);
+                        @include transitions;
+                        @include border(solid, 1, transparent);
+
+                        .input-field {
+                            @include setBgColor(transparent, $textPrimary);
+                            width: calc(100% - 1.25rem);
+                            padding: length(0) length(16);
+                            @include font-18-13-medium;
+
+                            &::placeholder {
+                                color: $textPrimary;
+                            }
+                        }
+
+                        &:focus-within {
+                            background: $product-border;
+                            border-color: $input-border;
+
+                            .icon {
+                                svg {
+                                    path {
+                                        fill: $textWarning;
+                                    }
+                                }
+                            }
+                        }
+
+                        .flag-code {
+                            @include flex-center-vert;
+                            gap: length(8);
+
+                            .code {
+                                @include font-22-14-normal;
+                                color: $primary;
+                            }
+                        }
+                    }
+
+                    .btn-submit {
+                        @include w100;
+                        padding: length(16) length(24);
+                        @include font-18-13-medium;
+                        @include setBgColor($textWarning, $white);
+                        @include radius(8);
+                        box-shadow: $box-shadow-1;
+                        text-align: center;
+                        @include transitions;
+
+                        @include hover {
+                            @include setBgColor($gold, $white);
+                        }
+                    }
+                }
+            }
+
+            .findinfo-thumbnail {
+                width: 40%;
+                height: length(185);
+                @include flex-center;
+                overflow: hidden;
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                    order: 0;
+                }
+
+                img {
+                    @include wh100;
+                }
+            }
+        }
+
+        &-body {
+            .trackorderlist {
+                &-header {
+                    background: $white;
+                    padding: length(20) length(32);
+                    @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+
+                    @include breakpoint(phone768) {
+                        padding: length(20);
+                    }
+
+                    .trackorderlist-title {
+                        @include font-24-17-medium;
+                        color: $primaryDark;
+                    }
+                }
+
+                &-body {
+                    background: $white;
+                    @include flex-column;
+
+                    .tracklist {
+                        @include flex-column;
+                        gap: length(24);
+                        padding: length(20) length(24) length(20) length(32);
+                        @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+
+                        @include breakpoint(phone768) {
+                            padding: length(20);
+                        }
+
+                        &:nth-child(odd) {
+                            background: $cardBg;
+                        }
+
+                        &:last-of-type {
+                            border-bottom: 0;
+                        }
+
+                        &-header {
+                            @include flex-center-between;
+
+                            .ordernumber-orderdate {
+                                @include flex-center-vert;
+                                gap: length(4);
+
+                                @include breakpoint(phone575) {
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                }
+
+                                .ordernumber {
+                                    &-title {
+                                        @include font-24-14-medium;
+                                        color: $primaryDark;
+
+                                        @include breakpoint(phone575) {
+                                            @include font-16-12-medium;
+                                        }
+                                    }
+                                }
+
+                                .divider {
+                                    @include breakpoint(phone575) {
+                                        display: none;
+                                    }
+                                }
+
+                                .orderdate {
+                                    .datetext {
+                                        @include font-15-11-medium;
+                                        color: $textSecondary;
+
+                                        .date {
+                                            @include font-15-11-medium;
+                                            color: $textPrimary;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .btn-view {
+                                @include transparent-button;
+                                @include flex-center;
+                                gap: length(8);
+
+                                .text {
+                                    @include font-24-14-normal;
+                                    letter-spacing: length(-1);
+                                    color: $textWarning;
+                                    @include transitions;
+                                }
+
+                                .icon {
+                                    @include square(length(18));
+                                    @include flex-center;
+                                    overflow: hidden;
+
+                                    svg {
+                                        path {
+                                            @include transitions;
+                                        }
+                                    }
+                                }
+
+                                @include hover {
+                                    .text {
+                                        color: $gold;
+                                    }
+
+                                    .icon {
+                                        svg {
+                                            path {
+                                                fill: $gold;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .statustitle {
+                                @include font-24-14-normal;
+                                color: $primaryDark;
+                                letter-spacing: length(-1);
+                            }
+                        }
+
+                        &-body {
+                            @include flex-center-column;
+                            gap: length(48);
+
+                            @include breakpoint(mobile768) {
+                                flex-direction: row;
+                            }
+
+                            .step {
+                                position: relative;
+                                @include flex-center-vert;
+                                gap: length(20);
+
+                                @include breakpoint(mobile768) {
+                                    flex-direction: column;
+                                    width: calc(100% / 5);
+                                    gap: length(8);
+                                }
+
+                                &:first-of-type {
+                                    .step-icon {
+                                        &::before {
+                                            content: '';
+                                            height: 0;
+                                            left: 0;
+                                            width: 0;
+                                            display: none;
+                                        }
+                                    }
+                                }
+
+                                &-icon {
+                                    @include square(length(24));
+                                    @include flex-center;
+                                    @include circle;
+                                    position: relative;
+
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        width: length(1);
+                                        background: $dividerBg;
+                                        left: 50%;
+                                        @include transform(translateX(-50%));
+                                        height: 200%;
+                                        top: -200%;
+
+                                        @include breakpoint(mobile768) {
+                                            top: 50%;
+                                            @include transform(translateY(-50%));
+                                            left: -500%;
+                                            height: length(1);
+                                            width: 500%;
+                                        }
+
+                                        @include breakpoint(tab991) {
+                                            width: 600%;
+                                            left: -600%;
+                                        }
+                                    }
+
+                                    .iconregular {
+                                        @include square(length(24));
+                                        @include flex-center;
+                                        @include circle;
+                                        overflow: hidden;
+                                    }
+
+                                    .iconreactive {
+                                        @include square(length(24));
+                                        @include circle;
+                                        overflow: hidden;
+                                        display: none;
+                                    }
+                                }
+
+                                &-title {
+                                    @include font-16-12-medium;
+                                    color: $textPrimary;
+                                    width: length(120);
+                                    text-align: left;
+
+                                    @include breakpoint(mobile768) {
+                                        @include w100;
+                                        text-align: center;
+                                    }
+                                }
+
+                                &.active {
+                                    .step-icon {
+                                        &::before {
+                                            background: $timelineBg;
+                                        }
+
+                                        .iconregular {
+                                            display: none;
+                                        }
+
+                                        .iconreactive {
+                                            @include flex-center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.trackorderdetails {
+    &-header {
+        background: $white;
+        padding: length(16) length(24);
+        @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+        @include flex-center-between;
+
+        @include breakpoint(phone575) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: length(4);
+        }
+
+        .orderserial {
+            @include flex-center-vert;
+            gap: length(14);
+
+            @include breakpoint(phone575) {
+                justify-content: space-between;
+                @include w100;
+            }
+
+            .backtitle {
+                @include flex-center-vert;
+                gap: length(4);
+
+                .btn-back {
+                    @include square(length(24));
+                    @include flex-center;
+                    overflow: hidden;
+                    @include transparent-button;
+                }
+
+                .title {
+                    @include font-24-17-medium;
+                    color: $primaryDark;
+                }
+            }
+
+            .serialnumber {
+                @include font-24-14-normal;
+                color: $textSecondary;
+                letter-spacing: length(-1);
+            }
+        }
+
+        .orderdate {
+            @include breakpoint(phone575) {
+                @include flex-end;
+                @include w100;
+            }
+
+            .datetext {
+                @include font-15-11-medium;
+                color: $textSecondary;
+
+                .date {
+                    @include font-15-11-medium;
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    &-body {
+        background: $white;
+        @include flex-column;
+        margin-bottom: length(16);
+
+        .tracklist {
+            @include flex-column;
+            gap: length(24);
+            padding: length(16) length(24);
+            @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+
+            @include breakpoint(phone768) {
+                padding: length(20);
+            }
+
+            &-header {
+                .statustitle {
+                    @include font-24-14-normal;
+                    color: $primaryDark;
+                    letter-spacing: length(-1);
+                }
+            }
+
+            &-body {
+                @include flex-center-column;
+                gap: length(48);
+
+                @include breakpoint(mobile768) {
+                    flex-direction: row;
+                }
+
+                .step {
+                    position: relative;
+                    @include flex-center-vert;
+                    gap: length(20);
+
+                    @include breakpoint(mobile768) {
+                        flex-direction: column;
+                        width: calc(100% / 5);
+                        gap: length(8);
+                    }
+
+                    &:first-of-type {
+                        .step-icon {
+                            &::before {
+                                content: '';
+                                height: 0;
+                                left: 0;
+                                width: 0;
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &-icon {
+                        @include square(length(24));
+                        @include flex-center;
+                        @include circle;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: length(1);
+                            background: $dividerBg;
+                            left: 50%;
+                            @include transform(translateX(-50%));
+                            height: 200%;
+                            top: -200%;
+
+                            @include breakpoint(mobile768) {
+                                top: 50%;
+                                @include transform(translateY(-50%));
+                                left: -500%;
+                                height: length(1);
+                                width: 500%;
+                            }
+
+                            @include breakpoint(tab991) {
+                                width: 600%;
+                                left: -600%;
+                            }
+                        }
+
+                        .iconregular {
+                            @include square(length(24));
+                            @include flex-center;
+                            @include circle;
+                            overflow: hidden;
+                        }
+
+                        .iconreactive {
+                            @include square(length(24));
+                            @include circle;
+                            overflow: hidden;
+                            display: none;
+                        }
+                    }
+
+                    &-title {
+                        @include font-16-12-medium;
+                        color: $textPrimary;
+                        width: length(120);
+                        text-align: left;
+
+                        @include breakpoint(mobile768) {
+                            @include w100;
+                            text-align: center;
+                        }
+                    }
+
+                    &.active {
+                        .step-icon {
+                            &::before {
+                                background: $timelineBg;
+                            }
+
+                            .iconregular {
+                                display: none;
+                            }
+
+                            .iconreactive {
+                                @include flex-center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .delivery-additional-payment {
+            background: $cardBg;
+            @include flex-center-vert;
+            @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+
+            @include breakpoint(phone768) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .delivery {
+                width: 33%;
+                min-height: length(163);
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                }
+
+                &-header {
+                    padding: length(16) length(24) length(10);
+                    @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+
+                    .title {
+                        @include font-24-14-normal;
+                        color: $primaryDark;
+                        letter-spacing: length(-1);
+                    }
+                }
+
+                &-body {
+                    padding: length(16) length(24);
+                    @include flex-column;
+
+                    .name {
+                        @include font-16-13-medium;
+                        color: $primaryDark;
+                        margin-bottom: length(16);
+                    }
+
+                    .address {
+                        @include font-16-13-normal;
+                        color: $textPrimary;
+                    }
+
+                    .phonenumber-verified {
+                        @include flex-center-vert;
+                        gap: length(24);
+
+                        .phonenumber {
+                            .phone {
+                                @include font-24-13-normal;
+                                color: $textPrimary;
+                            }
+                        }
+
+                        .verified {
+                            @include flex-center-vert;
+                            gap: length(4);
+
+                            .icon {
+                                @include square(length(16));
+                                @include flex-center;
+                                overflow: hidden;
+                            }
+
+                            .text {
+                                @include font-24-14-normal;
+                                color: $checkBoxBg;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .additional {
+                width: 34%;
+                min-height: length(163);
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                }
+
+                &-header {
+                    padding: length(16) length(24) length(10);
+                    @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+
+                    .title {
+                        @include font-24-14-normal;
+                        color: $primaryDark;
+                    }
+                }
+
+                &-body {
+                    padding: length(16) length(24);
+
+                    .additionalinfo {
+                        @include flex-center-column;
+                        align-items: flex-start;
+                        gap: length(16);
+
+                        .btn-additional {
+                            @include flex-center-vert;
+                            gap: length(5);
+                            @include transparent-button;
+
+                            .text {
+                                @include font-15-11-medium;
+                                color: $textWarning;
+                            }
+
+                            .icon {
+                                @include square(length(16));
+                                @include flex-center;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .payment {
+                width: 33%;
+                min-height: length(163);
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                }
+                
+                &-header {
+                    padding: length(16) length(24) length(10);
+                    @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+
+                    .title {
+                        @include font-24-14-normal;
+                        color: $primaryDark;
+                    }
+                }
+
+                &-body {
+                    padding: length(16) length(24);
+                    @include flex-center-vert;
+                    gap: length(16);
+
+                    .icon {
+                        @include square(length(24));
+                        @include flex-center;
+                        overflow: hidden;
+                    }
+
+                    .text {
+                        @include font-18-13-medium;
+                        color: $textPrimary;
+
+                        .number {
+                            @include font-18-13-medium;
+                            color: $textPrimary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ratingbox {
+            padding: length(32) length(0);
+            background: $white;
+            @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+            @include flex-center-column;
+            gap: length(4);
+            text-align: center;
+
+            .ratingtitle {
+                @include font-24-14-medium;
+                color: $paginatinonText;
+            }
+
+            .ratinglist {
+                @include list-horizontal;
+                gap: length(4);
+
+                &-item {
+                    @include square(length(24));
+                    @include flex-center;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .query {
+            background: $white;
+
+            &-header {
+                @include border-single(bottom, solid, 1, $grayBg);
+                padding: length(16);
+
+                .querytitle {
+                    @include font-16-13-medium;
+                    color: $primaryDark;
+
+                    @include breakpoint(phone500) {
+                        @include font-16-12-medium;
+                    }
+                }
+            }
+
+            &-body {
+                @include flex-center-between;
+
+                .queryinfo {
+                    width: 50%;
+                    @include flex-center-vert;
+
+                    @include breakpoint(phone500) {
+                        width: 60%;
+                    }
+
+                    .btn-service {
+                        @include flex-center-vert;
+                        gap: length(8);
+                        @include transparent-button;
+
+                        .icon {
+                            @include square(length(24));
+                            @include flex-center;
+                            overflow: hidden;
+
+                            svg {
+                                path {
+                                    @include transitions;
+                                }
+                            }
+                        }
+
+                        .text {
+                            @include font-18-13-medium;
+                            color: $primaryDark;
+                            @include transitions;
+                            width: calc(100% - 1.5rem);
+
+                            @include breakpoint(phone500) {
+                                @include font-16-12-medium;
+                            }
+                        }
+
+                        @include hover {
+                            .icon {
+                                svg {
+                                    path {
+                                        fill: $textWarning;
+                                    }
+                                }
+                            }
+
+                            .text {
+                                color: $textWarning;
+                            }
+                        }
+                    }
+                }
+
+                .returninfo {
+                    width: 50%;
+                    @include flex-center-vert;
+
+                    @include breakpoint(phone500) {
+                        width: 40%;
+                    }
+
+                    .btn-return {
+                        @include flex-center-vert;
+                        gap: length(8);
+                        @include transparent-button;
+
+                        .icon {
+                            @include square(length(24));
+                            @include flex-center;
+                            overflow: hidden;
+
+                            svg {
+                                path {
+                                    @include transitions;
+                                }
+                            }
+                        }
+
+                        .text {
+                            @include font-18-13-medium;
+                            color: $primaryDark;
+                            @include transitions;
+                            width: calc(100% - 1.5rem);
+
+                            @include breakpoint(phone500) {
+                                @include font-16-12-medium;
+                            }
+                        }
+
+                        @include hover {
+                            .icon {
+                                svg {
+                                    path {
+                                        fill: $textWarning;
+                                    }
+                                }
+                            }
+
+                            .text {
+                                color: $textWarning;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .ordercards {
+            @include flex-column;
+            gap: length(16);
+        }
+    }
+
+    &-footer {
+        @include flex-column;
+        gap: length(14);
+        background: $white;
+        @include radius(6);
+        padding: length(16) length(0);
+
+        .title {
+            @include font-16-13-medium;
+            color: $primaryDark;
+        }
+
+        .ordersummary {
+            @include flex-column;
+            gap: length(2);
+
+            &-info {
+                padding: length(0) length(24);
+                @include flex-center-between;
+
+                .title {
+                    color: $textPrimary;
+                    @include font-24-13-medium;
+
+                    .text {
+                        color: $textSecondary;
+                        @include font-24-13-normal
+                    }
+                }
+
+                .fee {
+                    @include font-16-13-medium;
+                    color: $checkBoxBg;
+                }
+
+                .pricefee {
+                    @include font-16-13-medium;
+                    color: $paginatinonText;
+                }
+            }
+
+            .divider {
+                @include w100;
+                height: length(1);
+                margin: length(2) length(0);
+                background: $grayBg;
+            }
+        }
+    }
+}

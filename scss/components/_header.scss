@@ -1,0 +1,1345 @@
+// SITE HEADER START
+.header {
+    @include border-single(bottom, solid, 1, $header-border);
+    padding: length(16) length(0);
+    background: $white;
+    box-shadow: $box-shadow-4;
+
+    @include breakpoint(tab991) {
+        padding: length(16) length(0) length(0);
+    }
+
+    &-content {
+        position: relative;
+        @include flex-between;
+
+        .mobile-menu {
+            @include flex-end;
+            align-items: center;
+            padding: length(0) length(0) length(0) length(12);
+            @include w100;
+
+            @include breakpoint(tab991) {
+                width: auto;
+            }
+
+            .btn-search {
+                @include flex-center;
+                margin-right: length(14);
+                @include transparent-button;
+
+                @include breakpoint(tab991) {
+                    display: none;
+                }
+            }
+
+            .mobile-search {
+                @include w100;
+                // height: length(88);
+                height: length(104);
+                @include flex-center;
+                border-bottom: 0;
+                box-shadow: $box-shadow-3;
+
+                .offcanvas-body {
+                    @include w100;
+                    position: relative;
+                    @include flex-center;
+
+                    .searchbox {
+                        @include w100;
+                        @include flex-center-vert;
+
+                        .btn-search {
+                            @include square(length(36));
+                            @include flex-center;
+                            margin-right: 0;
+                        }
+
+                        .searchfield {
+                            padding: length(6) length(12);
+                            width: calc(100% - 2.25rem);
+                            @include font-18-13-normal;
+                            color: $secondaryDark;
+
+                            &::placeholder {
+                                color: $textSecondary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mobilelist {
+                @include list-horizontal;
+                gap: length(14);
+
+                &-link {
+                    position: relative;
+                    @include square(length(18));
+
+                    svg {
+                        @include wh100;
+                    }
+
+                    .cart-counter {
+                        position: absolute;
+                        top: length(0);
+                        right: length(-6);
+                        @include square(length(15));
+                        @include circle;
+                        @include flex-center;
+                        @include setBgColor($red, $white);
+                        @include border(solid, 1, $white);
+                        @include font-15-11-medium;
+                        text-align: center;
+                        padding: length(4);
+                    }
+
+                    .wish-active {
+                        position: absolute;
+                        top: length(2);
+                        right: length(-2);
+                        @include square(length(8));
+                        @include circle;
+                        @include flex-center;
+                        @include setBgColor($red, $white);
+                        @include border(solid, 1, $white);
+                        @include font-15-11-medium;
+                    }
+                }
+            }
+
+            .divider {
+                margin: length(0) length(14);
+            }
+
+            .user-dropdown {
+                position: relative;
+
+                @include breakpoint(tab991) {
+                    display: none;
+                }
+
+                .btn-dropdown {
+                    @include transparent-button;
+                }
+
+                @include hover {
+                    .dropdown-content {
+                        display: block;
+                    }
+                }
+
+                .dropdown-content {
+                    position: absolute;
+                    top: calc(100% + 1.25rem);
+                    right: length(-8);
+                    width: length(260);
+                    @include flex-center-column;
+                    background: $white;
+                    box-shadow: $box-shadow-3;
+                    @include radius(6);
+                    display: none;
+
+                    .dropicon {
+                        position: absolute;
+                        top: length(-32);
+                        right: length(-10);
+                    }
+
+                    .without-login {
+                        @include flex-center-column;
+
+                        .head {
+                            @include w100;
+                            padding: length(24) length(24) length(0);
+                            @include flex-center-column;
+                            gap: length(16);
+                        }
+
+                        .title {
+                            @include font-24-14-medium;
+                            color: $black;
+                        }
+
+                        .btn-signin {
+                            padding: length(12);
+                            @include w100;
+                            @include radius(8);
+                            box-shadow: $box-shadow-1;
+                            @include setBgColor($textWarning, $white);
+                            @include transitions;
+
+                            @include hover {
+                                @include setBgColor($gold, $white);
+                            }
+                        }
+
+                        .divider {
+                            @include w100;
+                            height: length(1);
+                            background: $dividerBg;
+                            margin: length(16) length(-24);
+                        }
+
+                        .text {
+                            @include font-24-14-medium;
+                            color: $textSecondary;
+                            text-align: center;
+                        }
+
+                        .btn-signup {
+                            @include font-24-14-medium;
+                            @include setBgColor(transparent, $textWarning);
+                            text-align: center;
+                            @include transitions;
+
+                            @include hover {
+                                @include setBgColor(transparent, $gold);
+                            }
+                        }
+
+                        .foot {
+                            @include w100;
+                            padding: length(0) length(24) length(24);
+                            @include flex-center-column;
+                            gap: length(16);
+                        }
+                    }
+
+                    .login-menu {
+                        .dropdown-link {
+                            @include w100;
+                            @include flex-between;
+                            padding: length(14) length(16);
+                            @include transitions;
+                            @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+
+                            &:last-of-type {
+                                border-bottom: 0;
+                            }
+
+                            .icon-text {
+                                @include flex-center-vert;
+                                gap: length(16);
+
+                                .icon {
+                                    @include square(length(22));
+                                    @include flex-center;
+                                    overflow: hidden;
+
+                                    svg {
+                                        path {
+                                            @include transitions;
+                                        }
+                                    }
+                                }
+
+                                .linktext {
+                                    @include font-20-14-medium;
+                                    color: $textPrimary;
+                                    @include transitions;
+                                }
+                            }
+
+                            .arrowicon {
+                                svg {
+                                    path {
+                                        @include transitions;
+                                    }
+                                }
+                            }
+
+                            @include hover {
+                                .icon-text {
+                                    .icon {
+                                        svg {
+                                            path {
+                                                fill: $textWarning;
+                                            }
+                                        }
+                                    }
+
+                                    .linktext {
+                                        color: $textWarning;
+                                    }
+                                }
+
+                                .arrowicon {
+                                    svg {
+                                        path {
+                                            fill: $textWarning;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .logout-link {
+                            .icon-text {
+                                .linktext {
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn-hamburger {
+                @include square(length(30));
+                margin-left: length(14);
+                @include flex-center;
+                @include transparent-button;
+
+                @include breakpoint(tab991) {
+                    display: none;
+                }
+
+                svg {
+                    @include w100;
+                    margin-top: length(5);
+                }
+            }
+
+            .mobilemenu-sidebar {
+                .mobile-sidebar {
+                    width: length(300);
+
+                    .offcanvas-header {
+                        .btn-close {
+                            padding: 0;
+                            margin: 0;
+                            background: transparent;
+                            opacity: 1;
+                            margin-top: length(-14);
+                            margin-right: length(8);
+
+                            &:focus {
+                                box-shadow: none;
+                                outline: none;
+                            }
+                        }
+                    }
+
+                    .offcanvas-body {
+                        .mobilelist {
+                            position: relative;
+                            @include list-vertical;
+                            gap: 0;
+
+                            .accordion {
+                                @include w100;
+                                // @include border-single(bottom, solid, 1, rgba($black, 0.25));
+
+                                &-item {
+                                    border: 0;
+                                    border-radius: 0;
+                                }
+
+                                &-link {
+                                    @include flex-center-vert;
+                                    @include border-single(bottom, solid, 1, rgba($black, 0.25));
+
+                                    .link {
+                                        width: calc(100% - 2.5rem);
+                                        height: 100%;
+                                        @include font-16-12-medium;
+                                        color: $primaryDark;
+                                    }
+                                }
+
+                                &-button {
+                                    @include square(length(40));
+                                    @include flex-center;
+                                    @include setBgColor(transparent, $primaryDark);
+
+                                    &:not(.collapsed) {
+                                        box-shadow: none;
+                                        outline: none;
+                                        @include setBgColor(transparent, $primaryDark);
+
+                                        &::after {
+                                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                        }
+                                    }
+
+                                    &:focus {
+                                        box-shadow: none;
+                                        outline: none;
+                                    }
+                                }
+
+                                &-collapse {
+                                    border-radius: 0;
+                                }
+
+                                &-body {
+                                    @include w100;
+                                    padding: 0;
+
+                                    .accordion {
+                                        @include w100;
+                                        border: 0;
+
+                                        &-item {
+                                            &:last-of-type {
+                                                border-bottom: 0;
+                                            }
+                                        }
+
+                                        &-link {
+                                            @include border-single(bottom, solid, 1, rgba($black, 0.25));
+
+                                            .link {
+                                                @include font-16-12-medium;
+                                                color: $primaryDark;
+                                            }
+                                        }
+
+                                        &-button {
+                                            @include square(length(40));
+                                            @include flex-center;
+                                            @include setBgColor(transparent, $primaryDark);
+
+                                            &:not(.collapsed) {
+                                                box-shadow: none;
+                                                outline: none;
+                                                @include setBgColor(transparent, $primaryDark);
+
+                                                &::after {
+                                                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                                }
+                                            }
+
+                                            &:focus {
+                                                box-shadow: none;
+                                                outline: none;
+                                            }
+                                        }
+
+                                        &-collapse {
+                                            border-radius: 0;
+
+                                            &.show {
+                                                @include border-single(bottom, solid, 1, rgba($black, 0.25));
+                                            }
+                                        }
+
+                                        &-body {
+                                            .subcategorylist {
+                                                .mobilesubmenu {
+                                                    @include w100;
+
+                                                    .menubox {
+                                                        @include flex-column;
+                                                        gap: length(8);
+                                                        padding: length(10) length(12);
+
+                                                        .subtitle {
+                                                            @include font-18-13-medium;
+                                                            color: $textSecondary;
+                                                        }
+
+                                                        .sublist {
+                                                            @include list-vertical;
+                                                            gap: length(8);
+
+                                                            &-link {
+                                                                @include font-16-12-normal;
+                                                                color: $primaryDark;
+                                                                letter-spacing: length(0.2);
+                                                                @include transitions;
+
+                                                                @include hover {
+                                                                    color: $textWarning;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &-item {
+                                @include flex-column;
+                                position: relative;
+                                @include w100;
+
+                                @include hover {
+                                    .mobiledropdown {
+                                        @include flex-column;
+                                    }
+                                }
+                            }
+
+                            &-link {
+                                @include flex-between;
+                                @include border-single(bottom, solid, 1, rgba($black, 0.25));
+                                @include font-16-12-medium;
+                                color: $primary;
+                                align-items: center;
+                                @include w100;
+                                padding: length(20) length(0);
+
+                                .text {
+                                    color: inherit;
+                                    font: inherit;
+                                    width: calc(100% - 1rem);
+                                }
+
+                                .icon {
+                                    @include square(length(16));
+                                    @include flex-center;
+
+                                    svg {
+                                        @include transitions;
+                                    }
+                                }
+
+                                @include hover {
+                                    color: $textWarning;
+
+                                    .text {
+                                        color: $textWarning;
+                                    }
+
+                                    .icon {
+                                        svg {
+                                            @include transform(rotate(180deg));
+
+                                            path {
+                                                fill: $textWarning;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .mobiledropdown {
+                                @include w100;
+
+                                .mobile-link {
+                                    @include flex-between;
+                                    align-items: center;
+                                    @include w100;
+                                    padding: length(12) length(0);
+                                    @include border-single(bottom, solid, 1, rgba($black, 0.25));
+
+                                    .text {
+                                        @include font-16-12-medium;
+                                        color: $primaryDark;
+                                    }
+
+                                    .icon {
+                                        @include square(length(16));
+                                        @include flex-center;
+
+                                        svg {
+                                            @include transitions;
+                                        }
+                                    }
+
+                                    @include hover {
+                                        .text {
+                                            font-weight: bold;
+                                            color: $textWarning;
+                                        }
+
+                                        .icon {
+                                            svg {
+                                                @include transform(rotate(90deg));
+
+                                                path {
+                                                    fill: $textWarning;
+                                                }
+                                            }
+                                        }
+
+                                        ~.mobilesubmenu {
+                                            .menubox {
+                                                @include flex-column;
+                                            }
+                                        }
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mobilesearch-suggestions {
+            position: absolute;
+            top: 200%;
+            left: 0;
+            right: 0;
+            @include w100;
+            background: $white;
+            box-shadow: $box-shadow-3;
+            display: none;
+
+            &.show {
+                display: block;
+            }
+
+            .indicator {
+                position: absolute;
+                top: length(-32);
+                left: 0;
+                @include square(length(48));
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+            }
+
+            .suggestion-header {
+                @include flex-between;
+                @include border-single(bottom, solid, 1, $grayBg);
+                padding: length(24) length(32) length(12);
+
+                .text {
+                    @include font-24-14-medium;
+                    color: $textPrimary;
+                }
+
+                .link {
+                    @include font-14-11-medium;
+                    color: $textWarning;
+                    margin-top: length(6);
+                }
+            }
+
+            .suggestion-list {
+                padding: length(16) length(32) length(18);
+                @include flex-column;
+                gap: length(6);
+
+                &-item {
+                    @include flex-between;
+
+                    .suggestion-text {
+                        @include font-24-13-normal;
+                        color: $primaryDark;
+                    }
+
+                    .btn-explore {
+                        svg {
+                            path {
+                                @include transitions;
+                            }
+                        }
+
+                        @include hover {
+                            svg {
+                                path {
+                                    fill: $gold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .desktopsearch {
+            min-width: length(600);
+            margin: 0 auto;
+            position: relative;
+            display: none;
+            background: $product-border;
+
+            @include breakpoint(tab991) {
+                @include flex-center-vert;
+            }
+
+            .search-clear {
+                @include flex-center-vert;
+                @include w100;
+
+                .searchbox {
+                    @include flex-center-vert;
+                    width: calc(100% - 3.75rem);
+
+                    .btn-search {
+                        @include square(length(40));
+                        @include flex-center;
+                        background: transparent;
+                    }
+
+                    .inputfield {
+                        width: calc(100% - 2.5rem);
+                        height: length(40);
+                        @include setBgColor(transparent, $primaryDark);
+                        @include font-18-13-normal;
+
+                        &::placeholder {
+                            color: $textPrimary;
+                        }
+                    }
+                }
+
+                .btn-clear {
+                    width: length(60);
+                    @include transparent-button;
+                    color: $textPrimary;
+                    @include font-14-11-medium;
+                }
+            }
+
+            .desktopsearch-suggestions {
+                position: absolute;
+                top: 200%;
+                left: 0;
+                right: 0;
+                @include w100;
+                background: $white;
+                box-shadow: $box-shadow-3;
+                display: none;
+
+                &.show {
+                    display: block;
+                }
+
+                .indicator {
+                    position: absolute;
+                    top: length(-32);
+                    left: 0;
+                    @include square(length(48));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+
+                .suggestion-header {
+                    @include flex-between;
+                    @include border-single(bottom, solid, 1, $grayBg);
+                    padding: length(24) length(32) length(12);
+
+                    .text {
+                        @include font-24-14-medium;
+                        color: $textPrimary;
+                    }
+
+                    .link {
+                        @include font-14-11-medium;
+                        color: $textWarning;
+                        margin-top: length(6);
+                    }
+                }
+
+                .suggestion-list {
+                    padding: length(16) length(0) length(18);
+                    @include flex-column;
+                    gap: length(6);
+
+                    &-item {
+                        @include flex-between;
+                        cursor: pointer;
+                        padding: length(4) length(32);
+                        @include transitions;
+
+                        @include hover {
+                            background: rgba($menu-border, 0.2);
+                        }
+
+                        .suggestion-text {
+                            @include font-24-13-normal;
+                            color: $primaryDark;
+                        }
+
+                        .btn-explore {
+                            svg {
+                                path {
+                                    @include transitions;
+                                }
+                            }
+
+                            @include hover {
+                                svg {
+                                    path {
+                                        fill: $gold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-bottom {
+        padding: length(16) length(0) length(0);
+        @include border-single(top, solid, 1, $header-border);
+        margin-top: length(16);
+        display: none;
+
+        @include breakpoint(tab991) {
+            @include flex-center;
+        }
+
+        &-menu {
+            @include flex-center-between;
+
+            // MAIN MENU
+            .desktoplist {
+                @include list-horizontal;
+                gap: length(32);
+
+                &-link {
+                    @include flex-center-vert;
+                    gap: length(8);
+                    @include transitions;
+                    @include font-14-11-medium;
+                    color: $primary;
+                    @include transitions;
+                    padding-bottom: length(16);
+
+                    .text {
+                        color: inherit;
+                        font: inherit;
+                        @include transitions;
+                    }
+
+                    .icon {
+                        svg {
+                            path {
+                                @include transitions;
+                            }
+                        }
+                    }
+
+                    @include hover {
+                        color: $textWarning;
+
+                        .icon {
+                            svg {
+                                path {
+                                    fill: $textWarning;
+                                }
+                            }
+                        }
+
+                        .text {
+                            color: $textWarning;
+                        }
+                    }
+                }
+
+                .desktopdropdownitem {
+                    position: relative;
+
+                    @include hover {
+                        .category-dropdown {
+                            display: block;
+                        }
+                    }
+
+                    .category-dropdown {
+                        background: $white;
+                        box-shadow: $box-shadow-3;
+                        min-width: length(630);
+                        @include double-radius(bottom, left, 6, bottom, right, 6);
+                        position: absolute;
+                        top: 100%;
+                        display: none;
+
+                        @extend %animation;
+                        @extend %slideUpIn;
+                    }
+
+                    .nav {
+                        width: length(160);
+                        @include border-single(right, solid, 1, rgba($black, 0.25));
+
+                        &-link {
+                            @include flex-center-between;
+                            gap: length(8);
+                            @include font-14-11-medium;
+                            color: $primary;
+                            padding: length(12) length(12) length(12) length(32);
+                            background: transparent;
+                            @include border-single(left, solid, 2, transparent);
+                            @include transitions;
+
+                            .icon {
+                                svg {
+                                    path {
+                                        @include transitions;
+                                    }
+                                }
+                            }
+
+                            @include hover {
+                                color: $textWarning;
+
+                                .icon {
+                                    svg {
+                                        path {
+                                            fill: $textWarning;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:hover:not(.active) {
+                                border-left-color: $textWarning;
+                                background: $activeBg;
+
+                                .text {
+                                    color: $textWarning;
+                                }
+
+                                .icon {
+                                    svg {
+                                        path {
+                                            fill: $textWarning;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .text {
+                                @include font-14-11-medium;
+                                color: $primary;
+                            }
+
+                            &.active {
+                                border-left-color: $textWarning;
+                                background: $activeBg;
+
+                                .text {
+                                    color: $textWarning;
+                                }
+
+                                .icon {
+                                    svg {
+                                        path {
+                                            fill: $textWarning;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .tab-content {
+                        width: calc(100% - 10rem);
+
+                        .subdropdowncontent {
+                            @include w100;
+
+                            .dropdown-header {
+                                @include w100;
+                                @include flex-center-between;
+                                padding: length(12) length(24);
+                                @include border-single(bottom, solid, 1, rgba($black, 0.25));
+
+                                .title {
+                                    @include font-24-14-medium;
+                                    color: $primaryDark;
+                                }
+
+                                .link {
+                                    @include flex-center-vert;
+                                    gap: length(4);
+
+                                    .text {
+                                        @include font-14-11-medium;
+                                        color: $textWarning;
+                                        margin-top: length(3);
+                                    }
+
+                                    .icon {
+                                        svg {
+                                            path {
+                                                fill: $textWarning;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .dropdown-body {
+                                @include flex-center-between;
+                                @include w100;
+
+                                .leftcontent,
+                                .rightcontent {
+                                    @include flex-column;
+                                    gap: length(18);
+                                    padding: length(12) length(24);
+
+                                    .title {
+                                        @include font-18-13-medium;
+                                        color: $textSecondary;
+                                    }
+
+                                    .list {
+                                        @include list-vertical;
+                                        gap: length(4);
+
+                                        &-link {
+                                            @include font-16-12-medium;
+                                            color: $primaryDark;
+                                            letter-spacing: length(0.2);
+                                            @include transitions;
+
+                                            @include hover {
+                                                color: $gold;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // USER DROPDOWN
+            .signdropdown {
+                position: relative;
+
+                @include hover {
+                    .dropdowncontent {
+                        display: block;
+                    }
+                }
+
+                .dropdown-link {
+                    @include flex-center-vert;
+                    gap: length(8);
+                    @include font-14-11-medium;
+                    color: $primary;
+                    @include transitions;
+
+                    .icon {
+                        svg {
+                            path {
+                                @include transitions;
+                            }
+                        }
+                    }
+
+                    @include hover {
+                        color: $textWarning;
+
+                        .icon {
+                            svg {
+                                path {
+                                    fill: $textWarning;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .dropdowncontent {
+                    position: absolute;
+                    top: calc(100% + 1.5rem);
+                    top: 100%;
+                    right: length(0);
+                    width: length(260);
+                    background: transparent;
+                    padding-top: length(24);
+                    display: none;
+
+                    @extend %animation;
+                    @extend %slideUpIn;
+
+                    .contents {
+                        @include flex-center-column;
+                        background: $white;
+                        box-shadow: $box-shadow-3;
+                        @include radius(6);
+                        position: relative;
+
+                        .dropicon {
+                            position: absolute;
+                            top: length(-30);
+                            right: length(-10);
+                            z-index: -1;
+                        }
+
+                        // USER DROPDOWN
+                        .withoutlogin {
+                            .head {
+                                @include w100;
+                                padding: length(24) length(24) length(0);
+                                @include flex-center-column;
+                                gap: length(16);
+
+                                .title {
+                                    @include font-24-14-medium;
+                                    color: $black;
+                                }
+
+                                .btn-signin {
+                                    padding: length(12);
+                                    @include w100;
+                                    @include radius(8);
+                                    box-shadow: $box-shadow-1;
+                                    @include setBgColor($textWarning, $white);
+                                    @include transitions;
+
+                                    @include hover {
+                                        @include setBgColor($gold, $white);
+                                    }
+                                }
+                            }
+
+                            .divider {
+                                @include w100;
+                                height: length(1);
+                                background: $dividerBg;
+                                margin: length(16) length(0);
+                            }
+
+                            .foot {
+                                @include flex-center-column;
+                                padding-bottom: length(24);
+
+                                .text {
+                                    @include font-24-14-medium;
+                                    color: $textSecondary;
+                                    text-align: center;
+                                }
+
+                                .btn-signup {
+                                    @include font-24-14-medium;
+                                    @include setBgColor(transparent, $textWarning);
+                                    text-align: center;
+                                    @include transitions;
+
+                                    @include hover {
+                                        @include setBgColor(transparent, $gold);
+                                    }
+                                }
+                            }
+                        }
+
+                        .withlogin {
+                            .loginmenu {
+                                .dropdown-link {
+                                    @include w100;
+                                    @include flex-between;
+                                    padding: length(14) length(16);
+                                    @include transitions;
+                                    @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
+
+                                    &:last-of-type {
+                                        border-bottom: 0;
+                                    }
+
+                                    .icon-text {
+                                        @include flex-center-vert;
+                                        gap: length(16);
+
+                                        .icon {
+                                            @include square(length(22));
+                                            @include flex-center;
+                                            overflow: hidden;
+
+                                            svg {
+                                                path {
+                                                    @include transitions;
+                                                }
+                                            }
+                                        }
+
+                                        .linktext {
+                                            @include font-20-14-medium;
+                                            color: $textPrimary;
+                                            @include transitions;
+                                        }
+                                    }
+
+                                    .arrowicon {
+                                        svg {
+                                            path {
+                                                @include transitions;
+                                            }
+                                        }
+                                    }
+
+                                    @include hover {
+                                        .icon-text {
+                                            .icon {
+                                                svg {
+                                                    path {
+                                                        fill: $textWarning;
+                                                    }
+                                                }
+                                            }
+
+                                            .linktext {
+                                                color: $textWarning;
+                                            }
+                                        }
+
+                                        .arrowicon {
+                                            svg {
+                                                path {
+                                                    fill: $textWarning;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .logout-link {
+                                    .icon-text {
+                                        .linktext {
+                                            color: $red;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// CHECKOUT HEADER START
+.checkout-header {
+    margin-bottom: length(24);
+    background: $white;
+    box-shadow: $box-shadow-8;
+    padding-top: length(44);
+
+    &-content {
+        @include flex-center-between;
+        margin-bottom: length(8);
+
+        .headerinfo {
+            @include flex-center-vert;
+
+            &-title {
+                @include font-15-11-medium;
+                color: $primaryDark;
+
+                @include breakpoint(mobile400) {
+                    display: none;
+                }
+            }
+
+            .divider {
+                margin: length(0) length(16) length(0) length(27);
+
+                @include breakpoint(mobile400) {
+                    display: none;
+                }
+            }
+
+            .helplink {
+                display: flex;
+                gap: length(8);
+
+                .icon {
+                    @include square(length(18));
+                    @include flex-center-vert;
+
+                    svg {
+                        path {
+                            @include transitions;
+                        }
+                    }
+                }
+
+                .details {
+                    width: calc(100% - 1.625rem);
+                    @include flex-column;
+
+                    .detailtitle {
+                        @include font-16-10-normal;
+                        color: $textPrimary;
+                        @include transitions;
+                    }
+
+                    .detailtext {
+                        @include font-16-12-medium;
+                        color: $primaryDark;
+                        @include transitions;
+                    }
+                }
+
+                @include hover {
+                    svg {
+                        path {
+                            fill: $secondary;
+                        }
+                    }
+
+                    .details {
+                        .detailtitle {
+                            color: $secondary;
+                        }
+
+                        .detailtext {
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        padding: length(8) length(0);
+        @include border-single(top, solid, 1, $header-border);
+
+        .backlink {
+            @include flex-center-vert;
+            gap: length(8);
+
+            .icon {
+                @include square(length(18));
+                @include flex-center-vert;
+
+                svg {
+                    path {
+                        @include transitions;
+                    }
+                }
+            }
+
+            .text {
+                width: calc(100% - 1.625rem);
+                @include font-24-14-normal;
+                color: $primaryDark;
+                letter-spacing: length(-1);
+                @include transitions;
+            }
+
+            @include hover {
+                svg {
+                    path {
+                        fill: $secondary;
+                    }
+                }
+
+                .text {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
