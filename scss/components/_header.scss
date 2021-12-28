@@ -136,14 +136,18 @@
                 }
 
                 &-link {
+                    @include flex-center;
                     @include transparent-button;
                     @include square(length(30));
                     padding: length(4);
                     overflow: hidden;
+                }
+
+                .hamburgermenu {
                     display: none;
 
                     @include breakpoint(phone768) {
-                        @include flex-center;
+                        display: block;
                     }
                 }
             }
