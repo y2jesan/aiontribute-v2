@@ -1,0 +1,13 @@
+.btn-create {
+    @include setBgColor($primary, $buttonHover);
+    padding: length(12) length(32);
+    @include font-24-14-medium;
+    text-align: center;
+    @include radius(48);
+    @include transitions;
+
+    @include hover {
+        @include setBgColor($buttonHover, $primary);
+        @include transform(scale(0.95));
+    }
+}

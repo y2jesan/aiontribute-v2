@@ -1,5 +1,60 @@
 // ABOUT US START
 
+.about-section {
+    min-height: calc(100vh - 4.25rem);
+    @include flex-center;
+    overflow: hidden;
+    padding: length(48) length(0);
 
+    .aboutvideobox {
+        @include flex-center;
+        overflow: hidden;
+
+        @include breakpoint(phone768) {
+            margin-bottom: legth(24);
+        }
+
+        video {
+            @include wh100;
+            object-fit: cover;
+        }
+    }
+
+    .aboutcontent {
+        @include flex-center-vert;
+        height: 100%;
+
+        @include breakpoint(laptop1200) {
+            padding-left: length(24);
+        }
+
+        .aboutinfo {
+            @include flex-column;
+            gap: length(20);
+
+            @include breakpoint(phone768) {
+                text-align: center;
+            }
+
+            .about-title {
+                color: $textPrimary;
+                font-weight: 500;
+            }
+
+            .contents {
+                margin-bottom: length(12);
+
+                .about-text {
+                    @include font-24-16-medium;
+                    color: $textPrimary;
+
+                    @include breakpoint(phone768) {
+                        @include font-24-14-medium;
+                    }
+                }
+            }
+        }
+    }
+}
 
 //  ABOUT US END
