@@ -100,7 +100,7 @@ video {
     border: 0;
 
     &::selection {
-        @include setBgColor($primary, $white);
+        @include setBgColor($primary, $buttonHover);
     }
 }
 

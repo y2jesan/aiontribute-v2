@@ -54,12 +54,211 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 }
 
 /*------------------------------------*\
-		26/10 FONT SIZES
+		10/10 FONT SIZES
 \*------------------------------------*/
-@mixin font-26-10-normal {
-	@include font(family($poppins),
+@mixin font-10-10-normal {
+	@include font(family($montserrat),
 		style('normal'),
 		size('s10'),
 		weight('normal'),
-		line-height(26, size('s10')));
+		line-height(10, size('s10')));
+}
+
+@mixin font-10-10-medium {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s10'),
+		weight('medium'),
+		line-height(10, size('s10')));
+}
+
+@mixin font-10-10-semibold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s10'),
+		weight('semibold'),
+		line-height(10, size('s10')));
+}
+
+@mixin font-10-10-bold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s10'),
+		weight('bold'),
+		line-height(10, size('s10')));
+}
+
+/*------------------------------------*\
+		12/12 FONT SIZES
+\*------------------------------------*/
+@mixin font-12-12-normal {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s12'),
+		weight('normal'),
+		line-height(12, size('s12')));
+}
+
+@mixin font-12-12-medium {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s12'),
+		weight('medium'),
+		line-height(12, size('s12')));
+}
+
+@mixin font-12-12-semibold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s12'),
+		weight('semibold'),
+		line-height(12, size('s12')));
+}
+
+@mixin font-12-12-bold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s12'),
+		weight('bold'),
+		line-height(12, size('s12')));
+}
+
+/*------------------------------------*\
+		24/12 FONT SIZES
+\*------------------------------------*/
+@mixin font-24-12-normal {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s12'),
+		weight('normal'),
+		line-height(24, size('s12')));
+}
+
+@mixin font-24-12-medium {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s12'),
+		weight('medium'),
+		line-height(24, size('s12')));
+}
+
+@mixin font-24-12-semibold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s12'),
+		weight('semibold'),
+		line-height(24, size('s12')));
+}
+
+@mixin font-24-12-bold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s12'),
+		weight('bold'),
+		line-height(24, size('s12')));
+}
+
+/*------------------------------------*\
+		14/14 FONT SIZES
+\*------------------------------------*/
+@mixin font-14-14-normal {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s14'),
+		weight('normal'),
+		line-height(14, size('s14')));
+}
+
+@mixin font-14-14-medium {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s14'),
+		weight('medium'),
+		line-height(14, size('s14')));
+}
+
+@mixin font-14-14-semibold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s14'),
+		weight('semibold'),
+		line-height(14, size('s14')));
+}
+
+@mixin font-14-14-bold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s14'),
+		weight('bold'),
+		line-height(14, size('s14')));
+}
+
+/*------------------------------------*\
+		24/14 FONT SIZES
+\*------------------------------------*/
+@mixin font-24-14-normal {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s14'),
+		weight('normal'),
+		line-height(24, size('s14')));
+}
+
+@mixin font-24-14-medium {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s14'),
+		weight('medium'),
+		line-height(24, size('s14')));
+}
+
+@mixin font-24-14-semibold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s14'),
+		weight('semibold'),
+		line-height(24, size('s14')));
+}
+
+@mixin font-24-14-bold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s14'),
+		weight('bold'),
+		line-height(24, size('s14')));
+}
+
+/*------------------------------------*\
+		24/16 FONT SIZES
+\*------------------------------------*/
+@mixin font-24-16-normal {
+	@include font(family($montserrat),
+		style('normal'),
+		size('base'),
+		weight('normal'),
+		line-height(24, size('base')));
+}
+
+@mixin font-24-16-medium {
+	@include font(family($montserrat),
+		style('normal'),
+		size('base'),
+		weight('medium'),
+		line-height(24, size('base')));
+}
+
+@mixin font-24-16-semibold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('base'),
+		weight('semibold'),
+		line-height(24, size('base')));
+}
+
+@mixin font-24-16-bold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('base'),
+		weight('bold'),
+		line-height(24, size('base')));
 }
