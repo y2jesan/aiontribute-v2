@@ -2,8 +2,9 @@
 
 .header {
     background: $white;
-    box-shadow: $box-shadow-6;
+    box-shadow: $box-shadow-10;
     padding: length(10) length(0);
+    @include border-single(bottom, solid, 1, $header-border);
 
     &-content {
         @include flex-center-between;
