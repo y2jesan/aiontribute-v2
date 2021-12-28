@@ -204,3 +204,35 @@ input[type="date"]:valid::before {
 select {
     cursor: pointer;
 }
+
+/**
+** HEADING STYLES START
+**/
+
+h1 {
+    @include heading-1;
+}
+
+h2 {
+    @include heading-2;
+}
+
+h3 {
+    @include heading-3;
+}
+
+h4 {
+    @include heading-4;
+}
+
+h5 {
+    @include heading-5;
+}
+
+h6 {
+    @include heading-6;
+}
+
+/**
+** HEADING STYLES END
+**/

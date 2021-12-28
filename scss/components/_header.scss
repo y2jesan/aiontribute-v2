@@ -79,14 +79,20 @@
                 }
 
                 .cartlink {
-                    @include square(length(28));
+                    @include square(length(32));
                     @include flex-center;
                     position: relative;
 
                     .icon {
-                        @include wh100;
+                        @include square(length(32));
                         @include flex-center;
                         overflow: hidden;
+
+                        svg {
+                            path {
+                                @include transitions;
+                            }
+                        }
                     }
 
                     .cartcount {
@@ -100,6 +106,31 @@
                         @include circle;
                         @include setBgColor($textDark, $buttonHover);
                         @include font-10-10-medium;
+                        @include transitions;
+                    }
+
+                    &:hover:not(.active) {
+                        svg {
+                            path {
+                                stroke: $textActiveLink;
+                            }
+                        }
+
+                        .cartcount {
+                            background: $textActiveLink;
+                        }
+                    }
+
+                    &.active {
+                        svg {
+                            path {
+                                stroke: $textActiveLink;
+                            }
+                        }
+
+                        .cartcount {
+                            background: $textActiveLink;
+                        }
                     }
                 }
 
@@ -119,6 +150,8 @@
     }
 
     .mobilemenu {
+        // width: length(320);
+
         .mobilelist {
             @include list-vertical;
             gap: length(8);

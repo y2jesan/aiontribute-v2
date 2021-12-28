@@ -271,6 +271,12 @@
     // FONT STYLE MIXINS
 \*------------------------------------*/
 /*------------------------------------*\
+		DISPLAY FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
+		HEADINGS FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		10/10 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
@@ -287,6 +293,9 @@
 \*------------------------------------*/
 /*------------------------------------*\
 		24/16 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
+		24/15 FONT SIZES ((FuturaPT))
 \*------------------------------------*/
 * {
   margin: 0;
@@ -674,6 +683,60 @@ select {
   cursor: pointer;
 }
 
+/**
+** HEADING STYLES START
+**/
+h1 {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+h2 {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+h3 {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+h4 {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+h5 {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+h6 {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+/**
+** HEADING STYLES END
+**/
 /*------------------------------------*\
     breakpoint vars
 \*------------------------------------*/
@@ -831,8 +894,8 @@ select {
 }
 
 .header-content .headermenu .iconlist .cartlink {
-  height: 1.75rem;
-  width: 1.75rem;
+  height: 2rem;
+  width: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -846,8 +909,8 @@ select {
 }
 
 .header-content .headermenu .iconlist .cartlink .icon {
-  width: 100%;
-  height: 100%;
+  height: 2rem;
+  width: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -858,6 +921,11 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+}
+
+.header-content .headermenu .iconlist .cartlink .icon svg path {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
 
 .header-content .headermenu .iconlist .cartlink .cartcount {
@@ -885,6 +953,24 @@ select {
   font-size: 0.625rem;
   font-weight: 500;
   line-height: 1;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.header-content .headermenu .iconlist .cartlink:hover:not(.active) svg path {
+  stroke: #BABABA;
+}
+
+.header-content .headermenu .iconlist .cartlink:hover:not(.active) .cartcount {
+  background: #BABABA;
+}
+
+.header-content .headermenu .iconlist .cartlink.active svg path {
+  stroke: #BABABA;
+}
+
+.header-content .headermenu .iconlist .cartlink.active .cartcount {
+  background: #BABABA;
 }
 
 .header-content .headermenu .iconlist-link {
@@ -953,7 +1039,7 @@ select {
 
 .footer {
   background: #f7f7f7;
-  padding: 1.5rem;
+  padding: 1.5rem 0rem;
 }
 
 .footer-content {
@@ -970,6 +1056,14 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .footer-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .footer-content .footerinfo {
@@ -986,6 +1080,8 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
 }
 
 .footer-content .footerinfo .footerlogo {
@@ -995,7 +1091,58 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.625rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.footer-content .footerinfo .footerlogo-icon {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.footer-content .footerinfo .footerlogo-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer-content .footerinfo .footerlogo-text {
+  color: #212529;
+  font-weight: 500;
+}
+
+.footer-content .footerinfo .footlink {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #707070;
+  text-align: center;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.footer-content .footerinfo .footlink:not([disabled]):hover {
+  color: #B32122;
 }
 
 .footer-content .socialsinfo {
@@ -1012,6 +1159,12 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-content .socialsinfo-title {
+  font-weight: 500;
+  color: #212529;
 }
 
 .footer-content .socialsinfo .sociallist {
@@ -1024,6 +1177,79 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-content .socialsinfo .sociallist-link {
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.footer-content .socialsinfo .sociallist-link svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-content .footerguideline .guidelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-content .footerguideline .guidelist-link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #212529;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.footer-content .footerguideline .guidelist-link:not([disabled]):hover {
+  color: #B32122;
+}
+
+.footer .divider {
+  margin: 1.5rem 0rem;
+  background: #E4EAF1;
+  width: 100%;
+  height: 0.0625rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .footer .footer-copyright {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.footer .footer-copyright .textcopyright {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #707070;
+  text-align: center;
 }
 
 .offcanvas-end {
@@ -1036,6 +1262,7 @@ select {
 
 .offcanvas {
   background: #f8f8f8;
+  width: 20rem;
 }
 
 .offcanvas-header {

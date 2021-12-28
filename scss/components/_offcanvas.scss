@@ -8,6 +8,7 @@
 
 .offcanvas {
     background: $sidebarBg;
+    width: length(320);
 
     &-header {
         @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
