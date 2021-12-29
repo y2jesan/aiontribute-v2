@@ -119,7 +119,7 @@
                             padding: length(4);
 
                             svg {
-                                @include square(length(20));
+                                @include square(length(18));
 
                                 path {
                                     fill: $primary;
@@ -179,7 +179,7 @@
                             padding: length(4);
 
                             svg {
-                                @include square(length(20));
+                                @include square(length(18));
 
                                 path {
                                     fill: $primary;
