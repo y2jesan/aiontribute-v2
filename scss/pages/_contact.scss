@@ -19,10 +19,12 @@
             font-weight: 500;
             color: $textPrimary;
             text-align: center;
+            display: none;
 
             @include breakpoint(phone768) {
                 @include heading-2;
                 font-weight: 500;
+                display: block;
             }
 
             @include breakpoint(phone359) {
@@ -31,23 +33,178 @@
             }
         }
 
-        // CONTACT INFO START
-        .contactinfo {
-            .text {
-                @include font-24-16-normal;
-                color: $textPrimary;
-                line-height: 2;
-                text-align: justify;
+        // CONTACT DETAILS START
+        .contactdetails {
+            @include flex-column;
+            gap: length(32);
 
-                @include breakpoint(phone768) {
-                    @include font-24-14-normal;
-                    line-height: 2;
-                    text-align: center;
+            // CONTACT INFO START
+            .contactinfo {
+                @include flex-column;
+                gap: length(32);
+
+                .heading-group {
+                    .contactinfo-title {
+                        font-weight: 500;
+                        color: $textPrimary;
+                        text-align: center;
+                        display: block;
+
+                        @include breakpoint(phone768) {
+                            @include heading-2;
+                            font-weight: 500;
+                            display: none;
+                        }
+
+                        @include breakpoint(phone359) {
+                            @include heading-3;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .contactinfo-subtitle {
+                        font-weight: 500;
+                        color: $textPrimary;
+                        text-align: center;
+                        display: none;
+
+                        @include breakpoint(phone768) {
+                            @include heading-2;
+                            font-weight: 500;
+                            display: block;
+                        }
+
+                        @include breakpoint(phone359) {
+                            @include heading-3;
+                            font-weight: 500;
+                        }
+                    }
                 }
 
-                @include breakpoint(phone359) {
-                    @include font-12-12-normal;
+                .text {
+                    @include font-24-16-normal;
+                    color: $textPrimary;
                     line-height: 2;
+                    text-align: justify;
+
+                    @include breakpoint(phone768) {
+                        @include font-24-14-normal;
+                        line-height: 2;
+                        text-align: center;
+                    }
+
+                    @include breakpoint(phone359) {
+                        @include font-12-12-normal;
+                        line-height: 2;
+                    }
+                }
+            }
+
+            // CONNECT INFO START
+            .connect {
+                @include flex-column;
+                gap: length(12);
+
+                &-info {
+
+                    &-link {
+                        @include flex-center-vert;
+                        gap: length(12);
+
+                        .icon {
+                            background: $buttonHover;
+                            @include square(length(40));
+                            @include circle;
+                            @include flex-center;
+                            overflow: hidden;
+                            padding: length(4);
+
+                            svg {
+                                path {
+                                    &:last-of-type {
+                                        fill: $primary;
+                                        @include transitions;
+                                    }
+                                }
+                            }
+                        }
+
+                        .text {
+                            width: calc(100% - 3.25rem);
+                            @include font-24-16-normal;
+                            color: $textPrimary;
+                            line-height: 2;
+                            @include transitions;
+
+                            @include breakpoint(phone768) {
+                                @include font-24-14-normal;
+                                line-height: 2;
+                            }
+
+                            @include breakpoint(phone359) {
+                                @include font-12-12-normal;
+                                line-height: 2;
+                            }
+                        }
+
+                        @include hover {
+                            .icon {
+                                background: $primary;
+
+                                svg {
+                                    path {
+                                        &:last-of-type {
+                                            fill: $buttonHover;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .text {
+                                color: $primary;
+                            }
+                        }
+                    }
+
+                    .infobox {
+                        @include flex-center-vert;
+                        gap: length(12);
+                        align-items: flex-start;
+
+                        .icon {
+                            background: $buttonHover;
+                            @include square(length(40));
+                            @include circle;
+                            @include flex-center;
+                            overflow: hidden;
+                            padding: length(4);
+
+                            svg {
+                                path {
+                                    &:last-of-type {
+                                        fill: $primary;
+                                    }
+                                }
+                            }
+                        }
+
+                        .text {
+                            width: calc(100% - 3.25rem);
+                            @include font-24-16-normal;
+                            color: $textPrimary;
+                            line-height: 2;
+
+                            @include breakpoint(phone768) {
+                                @include font-24-14-normal;
+                                line-height: 2;
+                            }
+
+                            @include breakpoint(phone359) {
+                                @include font-12-12-normal;
+                                line-height: 2;
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -1957,6 +1957,7 @@ h6 {
   font-weight: 500;
   color: #212529;
   text-align: center;
+  display: none;
 }
 
 @media screen and (max-width: 48rem) {
@@ -1967,6 +1968,7 @@ h6 {
     font-weight: 600;
     line-height: 1.36;
     font-weight: 500;
+    display: block;
   }
 }
 
@@ -1981,7 +1983,89 @@ h6 {
   }
 }
 
-.contact-content .contactinfo .text {
+.contact-content .contactdetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-content .contactdetails .contactinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-content .contactdetails .contactinfo .heading-group .contactinfo-title {
+  font-weight: 500;
+  color: #212529;
+  text-align: center;
+  display: block;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactdetails .contactinfo .heading-group .contactinfo-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .contact-content .contactdetails .contactinfo .heading-group .contactinfo-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.contact-content .contactdetails .contactinfo .heading-group .contactinfo-subtitle {
+  font-weight: 500;
+  color: #212529;
+  text-align: center;
+  display: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactdetails .contactinfo .heading-group .contactinfo-subtitle {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .contact-content .contactdetails .contactinfo .heading-group .contactinfo-subtitle {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.contact-content .contactdetails .contactinfo .text {
   font-family: "Montserrat";
   font-style: normal;
   font-size: 1rem;
@@ -1993,7 +2077,7 @@ h6 {
 }
 
 @media screen and (max-width: 48rem) {
-  .contact-content .contactinfo .text {
+  .contact-content .contactdetails .contactinfo .text {
     font-family: "Montserrat";
     font-style: normal;
     font-size: 0.875rem;
@@ -2005,7 +2089,167 @@ h6 {
 }
 
 @media screen and (max-width: 22.4375rem) {
-  .contact-content .contactinfo .text {
+  .contact-content .contactdetails .contactinfo .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 2;
+  }
+}
+
+.contact-content .contactdetails .connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-content .contactdetails .connect-info-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-content .contactdetails .connect-info-link .icon {
+  background: #e0dbdb;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 0.25rem;
+}
+
+.contact-content .contactdetails .connect-info-link .icon svg path:last-of-type {
+  fill: #B32122;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.contact-content .contactdetails .connect-info-link .text {
+  width: calc(100% - 3.25rem);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #212529;
+  line-height: 2;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactdetails .connect-info-link .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .contact-content .contactdetails .connect-info-link .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 2;
+  }
+}
+
+.contact-content .contactdetails .connect-info-link:not([disabled]):hover .icon {
+  background: #B32122;
+}
+
+.contact-content .contactdetails .connect-info-link:not([disabled]):hover .icon svg path:last-of-type {
+  fill: #e0dbdb;
+}
+
+.contact-content .contactdetails .connect-info-link:not([disabled]):hover .text {
+  color: #B32122;
+}
+
+.contact-content .contactdetails .connect-info .infobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact-content .contactdetails .connect-info .infobox .icon {
+  background: #e0dbdb;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 0.25rem;
+}
+
+.contact-content .contactdetails .connect-info .infobox .icon svg path:last-of-type {
+  fill: #B32122;
+}
+
+.contact-content .contactdetails .connect-info .infobox .text {
+  width: calc(100% - 3.25rem);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #212529;
+  line-height: 2;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactdetails .connect-info .infobox .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .contact-content .contactdetails .connect-info .infobox .text {
     font-family: "Montserrat";
     font-style: normal;
     font-size: 0.75rem;
