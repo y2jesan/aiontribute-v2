@@ -112,3 +112,116 @@
 }
 
 // PRIVACY-POLICY END
+
+// RETURN-POLICY START
+
+.returnpolicy {
+    min-height: calc(100vh - 4.25rem);
+    padding: length(48) length(0);
+
+    &-content {
+        max-width: 60%;
+        @include flex-column;
+        gap: length(20);
+
+        @include breakpoint(phone768) {
+            max-width: 100%;
+        }
+
+        .returndetails {
+            @include flex-column;
+            gap: length(20);
+
+            @include breakpoint(phone768) {
+                gap: length(10);
+            }
+
+            .text {
+                @include font-24-16-normal;
+                line-height: 2;
+                color: $textPrimary;
+                text-align: justify;
+
+                @include breakpoint(phone768) {
+                    @include font-24-14-normal;
+                    line-height: 2;
+                    text-align: left;
+                }
+            }
+
+            strong {
+                @include font-24-16-medium;
+                line-height: 2;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include font-24-14-medium;
+                    line-height: 2;
+                }
+            }
+        }
+
+        .return-article {
+            @include flex-column;
+            gap: length(20);
+
+            @include breakpoint(phone768) {
+                gap: length(10);
+            }
+
+            .returnhead {
+                .returntitle {
+                    @include heading-3;
+                    font-weight: 500;
+
+                    @include breakpoint(phone768) {
+                        @include heading-4;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .returninfo {
+                @include flex-column;
+                gap: length(20);
+
+                @include breakpoint(phone768) {
+                    gap: length(10);
+                }
+
+                .text {
+                    @include font-24-16-normal;
+                    line-height: 2;
+                    color: $textPrimary;
+                    text-align: justify;
+
+                    @include breakpoint(phone768) {
+                        @include font-24-14-normal;
+                        line-height: 2;
+                        text-align: left;
+                    }
+
+                    .link {
+                        @include font-24-16-normal;
+                        line-height: 2;
+                        color: $black;
+                        text-decoration: underline;
+                        @include transitions;
+
+                        @include hover {
+                            text-decoration: none;
+                            color: $primary;
+                        }
+
+                        @include breakpoint(phone768) {
+                            @include font-24-14-normal;
+                            line-height: 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// RETURN-POLICY END

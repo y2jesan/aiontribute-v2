@@ -2395,3 +2395,193 @@ h6 {
     text-align: left;
   }
 }
+
+.returnpolicy {
+  min-height: calc(100vh - 4.25rem);
+  padding: 3rem 0rem;
+}
+
+.returnpolicy-content {
+  max-width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .returnpolicy-content {
+    max-width: 100%;
+  }
+}
+
+.returnpolicy-content .returndetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .returnpolicy-content .returndetails {
+    gap: 0.625rem;
+  }
+}
+
+.returnpolicy-content .returndetails .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  line-height: 2;
+  color: #212529;
+  text-align: justify;
+}
+
+@media screen and (max-width: 48rem) {
+  .returnpolicy-content .returndetails .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    line-height: 2;
+    text-align: left;
+  }
+}
+
+.returnpolicy-content .returndetails strong {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  line-height: 2;
+  color: #212529;
+}
+
+@media screen and (max-width: 48rem) {
+  .returnpolicy-content .returndetails strong {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+    line-height: 2;
+  }
+}
+
+.returnpolicy-content .return-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .returnpolicy-content .return-article {
+    gap: 0.625rem;
+  }
+}
+
+.returnpolicy-content .return-article .returnhead .returntitle {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.36;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 48rem) {
+  .returnpolicy-content .return-article .returnhead .returntitle {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.returnpolicy-content .return-article .returninfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .returnpolicy-content .return-article .returninfo {
+    gap: 0.625rem;
+  }
+}
+
+.returnpolicy-content .return-article .returninfo .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  line-height: 2;
+  color: #212529;
+  text-align: justify;
+}
+
+@media screen and (max-width: 48rem) {
+  .returnpolicy-content .return-article .returninfo .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    line-height: 2;
+    text-align: left;
+  }
+}
+
+.returnpolicy-content .return-article .returninfo .text .link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  line-height: 2;
+  color: black;
+  text-decoration: underline;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.returnpolicy-content .return-article .returninfo .text .link:not([disabled]):hover {
+  text-decoration: none;
+  color: #B32122;
+}
+
+@media screen and (max-width: 48rem) {
+  .returnpolicy-content .return-article .returninfo .text .link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    line-height: 2;
+  }
+}
