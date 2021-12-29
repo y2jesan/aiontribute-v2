@@ -123,7 +123,6 @@
 
                                 path {
                                     fill: $primary;
-                                    @include transitions;
                                 }
                             }
                         }
@@ -147,18 +146,6 @@
                         }
 
                         @include hover {
-                            .icon {
-                                background: $primary;
-
-                                svg {
-                                    path {
-                                        &:last-of-type {
-                                            fill: $buttonHover;
-                                        }
-                                    }
-                                }
-                            }
-
                             .text {
                                 color: $primary;
                             }
@@ -282,28 +269,6 @@
 
                 .submitbox {
                     @include flex-end;
-
-                    .btn-submit {
-                        padding: length(12) length(48);
-                        @include radius(48);
-                        @include font-24-16-medium;
-                        @include setBgColor($primary, $buttonHover);
-                        @include transitions;
-
-                        @include hover {
-                            @include setBgColor($buttonHover, $primary);
-                            @include transform(scale(0.95));
-                        }
-
-                        @include breakpoint(phone768) {
-                            @include font-24-14-medium;
-                            text-align: center;
-                        }
-
-                        @include breakpoint(phone359) {
-                            @include font-12-12-medium;
-                        }
-                    }
                 }
             }
         }

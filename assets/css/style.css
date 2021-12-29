@@ -1319,17 +1319,27 @@ h6 {
 .btn-create {
   background: #B32122;
   color: #e0dbdb;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 2.25rem;
   font-family: "Montserrat";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.71429;
+  line-height: 1.5;
   text-align: center;
   border-radius: 3rem;
   border-radius: 3rem;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 48rem) {
+  .btn-create {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+  }
 }
 
 @media screen and (max-width: 22.4375rem) {
@@ -1347,6 +1357,49 @@ h6 {
   color: #B32122;
   -webkit-transform: scale(0.95);
   transform: scale(0.95);
+}
+
+.btn-submit {
+  padding: 0.75rem 3rem;
+  border-radius: 3rem;
+  border-radius: 3rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  background: #e0dbdb;
+  color: #B32122;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  text-align: center;
+}
+
+.btn-submit:not([disabled]):hover {
+  background: #B32122;
+  color: #e0dbdb;
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 48rem) {
+  .btn-submit {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .btn-submit {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+  }
 }
 
 .offcanvas-end {
@@ -2182,8 +2235,6 @@ h6 {
 
 .contact-content .contactdetails .connect-info-link .icon svg path {
   fill: #B32122;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
 }
 
 .contact-content .contactdetails .connect-info-link .text {
@@ -2219,14 +2270,6 @@ h6 {
     line-height: 1;
     line-height: 2;
   }
-}
-
-.contact-content .contactdetails .connect-info-link:not([disabled]):hover .icon {
-  background: #B32122;
-}
-
-.contact-content .contactdetails .connect-info-link:not([disabled]):hover .icon svg path:last-of-type {
-  fill: #e0dbdb;
 }
 
 .contact-content .contactdetails .connect-info-link:not([disabled]):hover .text {
@@ -2424,49 +2467,6 @@ h6 {
           justify-content: flex-end;
 }
 
-.contact-content .contactcontent .contactform .submitbox .btn-submit {
-  padding: 0.75rem 3rem;
-  border-radius: 3rem;
-  border-radius: 3rem;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
-  background: #B32122;
-  color: #e0dbdb;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.contact-content .contactcontent .contactform .submitbox .btn-submit:not([disabled]):hover {
-  background: #e0dbdb;
-  color: #B32122;
-  -webkit-transform: scale(0.95);
-  transform: scale(0.95);
-}
-
-@media screen and (max-width: 48rem) {
-  .contact-content .contactcontent .contactform .submitbox .btn-submit {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: 500;
-    line-height: 1.71429;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 22.4375rem) {
-  .contact-content .contactcontent .contactform .submitbox .btn-submit {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1;
-  }
-}
-
 @media screen and (max-width: 48rem) {
   .contact-content .orderdown {
     -webkit-box-ordinal-group: 2;
@@ -2512,7 +2512,7 @@ h6 {
 }
 
 .emptycart-content .emptybox {
-  max-width: 25rem;
+  max-width: 30rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2526,11 +2526,12 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.25rem;
 }
 
 .emptycart-content .emptybox .emptythumbnail {
-  max-width: 18.75rem;
+  height: 8.75rem;
+  width: 8.75rem;
+  padding: 1.25rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2554,6 +2555,7 @@ h6 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-left: -1.875rem;
 }
 
 .emptycart-content .emptybox .emptytitle {
@@ -2565,6 +2567,7 @@ h6 {
   font-weight: 500;
   text-align: center;
   color: #B32122;
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 48rem) {
@@ -2587,6 +2590,190 @@ h6 {
     line-height: 1.36;
     font-weight: 500;
   }
+}
+
+.cart {
+  min-height: calc(100vh - 4.25rem);
+  overflow: hidden;
+  padding: 3rem 0rem;
+}
+
+.cart-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.25rem 0rem;
+}
+
+.cart-content .cart-title {
+  font-weight: 500;
+  color: #212529;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart-content .cart-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .cart-content .cart-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.cart-table .tablehead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.625rem 1.25rem;
+  background: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.03) 0rem 0.625rem 1.875rem 0rem;
+          box-shadow: rgba(0, 0, 0, 0.03) 0rem 0.625rem 1.875rem 0rem;
+  border-bottom: solid 0.0625rem #F0F0F0;
+}
+
+.cart-table .tablehead .tablecol {
+  width: 33%;
+}
+
+.cart-table .tablehead .tablecol .tabletitle {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  font-weight: 500;
+  color: #212529;
+  text-align: center;
+}
+
+.cart-table .tablebody .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-table .tablebody .tablerow .tablecol {
+  width: 33%;
+}
+
+.cart-table .tablebody .tablerow .tablecol .productinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.cart-table .tablebody .tablerow .tablecol .productinfo .product-thumbnail {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart-table .tablebody .tablerow .tablecol .productinfo .product-thumbnail .frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cart-table .tablebody .tablerow .tablecol .productinfo .product-thumbnail .productimage {
+  width: 4.25rem;
+  height: 3.8125rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0.375rem;
+  top: 0.3125rem;
+  -webkit-transform: skew(-7deg);
+          transform: skew(-7deg);
+  overflow: hidden;
+  z-index: 100;
+  z-index: 100;
+}
+
+.cart-table .tablebody .tablerow .tablecol .productinfo .product-thumbnail .productimage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cart-table .tablebody .tablerow .tablecol .productinfo .productname {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: black;
+}
+
+.cart-table .tablebody .tablerow .tablecol .priceinfo {
+  position: relative;
+  text-align: center;
+}
+
+.cart-table .tablebody .tablerow .tablecol .priceinfo .price {
+  margin-left: -1rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.cart-table .tablebody .tablerow .tablecol .priceinfo .btn-delete {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
 }
 
 .privacy-policy {

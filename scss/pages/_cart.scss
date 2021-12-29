@@ -10,12 +10,12 @@
         @include flex-center;
 
         .emptybox {
-            max-width: length(400);
+            max-width: length(480);
             @include flex-center-column;
-            gap: length(20);
 
             .emptythumbnail {
-                max-width: length(300);
+                @include square(length(140));
+                padding: length(20);
                 overflow: hidden;
                 @include flex-center;
 
@@ -26,6 +26,7 @@
                 img {
                     @include wh100;
                     object-fit: cover;
+                    margin-left: length(-30);
                 }
             }
 
@@ -34,6 +35,7 @@
                 font-weight: 500;
                 text-align: center;
                 color: $primary;
+                margin-bottom: length(24);
 
                 @include breakpoint(phone768) {
                     @include heading-3;
@@ -54,6 +56,135 @@
 
 // CART START
 
+.cart {
+    min-height: calc(100vh - 4.25rem);
+    overflow: hidden;
+    padding: length(48) length(0);
 
+    &-content {
+        @include flex-column;
+        gap: length(24);
+        padding: length(20) length(0);
+        
+        .cart-title {
+            font-weight: 500;
+            color: $textPrimary;
+
+            @include breakpoint(phone768) {
+                @include heading-2;
+                font-weight: 500;
+            }
+
+            @include breakpoint(phone359) {
+                @include heading-3;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &-table {
+        .tablehead {
+            @include flex-center-between;
+            padding: length(10) length(20);
+            background: $white;
+            box-shadow: $box-shadow-10;
+            @include border-single(bottom, solid, 1, $header-border);
+
+            .tablecol {
+                width: 33%;
+
+                .tabletitle {
+                    @include heading-4;
+                    font-weight: 500;
+                    color: $textPrimary;
+                    text-align: center;
+                }
+            }
+        }
+
+        .tablebody {
+            .tablerow {
+                @include flex-center-between;
+
+                .tablecol {
+                    width: 33%;
+
+                    .productinfo {
+                        @include flex-center-vert;
+                        gap: length(20);
+
+                        .product-thumbnail {
+                            position: relative;
+                            @include square(length(80));
+                            // @include circle;
+                            overflow: hidden;
+                            @include flex-center;
+
+                            .frame {
+                                @include wh100;
+                                position: relative;
+                            }
+
+                            .productimage {
+                                // @include square(length(60));
+                                width: length(68);
+                                height: length(61);
+                                @include circle;
+                                @include flex-center;
+                                position: absolute;
+                                left: length(6);
+                                top: length(5);
+                                transform: skew(-7deg);
+                                overflow: hidden;
+                                z-index: 100;
+                                z-index: 100;
+
+                                img {
+                                     @include wh100;
+                                    @include circle;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+
+                        .productname {
+                            @include font-24-16-semibold;
+                            color: $black;
+                        }
+                    }
+
+                    .quantitybox {
+                        .btn-decrement,
+                        .btn-increment {}
+
+                        .btn-decrement {}
+
+                        .btn-increment {}
+
+                        .counterfield {}
+                    }
+
+                    .priceinfo {
+                        position: relative;
+                        text-align: center;
+
+                        .price {
+                            margin-left: length(-16);
+                            text-align: center;
+                            display: inline-block;
+                        }
+
+                        .btn-delete {
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 // CART END
