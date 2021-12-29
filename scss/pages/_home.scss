@@ -12,7 +12,7 @@
 
         // HOME BANNER START
         .homebanner {
-            @include flex-center-between;
+            @include flex-center-around;
 
             @include breakpoint(tablet991) {
                 justify-content: center;

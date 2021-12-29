@@ -57,6 +57,11 @@
     align-items: center;
 }
 
+@mixin flex-center-around {
+    @include flex-center-vert;
+    justify-content: space-around;
+}
+
 // RESET LIST
 @mixin reset-list {
     margin: 0;
