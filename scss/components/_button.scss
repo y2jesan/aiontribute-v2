@@ -6,6 +6,10 @@
     @include radius(48);
     @include transitions;
 
+    @include breakpoint(phone359) {
+        @include font-12-12-medium;
+    }
+
     @include hover {
         @include setBgColor($buttonHover, $primary);
         @include transform(scale(0.95));

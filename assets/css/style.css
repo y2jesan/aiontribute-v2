@@ -1278,6 +1278,16 @@ h6 {
   transition: all 350ms ease-in-out;
 }
 
+@media screen and (max-width: 22.4375rem) {
+  .footer-content .footerguideline .guidelist-link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
 .footer-content .footerguideline .guidelist-link:not([disabled]):hover {
   color: #B32122;
 }
@@ -1320,6 +1330,16 @@ h6 {
   border-radius: 3rem;
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .btn-create {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+  }
 }
 
 .btn-create:not([disabled]):hover {
@@ -1720,12 +1740,24 @@ h6 {
   }
 }
 
+@media screen and (max-width: 22.4375rem) {
+  .home-section-content .homedetails .hometitle {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
 .home-section-content .homedetails .hometext {
   font-family: "Montserrat";
   font-style: normal;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+  line-height: 2;
   color: black;
   margin-bottom: 0.875rem;
 }
@@ -1737,6 +1769,18 @@ h6 {
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.71429;
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .home-section-content .homedetails .hometext {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 2;
   }
 }
 
@@ -1819,6 +1863,28 @@ h6 {
   font-weight: 500;
 }
 
+@media screen and (max-width: 48rem) {
+  .about-section .aboutcontent .aboutinfo .about-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .about-section .aboutcontent .aboutinfo .about-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
 .about-section .aboutcontent .aboutinfo .contents {
   margin-bottom: 0.75rem;
 }
@@ -1841,6 +1907,17 @@ h6 {
     font-size: 0.875rem;
     font-weight: normal;
     line-height: 1.71429;
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .about-section .aboutcontent .aboutinfo .contents .about-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
     line-height: 2;
   }
 }
@@ -1894,6 +1971,17 @@ h6 {
   }
 }
 
+@media screen and (max-width: 22.4375rem) {
+  .contact-content .contact-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
 .contact-content .contactinfo .text {
   font-family: "Montserrat";
   font-style: normal;
@@ -1914,6 +2002,17 @@ h6 {
     line-height: 1.71429;
     line-height: 2;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .contact-content .contactinfo .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 2;
   }
 }
 
@@ -2069,6 +2168,16 @@ h6 {
     font-weight: 500;
     line-height: 1.71429;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .contact-content .contactcontent .contactform .submitbox .btn-submit {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
   }
 }
 

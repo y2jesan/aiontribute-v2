@@ -88,6 +88,10 @@
                     // text-decoration: underline;
                     @include transitions;
 
+                    @include breakpoint(phone359) {
+                        @include font-12-12-medium;
+                    }
+
                     @include hover {
                         color: $primary;
                     }

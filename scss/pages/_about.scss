@@ -39,6 +39,16 @@
             .about-title {
                 color: $textPrimary;
                 font-weight: 500;
+
+                @include breakpoint(phone768) {
+                    @include heading-2;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
             }
 
             .contents {
@@ -52,6 +62,11 @@
 
                     @include breakpoint(phone768) {
                         @include font-24-14-normal;
+                        line-height: 2;
+                    }
+
+                    @include breakpoint(phone359) {
+                        @include font-12-12-normal;
                         line-height: 2;
                     }
                 }

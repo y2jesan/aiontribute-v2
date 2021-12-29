@@ -62,15 +62,27 @@
                     @include heading-1;
                     font-weight: 500;
                 }
+
+                @include breakpoint(phone359) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
             }
 
             .hometext {
                 @include font-24-16-medium;
+                line-height: 2;
                 color: $black;
                 margin-bottom: length(14);
 
                 @include breakpoint(phone768) {
                     @include font-24-14-medium;
+                    line-height: 2;
+                }
+
+                @include breakpoint(phone359) {
+                    @include font-12-12-medium;
+                    line-height: 2;
                 }
             }
         }
