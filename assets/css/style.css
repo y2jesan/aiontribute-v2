@@ -1957,6 +1957,7 @@ h6 {
 .contact-content .contact-title {
   font-weight: 500;
   color: #212529;
+  text-align: center;
 }
 
 @media screen and (max-width: 48rem) {
@@ -1967,7 +1968,6 @@ h6 {
     font-weight: 600;
     line-height: 1.36;
     font-weight: 500;
-    text-align: center;
   }
 }
 
