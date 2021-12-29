@@ -359,3 +359,38 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 		weight('bold'),
 		line-height(24, size('s15')));
 }
+
+/*------------------------------------*\
+		24/16 FONT SIZES ((FuturaPT))
+\*------------------------------------*/
+@mixin font-24-16-normal-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('base'),
+		weight('normal'),
+		line-height(24, size('base')));
+}
+
+@mixin font-24-16-medium-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('base'),
+		weight('medium'),
+		line-height(24, size('base')));
+}
+
+@mixin font-24-16-semibold-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('base'),
+		weight('semibold'),
+		line-height(24, size('base')));
+}
+
+@mixin font-24-16-bold-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('base'),
+		weight('bold'),
+		line-height(24, size('base')));
+}

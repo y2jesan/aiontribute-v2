@@ -17,6 +17,29 @@
     <header class="header sticky-top">
         <div class="container">
             <div class="header-content">
+                <!-- HAMBURGER ICON START -->
+                <div class="hamburgermenu">
+                    <button class="btn-hamburgermenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 30 23">
+                            <g id="hamburgericon" data-name="Dropdown Icon" transform="translate(-752 -3088)">
+                                <g id="bar1" data-name="Rectangle 11" transform="translate(752 3088)" fill="#fff" stroke="#707070" stroke-width="1">
+                                    <rect width="30" height="5" stroke="none"></rect>
+                                    <rect x="0.5" y="0.5" width="29" height="4" fill="none"></rect>
+                                </g>
+                                <g id="bar2" data-name="Rectangle 12" transform="translate(752 3097)" fill="#fff" stroke="#707070" stroke-width="1">
+                                    <rect width="30" height="5" stroke="none"></rect>
+                                    <rect x="0.5" y="0.5" width="29" height="4" fill="none"></rect>
+                                </g>
+                                <g id="bar3" data-name="Rectangle 13" transform="translate(752 3106)" fill="#fff" stroke="#707070" stroke-width="1">
+                                    <rect width="30" height="5" stroke="none"></rect>
+                                    <rect x="0.5" y="0.5" width="29" height="4" fill="none"></rect>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <!-- HAMBURGER ICON END -->
+
                 <!-- SITE LOGO START -->
                 <div class="logo">
                     <a href="index.html" class="brandlink">
@@ -62,27 +85,6 @@
 
                                 <span class="cartcount">0</span>
                             </a>
-                        </li>
-
-                        <li class="iconlist-item hamburgermenu">
-                            <button class="iconlist-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 30 23">
-                                    <g id="hamburgericon" data-name="Dropdown Icon" transform="translate(-752 -3088)">
-                                        <g id="bar1" data-name="Rectangle 11" transform="translate(752 3088)" fill="#fff" stroke="#707070" stroke-width="1">
-                                            <rect width="30" height="5" stroke="none"></rect>
-                                            <rect x="0.5" y="0.5" width="29" height="4" fill="none"></rect>
-                                        </g>
-                                        <g id="bar2" data-name="Rectangle 12" transform="translate(752 3097)" fill="#fff" stroke="#707070" stroke-width="1">
-                                            <rect width="30" height="5" stroke="none"></rect>
-                                            <rect x="0.5" y="0.5" width="29" height="4" fill="none"></rect>
-                                        </g>
-                                        <g id="bar3" data-name="Rectangle 13" transform="translate(752 3106)" fill="#fff" stroke="#707070" stroke-width="1">
-                                            <rect width="30" height="5" stroke="none"></rect>
-                                            <rect x="0.5" y="0.5" width="29" height="4" fill="none"></rect>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </button>
                         </li>
                     </ul>
                     <!-- ICON LIST END -->
@@ -132,6 +134,78 @@
     </header>
     <!-- HEADER SECTION END -->
 
+    <!-- ABOUT SECTION START -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h1 class="contact-title">Get In Touch</h1>
+                
+                <div class="row">
+                    <div class="col-md-5 col-12 orderdown">
+                        <div class="contactinfo">
+                            <p class="text">
+                                We are thoroughly engaged with each and every one of our customers, please let us know if there is something you would like, but do not see in our collection.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 col-12 orderup">
+                        <div class="contactcontent">
+                            <!-- CONTACT FORM START -->
+                            <form class="contactform">
+                                <!-- NAME FIELD START -->
+                                <div class="inputbox error">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="floatingName" placeholder="Name">
+                                        <label class="form-label" for="floatingName">Name</label>
+                                    </div>
+                                    <p class="error-message">Name field is required</p>
+                                </div>
+                                <!-- NAME FIELD END -->
+
+                                <!-- EMAIL ADDRESS FIELD START -->
+                                <div class="inputbox">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="floatingEmail" placeholder="Email Address">
+                                        <label class="form-label" for="floatingEmail">Email Address</label>
+                                    </div>
+                                    <p class="error-message">Email address is required</p>
+                                </div>
+                                <!-- EMAIL ADDRESS FIELD END -->
+
+                                <!-- PHONE NUMBER FIELD START -->
+                                <div class="inputbox">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="floatingPhoneNumber" placeholder="Phone Number">
+                                        <label class="form-label" for="floatingPhoneNumber">Phone Number</label>
+                                    </div>
+                                    <p class="error-message">Phone number is required</p>
+                                </div>
+                                <!-- PHONE NUMBER FIELD END -->
+
+                                <!-- MESSAGE FIELD START -->
+                                <div class="inputbox">
+                                    <div class="form-floating">
+                                        <textarea class="form-control messagebox" placeholder="Enter your message" id="floatingMessage"></textarea>
+                                        <label class="form-label" for="floatingMessage">Enter your message</label>
+                                    </div>
+                                </div>
+                                <!-- MESSAGE FIELD END -->
+
+                                <!-- SUBMIT INFO START -->
+                                <div class="submitbox">
+                                    <button class="btn-submit" type="button">Send</button>
+                                </div>
+                                <!-- SUBMIT INFO END -->
+                            </form>
+                            <!-- CONTACT FORM END -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT SECTION END -->
 
     <!-- FOOTER SECTION START -->
     <footer class="footer">

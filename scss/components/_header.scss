@@ -9,7 +9,28 @@
     &-content {
         @include flex-center-between;
 
+        .hamburgermenu {
+            display: none;
+
+            @include breakpoint(phone768) {
+                display: block;
+            }
+
+            .btn-hamburgermenu {
+                @include flex-center;
+                @include transparent-button;
+                @include square(length(30));
+                padding: length(4);
+                overflow: hidden;
+            }
+        }
+
         .logo {
+            @include breakpoint(phone768) {
+                @include flex-center;
+                width: calc(100% - 3.875rem);
+            }
+
             .brandlink {
                 @include flex-center-vert;
                 gap: length(10);
@@ -19,16 +40,20 @@
                     @include flex-center;
                     overflow: hidden;
 
+                    @include breakpoint(phone768) {
+                        @include square(length(36));
+                    }
+
                     img {
                         @include wh100;
                     }
                 }
 
                 &-text {
-                    @include font-24-16-normal;
+                    @include font-24-16-medium-futuraPT;
                     color: $black;
                     text-transform: uppercase;
-                    text-shadow: $text-shadow;
+                    // text-shadow: $text-shadow;
                 }
             }
         }
@@ -72,11 +97,11 @@
             }
 
             .iconlist {
+                @include flex-center;
                 @include list-horizontal;
-                gap: length(40);
 
-                @include breakpoint(tablet991) {
-                    gap: length(20);
+                @include breakpoint(phone768) {
+                    padding-right: length(10);
                 }
 
                 .cartlink {
@@ -84,10 +109,18 @@
                     @include flex-center;
                     position: relative;
 
+                    @include breakpoint(phone768) {
+                        @include square(length(28));
+                    }
+
                     .icon {
                         @include square(length(32));
                         @include flex-center;
                         overflow: hidden;
+
+                        @include breakpoint(phone768) {
+                            @include square(length(28));
+                        }
 
                         svg {
                             path {
@@ -108,6 +141,10 @@
                         @include setBgColor($textDark, $buttonHover);
                         @include font-10-10-medium;
                         @include transitions;
+
+                        @include breakpoint(phone768) {
+                            top: length(-8);
+                        }
                     }
 
                     &:hover:not(.active) {
@@ -132,22 +169,6 @@
                         .cartcount {
                             background: $textActiveLink;
                         }
-                    }
-                }
-
-                &-link {
-                    @include flex-center;
-                    @include transparent-button;
-                    @include square(length(30));
-                    padding: length(4);
-                    overflow: hidden;
-                }
-
-                .hamburgermenu {
-                    display: none;
-
-                    @include breakpoint(phone768) {
-                        display: block;
                     }
                 }
             }

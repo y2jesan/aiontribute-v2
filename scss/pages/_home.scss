@@ -49,6 +49,10 @@
             gap: length(14);
             text-align: center;
 
+            @include breakpoint(phone768) {
+                gap: length(20);
+            }
+
             .hometitle {
                 @include display-1;
                 color: $black;

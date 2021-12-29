@@ -297,6 +297,9 @@
 /*------------------------------------*\
 		24/15 FONT SIZES ((FuturaPT))
 \*------------------------------------*/
+/*------------------------------------*\
+		24/16 FONT SIZES ((FuturaPT))
+\*------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -770,6 +773,49 @@ h6 {
           align-items: center;
 }
 
+.header-content .hamburgermenu {
+  display: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .header-content .hamburgermenu {
+    display: block;
+  }
+}
+
+.header-content .hamburgermenu .btn-hamburgermenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
+  border: none;
+  height: 1.875rem;
+  width: 1.875rem;
+  padding: 0.25rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 48rem) {
+  .header-content .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: calc(100% - 3.875rem);
+  }
+}
+
 .header-content .logo .brandlink {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -795,20 +841,26 @@ h6 {
   overflow: hidden;
 }
 
+@media screen and (max-width: 48rem) {
+  .header-content .logo .brandlink-icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+}
+
 .header-content .logo .brandlink-icon img {
   width: 100%;
   height: 100%;
 }
 
 .header-content .logo .brandlink-text {
-  font-family: "Montserrat";
+  font-family: "FuturaPT";
   font-style: normal;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 500;
   line-height: 1.5;
   color: black;
   text-transform: uppercase;
-  text-shadow: 0rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.66);
 }
 
 .header-content .headermenu {
@@ -877,21 +929,25 @@ h6 {
 }
 
 .header-content .headermenu .iconlist {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
-@media screen and (max-width: 61.9375rem) {
+@media screen and (max-width: 48rem) {
   .header-content .headermenu .iconlist {
-    gap: 1.25rem;
+    padding-right: 0.625rem;
   }
 }
 
@@ -910,6 +966,13 @@ h6 {
   position: relative;
 }
 
+@media screen and (max-width: 48rem) {
+  .header-content .headermenu .iconlist .cartlink {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+}
+
 .header-content .headermenu .iconlist .cartlink .icon {
   height: 2rem;
   width: 2rem;
@@ -923,6 +986,13 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+}
+
+@media screen and (max-width: 48rem) {
+  .header-content .headermenu .iconlist .cartlink .icon {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
 }
 
 .header-content .headermenu .iconlist .cartlink .icon svg path {
@@ -959,6 +1029,12 @@ h6 {
   transition: all 350ms ease-in-out;
 }
 
+@media screen and (max-width: 48rem) {
+  .header-content .headermenu .iconlist .cartlink .cartcount {
+    top: -0.5rem;
+  }
+}
+
 .header-content .headermenu .iconlist .cartlink:hover:not(.active) svg path {
   stroke: #BABABA;
 }
@@ -973,34 +1049,6 @@ h6 {
 
 .header-content .headermenu .iconlist .cartlink.active .cartcount {
   background: #BABABA;
-}
-
-.header-content .headermenu .iconlist-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: transparent;
-  border: none;
-  height: 1.875rem;
-  width: 1.875rem;
-  padding: 0.25rem;
-  overflow: hidden;
-}
-
-.header-content .headermenu .iconlist .hamburgermenu {
-  display: none;
-}
-
-@media screen and (max-width: 48rem) {
-  .header-content .headermenu .iconlist .hamburgermenu {
-    display: block;
-  }
 }
 
 .header .mobilemenu .mobilelist {
@@ -1645,6 +1693,12 @@ h6 {
   text-align: center;
 }
 
+@media screen and (max-width: 48rem) {
+  .home-section-content .homedetails {
+    gap: 1.25rem;
+  }
+}
+
 .home-section-content .homedetails .hometitle {
   font-family: "FuturaPT";
   font-style: normal;
@@ -1785,5 +1839,228 @@ h6 {
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.71429;
+  }
+}
+
+.contact {
+  min-height: calc(100vh - 4.25rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 3rem 0rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact {
+    padding: 1.5rem 0rem;
+  }
+}
+
+.contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-content .contact-title {
+  font-weight: 500;
+  color: #212529;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contact-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.contact-content .contactinfo .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactinfo .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    text-align: center;
+  }
+}
+
+.contact-content .contactcontent .contactform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactcontent .contactform {
+    gap: 1.25rem;
+  }
+}
+
+.contact-content .contactcontent .contactform .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-content .contactcontent .contactform .inputbox .form-floating .form-control {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #212529;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactcontent .contactform .inputbox .form-floating .form-control {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.contact-content .contactcontent .contactform .inputbox .form-floating .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #72809D;
+}
+
+.contact-content .contactcontent .contactform .inputbox .form-floating .form-label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #72809D;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactcontent .contactform .inputbox .form-floating .form-label {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.contact-content .contactcontent .contactform .inputbox .form-floating .messagebox {
+  min-height: 8.75rem;
+}
+
+.contact-content .contactcontent .contactform .inputbox .error-message {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #B32122;
+  display: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactcontent .contactform .inputbox .error-message {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
+.contact-content .contactcontent .contactform .inputbox.error .form-floating .form-control {
+  border-color: #B32122;
+}
+
+.contact-content .contactcontent .contactform .inputbox.error .error-message {
+  display: block;
+}
+
+.contact-content .contactcontent .contactform .submitbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact-content .contactcontent .contactform .submitbox .btn-submit {
+  padding: 0.75rem 3rem;
+  border-radius: 3rem;
+  border-radius: 3rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .contactcontent .contactform .submitbox .btn-submit {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .orderdown {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content .orderup {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-bottom: 2rem;
   }
 }
