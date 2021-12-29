@@ -1,6 +1,6 @@
-// EMPTY CART START
+// 404 ERROR START
 
-.emptycart {
+.errorscreen {
     min-height: calc(100vh - 4.25rem);
     @include flex-center;
     overflow: hidden;
@@ -9,39 +9,34 @@
     &-content {
         @include flex-center;
 
-        .emptybox {
+        .errorbox {
             max-width: length(400);
             @include flex-center-column;
             gap: length(20);
 
-            .emptythumbnail {
+            .errorthumbnail {
                 max-width: length(300);
                 overflow: hidden;
                 @include flex-center;
 
-                @include breakpoint(phone768) {
-                    max-width: length(200);
-                }
-
                 img {
                     @include wh100;
-                    object-fit: cover;
                 }
             }
 
-            .emptytitle {
-                @include heading-2;
+            .errortext {
+                @include heading-1;
                 font-weight: 500;
                 text-align: center;
                 color: $primary;
 
                 @include breakpoint(phone768) {
-                    @include heading-3;
+                    @include heading-2;
                     font-weight: 500;
                 }
 
                 @include breakpoint(phone359) {
-                    @include heading-4;
+                    @include heading-3;
                     font-weight: 500;
                 }
             }
@@ -49,11 +44,4 @@
     }
 }
 
-//  EMPTY CART END
-
-
-// CART START
-
-
-
-// CART END
+// 404 ERROR END

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aion Tribute | Cart</title>
+    <title>Aion Tribute | 404 Not Found</title>
     <!-- AION FAFICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- BOOTSTRAP CSS -->
@@ -13,23 +13,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- PRE-LOADER START -->
-    <div class="preloader d-none" id="preloader">
-        <div class="preloader-orbit-loading">
-            <div class="cssload-inner cssload-one"></div>
-            <div class="cssload-inner cssload-two"></div>
-            <div class="cssload-inner cssload-three"></div>
-        </div>
-    </div>
-    <!-- PRE-LOADER END -->
-
     <!-- HEADER SECTION START -->
     <header class="header sticky-top">
         <div class="container">
             <div class="header-content">
                 <!-- HAMBURGER ICON START -->
                 <div class="hamburgermenu">
-                    <button class="btn-hamburgermenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                    <button class="btn-hamburgermenu d-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 30 23">
                             <g id="hamburgericon" data-name="Dropdown Icon" transform="translate(-752 -3088)">
                                 <g id="bar1" data-name="Rectangle 11" transform="translate(752 3088)" fill="#fff" stroke="#707070" stroke-width="1">
@@ -47,9 +37,15 @@
                             </g>
                         </svg>
                     </button>
+
+                    <button class="btn-hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
                 </div>
                 <!-- HAMBURGER ICON END -->
-                
+
                 <!-- SITE LOGO START -->
                 <div class="logo">
                     <a href="index.html" class="brandlink">
@@ -84,7 +80,7 @@
                     <!-- ICON LIST START -->
                     <ul class="iconlist">
                         <li class="iconlist-item">
-                            <a href="cart.html" class="cartlink active">
+                            <a href="cart.html" class="cartlink">
                                 <span class="icon">
                                     <svg id="shopping-cart" data-name="shopping-cart" xmlns="http://www.w3.org/2000/svg" width="36" height="34.5" viewBox="0 0 36 34.5">
                                         <path id="shoppingcart-1" data-name="Shoppingcart-1" d="M15,31.5A1.5,1.5,0,1,1,13.5,30,1.5,1.5,0,0,1,15,31.5Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -144,22 +140,20 @@
     </header>
     <!-- HEADER SECTION END -->
 
-    <!-- EMPTY CART START -->
-    <section class="emptycart">
+    <!-- ERROR SCREEN START -->
+    <section class="errorscreen">
         <div class="container">
-            <div class="emptycart-content">
-                <div class="emptybox">
-                    <div class="emptythumbnail">
-                        <img src="assets/images/empty-screen/empty-cart.svg" alt="empty-thumbnail">
+            <div class="errorscreen-content">
+                <div class="errorbox">
+                    <div class="errorthumbnail">
+                        <img src="assets/images/empty-screen/error-page.svg" alt="404-thumbnail">
                     </div>
-                    
-                    <h1 class="emptytitle">Your Shopping Cart is Empty!</h1>
+                    <h1 class="errortext">Error 404! <br> Page Not Found</h1>
                 </div>
             </div>
         </div>
     </section>
-    <!-- EMPTY CART END -->
-
+    <!-- ERROR SCREEN EDN -->
 
     <!-- FOOTER SECTION START -->
     <footer class="footer">
@@ -243,5 +237,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- TOOLTIP JS -->
     <script src="assets/js/aiontooltip.js"></script>
+    <!-- AION HAMBURGER JS -->
+    <script src="assets/js/aionhamburger.js"></script>
 </body>
 </html>
