@@ -2138,7 +2138,12 @@ h6 {
   padding: 0.25rem;
 }
 
-.contact-content .contactdetails .connect-info-link .icon svg path:last-of-type {
+.contact-content .contactdetails .connect-info-link .icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.contact-content .contactdetails .connect-info-link .icon svg path {
   fill: #B32122;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
@@ -2222,7 +2227,12 @@ h6 {
   padding: 0.25rem;
 }
 
-.contact-content .contactdetails .connect-info .infobox .icon svg path:last-of-type {
+.contact-content .contactdetails .connect-info .infobox .icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.contact-content .contactdetails .connect-info .infobox .icon svg path {
   fill: #B32122;
 }
 

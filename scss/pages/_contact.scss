@@ -119,11 +119,11 @@
                             padding: length(4);
 
                             svg {
+                                @include square(length(20));
+
                                 path {
-                                    &:last-of-type {
-                                        fill: $primary;
-                                        @include transitions;
-                                    }
+                                    fill: $primary;
+                                    @include transitions;
                                 }
                             }
                         }
@@ -179,10 +179,10 @@
                             padding: length(4);
 
                             svg {
+                                @include square(length(20));
+
                                 path {
-                                    &:last-of-type {
-                                        fill: $primary;
-                                    }
+                                    fill: $primary;
                                 }
                             }
                         }
