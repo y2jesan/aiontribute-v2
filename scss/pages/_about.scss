@@ -52,6 +52,7 @@
 
                     @include breakpoint(phone768) {
                         @include font-24-14-normal;
+                        line-height: 2;
                     }
                 }
             }

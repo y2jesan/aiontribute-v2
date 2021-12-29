@@ -1841,6 +1841,7 @@ h6 {
     font-size: 0.875rem;
     font-weight: normal;
     line-height: 1.71429;
+    line-height: 2;
   }
 }
 
@@ -1911,6 +1912,7 @@ h6 {
     font-size: 0.875rem;
     font-weight: normal;
     line-height: 1.71429;
+    line-height: 2;
     text-align: center;
   }
 }
@@ -1949,6 +1951,7 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
+  line-height: 2;
   color: #212529;
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
@@ -1961,6 +1964,7 @@ h6 {
     font-size: 0.875rem;
     font-weight: normal;
     line-height: 1.71429;
+    line-height: 2;
   }
 }
 
@@ -1977,7 +1981,9 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
+  line-height: 2;
   color: #72809D;
+  line-height: 2;
 }
 
 @media screen and (max-width: 48rem) {
@@ -2000,6 +2006,7 @@ h6 {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1;
+  line-height: 2;
   color: #B32122;
   display: none;
 }
@@ -2011,6 +2018,7 @@ h6 {
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1;
+    line-height: 2;
   }
 }
 

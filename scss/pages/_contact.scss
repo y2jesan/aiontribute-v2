@@ -34,6 +34,7 @@
 
                 @include breakpoint(phone768) {
                     @include font-24-14-normal;
+                    line-height: 2;
                     text-align: center;
                 }
             }
@@ -55,11 +56,13 @@
                     .form-floating {
                         .form-control {
                             @include font-24-16-normal;
+                            line-height: 2;
                             color: $textPrimary;
                             @include transitions;
 
                             @include breakpoint(phone768) {
                                 @include font-24-14-normal;
+                                line-height: 2;
                             }
 
                             &:focus {
@@ -71,11 +74,14 @@
 
                         .form-label {
                             @include font-24-16-normal;
+                            line-height: 2;
                             color: $textColor;
 
                             @include breakpoint(phone768) {
                                 @include font-24-14-normal;
                             }
+
+                            line-height: 2;
                         }
 
                         .messagebox {
@@ -85,11 +91,13 @@
 
                     .error-message {
                         @include font-14-14-medium;
+                        line-height: 2;
                         color: $primary;
                         display: none;
 
                         @include breakpoint(phone768) {
                             @include font-12-12-medium;
+                            line-height: 2;
                         }
                     }
 
