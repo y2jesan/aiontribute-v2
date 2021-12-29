@@ -1827,9 +1827,11 @@ h6 {
   font-family: "Montserrat";
   font-style: normal;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 1.5;
   color: #212529;
+  line-height: 2;
+  text-align: justify;
 }
 
 @media screen and (max-width: 48rem) {
@@ -1837,7 +1839,7 @@ h6 {
     font-family: "Montserrat";
     font-style: normal;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: normal;
     line-height: 1.71429;
   }
 }
@@ -1897,6 +1899,9 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
+  color: #212529;
+  line-height: 2;
+  text-align: justify;
 }
 
 @media screen and (max-width: 48rem) {
@@ -2035,6 +2040,17 @@ h6 {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+  background: #B32122;
+  color: #e0dbdb;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.contact-content .contactcontent .contactform .submitbox .btn-submit:not([disabled]):hover {
+  background: #e0dbdb;
+  color: #B32122;
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 @media screen and (max-width: 48rem) {

@@ -28,6 +28,9 @@
         .contactinfo {
             .text {
                 @include font-24-16-normal;
+                color: $textPrimary;
+                line-height: 2;
+                text-align: justify;
 
                 @include breakpoint(phone768) {
                     @include font-24-14-normal;
@@ -110,6 +113,13 @@
                         padding: length(12) length(48);
                         @include radius(48);
                         @include font-24-16-medium;
+                        @include setBgColor($primary, $buttonHover);
+                        @include transitions;
+
+                        @include hover {
+                            @include setBgColor($buttonHover, $primary);
+                            @include transform(scale(0.95));
+                        }
 
                         @include breakpoint(phone768) {
                             @include font-24-14-medium;

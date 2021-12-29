@@ -45,11 +45,13 @@
                 margin-bottom: length(12);
 
                 .about-text {
-                    @include font-24-16-medium;
+                    @include font-24-16-normal;
                     color: $textPrimary;
+                    line-height: 2;
+                    text-align: justify;
 
                     @include breakpoint(phone768) {
-                        @include font-24-14-medium;
+                        @include font-24-14-normal;
                     }
                 }
             }
