@@ -910,8 +910,8 @@ h6 {
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -996,8 +996,8 @@ h6 {
 }
 
 .header-content .headermenu .iconlist .cartlink .icon svg path {
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .header-content .headermenu .iconlist .cartlink .cartcount {
@@ -1025,8 +1025,8 @@ h6 {
   font-size: 0.625rem;
   font-weight: 500;
   line-height: 1;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (max-width: 48rem) {
@@ -1077,8 +1077,8 @@ h6 {
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .header .mobilemenu .mobilelist-link:hover:not(.active) {
@@ -1191,8 +1191,8 @@ h6 {
   line-height: 1.6;
   color: #707070;
   text-align: center;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .footer-content .footerinfo .footlink:not([disabled]):hover {
@@ -1274,8 +1274,8 @@ h6 {
   font-weight: 500;
   line-height: 1;
   color: #212529;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (max-width: 22.4375rem) {
@@ -1328,8 +1328,8 @@ h6 {
   text-align: center;
   border-radius: 3rem;
   border-radius: 3rem;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (max-width: 22.4375rem) {
@@ -1427,8 +1427,8 @@ h6 {
 }
 
 .offcanvas-header .btn-close svg {
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .offcanvas-header .btn-close:focus {
@@ -2050,10 +2050,9 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  line-height: 2;
   color: #212529;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (max-width: 48rem) {
@@ -2063,7 +2062,6 @@ h6 {
     font-size: 0.875rem;
     font-weight: normal;
     line-height: 1.71429;
-    line-height: 2;
   }
 }
 
@@ -2080,9 +2078,7 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  line-height: 2;
   color: #72809D;
-  line-height: 2;
 }
 
 @media screen and (max-width: 48rem) {
@@ -2149,8 +2145,8 @@ h6 {
   line-height: 1.5;
   background: #B32122;
   color: #e0dbdb;
-  -webkit-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .contact-content .contactcontent .contactform .submitbox .btn-submit:not([disabled]):hover {
@@ -2195,5 +2191,207 @@ h6 {
         -ms-flex-order: 0;
             order: 0;
     margin-bottom: 2rem;
+  }
+}
+
+.privacy-policy {
+  min-height: calc(100vh - 4.25rem);
+  padding: 3rem 0rem;
+}
+
+.privacy-policy-content {
+  max-width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .privacy-policy-content {
+    max-width: 100%;
+  }
+}
+
+.privacy-policy-content .privacy-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .privacy-policy-content .privacy-article {
+    gap: 0.625rem;
+  }
+}
+
+.privacy-policy-content .privacy-article .heading-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.privacy-policy-content .privacy-article .heading-group .privacy-title {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.36;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 48rem) {
+  .privacy-policy-content .privacy-article .heading-group .privacy-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.privacy-policy-content .privacy-article .heading-group .subtitle {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 48rem) {
+  .privacy-policy-content .privacy-article .heading-group .subtitle {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.privacy-policy-content .privacy-article .privacyinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .privacy-policy-content .privacy-article .privacyinfo {
+    gap: 0.625rem;
+  }
+}
+
+.privacy-policy-content .privacy-article .privacyinfo .subtitle {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 48rem) {
+  .privacy-policy-content .privacy-article .privacyinfo .subtitle {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.privacy-policy-content .privacy-article .privacyinfo .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  line-height: 2;
+  color: #212529;
+  text-align: justify;
+}
+
+@media screen and (max-width: 48rem) {
+  .privacy-policy-content .privacy-article .privacyinfo .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    line-height: 2;
+    text-align: left;
+  }
+}
+
+.privacy-policy-content .privacy-article .privacyinfo .text .link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  line-height: 2;
+  color: black;
+  text-decoration: underline;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.privacy-policy-content .privacy-article .privacyinfo .text .link:not([disabled]):hover {
+  text-decoration: none;
+  color: #B32122;
+}
+
+@media screen and (max-width: 48rem) {
+  .privacy-policy-content .privacy-article .privacyinfo .text .link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    line-height: 2;
+  }
+}
+
+.privacy-policy-content .privacy-article .privacyinfo .policytext {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  line-height: 2;
+  color: #212529;
+  text-align: justify;
+}
+
+@media screen and (max-width: 48rem) {
+  .privacy-policy-content .privacy-article .privacyinfo .policytext {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    line-height: 2;
+    text-align: left;
   }
 }

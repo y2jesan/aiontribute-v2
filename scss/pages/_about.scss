@@ -6,6 +6,7 @@
     overflow: hidden;
     padding: length(48) length(0);
 
+    // ABOUT VIDEOBOX START
     .aboutvideobox {
         @include flex-center;
         overflow: hidden;
@@ -20,6 +21,7 @@
         }
     }
 
+    // ABOUT CONTENT START
     .aboutcontent {
         @include flex-center-vert;
         height: 100%;

@@ -10,6 +10,7 @@
         @include flex-column;
         gap: length(48);
 
+        // HOME BANNER START
         .homebanner {
             @include flex-center-between;
 
@@ -44,6 +45,7 @@
             }
         }
 
+        // HOME DETAILS START
         .homedetails {
             @include flex-center-column;
             gap: length(14);

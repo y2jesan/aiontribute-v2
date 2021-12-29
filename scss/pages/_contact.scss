@@ -14,6 +14,7 @@
         @include flex-column;
         gap: length(32);
 
+        // CONTACT TITLE START
         .contact-title {
             font-weight: 500;
             color: $textPrimary;
@@ -30,6 +31,7 @@
             }
         }
 
+        // CONTACT INFO START
         .contactinfo {
             .text {
                 @include font-24-16-normal;
@@ -50,7 +52,10 @@
             }
         }
 
+        // CONTACT CONTENT START
         .contactcontent {
+
+            // CONTACT FORM START
             .contactform {
                 @include flex-column;
                 gap: length(32);
@@ -66,13 +71,11 @@
                     .form-floating {
                         .form-control {
                             @include font-24-16-normal;
-                            line-height: 2;
                             color: $textPrimary;
                             @include transitions;
 
                             @include breakpoint(phone768) {
                                 @include font-24-14-normal;
-                                line-height: 2;
                             }
 
                             &:focus {
@@ -84,14 +87,11 @@
 
                         .form-label {
                             @include font-24-16-normal;
-                            line-height: 2;
                             color: $textColor;
 
                             @include breakpoint(phone768) {
                                 @include font-24-14-normal;
                             }
-
-                            line-height: 2;
                         }
 
                         .messagebox {
