@@ -47,7 +47,7 @@
                     .contactinfo-title {
                         font-weight: 500;
                         color: $textPrimary;
-                        text-align: center;
+                        text-align: left;
                         display: block;
 
                         @include breakpoint(phone768) {
@@ -106,7 +106,6 @@
                 gap: length(12);
 
                 &-info {
-
                     &-link {
                         @include flex-center-vert;
                         gap: length(12);
