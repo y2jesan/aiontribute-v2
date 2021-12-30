@@ -110,6 +110,10 @@
                     font-weight: 500;
                     color: $textPrimary;
                     text-align: center;
+
+                    @include breakpoint(phone768) {
+                        margin-left: length(12);
+                    }
                 }
             }
 
@@ -189,7 +193,7 @@
                             gap: length(12);
                         }
 
-                        .product-thumbnail {
+                        .medallion-thumbnail {
                             position: relative;
                             @include square(length(80));
                             overflow: hidden;
@@ -211,7 +215,6 @@
                                 transform: skew(-7deg);
                                 overflow: hidden;
                                 z-index: 100;
-                                z-index: 100;
 
                                 img {
                                     @include wh100;
@@ -222,13 +225,67 @@
                         }
 
                         .product-thumb {
+                            position: relative;
                             @include square(length(80));
                             overflow: hidden;
                             @include flex-center;
 
-                            img {
+                            .frame {
                                 @include wh100;
-                                object-fit: contain;
+                                position: relative;
+                                object-fit: cover;
+                            }
+
+                            .productimage {
+                                width: length(16);
+                                height: length(16);
+                                @include circle;
+                                @include flex-center;
+                                position: absolute;
+                                left: 50%;
+                                top: length(8);
+                                transform: translateX(-50%);
+                                overflow: hidden;
+                                z-index: 100;
+                                z-index: 100;
+
+                                img {
+                                    @include wh100;
+                                    @include circle;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+
+                        .product-thumbnail {
+                            position: relative;
+                            @include square(length(80));
+                            overflow: hidden;
+                            @include flex-center;
+
+                            .frame {
+                                @include wh100;
+                                position: relative;
+                                object-fit: cover;
+                            }
+
+                            .productimage {
+                                width: length(25);
+                                height: length(25);
+                                @include circle;
+                                @include flex-center;
+                                position: absolute;
+                                left: 50.5%;
+                                top: length(5);
+                                transform: translateX(-50.5%);
+                                overflow: hidden;
+                                z-index: 100;
+
+                                img {
+                                    @include wh100;
+                                    @include circle;
+                                    object-fit: cover;
+                                }
                             }
                         }
 
@@ -259,7 +316,6 @@
 
                         @include breakpoint(phone768) {
                             margin-left: length(-12);
-                            background-color: rebeccapurple
                         }
 
                         .btn-decrement,
