@@ -111,10 +111,6 @@
                     color: $textPrimary;
                     text-align: center;
                 }
-
-                @include breakpoint(phone768) {
-                    width: 30%;
-                }
             }
 
             .productcol {
@@ -153,8 +149,8 @@
 
                 .btn-delete {
                     position: absolute;
-                    top: 10%;
-                    @include transform(translateY(-10%));
+                    top: 50%;
+                    @include transform(translateY(-50%));
                     right: length(20);
                     @include transparent-button;
                     @include square(length(20));
@@ -162,7 +158,8 @@
                     overflow: hidden;
 
                     @include breakpoint(phone768) {
-                        right: length(10);
+                        left: length(10);
+                        right: auto;
                     }
 
                     svg {
@@ -203,7 +200,7 @@
                                 position: relative;
                             }
 
-                            .productimage {
+                            .medallion {
                                 width: length(68);
                                 height: length(61);
                                 @include circle;
@@ -224,20 +221,34 @@
                             }
                         }
 
+                        .product-thumb {
+                            @include square(length(80));
+                            overflow: hidden;
+                            @include flex-center;
+
+                            img {
+                                @include wh100;
+                                object-fit: contain;
+                            }
+                        }
+
                         .productname {
                             width: calc(100% - 6.25rem);
 
                             @include breakpoint(phone768) {
                                 @include w100;
+                                text-align: center;
                             }
 
                             .name {
                                 @include font-24-16-semibold;
                                 color: $black;
+                                cursor: pointer;
 
                                 @include breakpoint(phone768) {
                                     @include font-12-12-semibold;
                                     text-align: center;
+                                    @include text-overflow;
                                 }
                             }
                         }
@@ -245,6 +256,11 @@
 
                     .quantitybox {
                         @include flex-center;
+
+                        @include breakpoint(phone768) {
+                            margin-left: length(-12);
+                            background-color: rebeccapurple
+                        }
 
                         .btn-decrement,
                         .btn-increment {
@@ -298,6 +314,10 @@
                             text-align: center;
                             @include font-24-14-medium;
                             @include setBgColor(transparent, $black);
+
+                            @include breakpoint(phone768) {
+                                width: length(24);
+                            }
 
                             &::placeholder {
                                 color: $textSecondary;
