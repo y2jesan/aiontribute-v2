@@ -421,6 +421,11 @@
                     @include w100;
                 }
 
+                @include breakpoint(mobile768) {
+                    flex-direction: row;
+                    align-items: center;
+                }
+
                 &-title {
                     color: $textPrimary;
                     font-weight: 500;
