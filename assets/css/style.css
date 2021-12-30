@@ -2748,6 +2748,12 @@ h6 {
   overflow: hidden;
 }
 
+@media screen and (max-width: 48rem) {
+  .cart-table .tablebody .tablerow .btn-delete {
+    right: 0.625rem;
+  }
+}
+
 .cart-table .tablebody .tablerow .btn-delete svg path {
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;

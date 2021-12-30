@@ -161,6 +161,10 @@
                     @include flex-center;
                     overflow: hidden;
 
+                    @include breakpoint(phone768) {
+                        right: length(10);
+                    }
+
                     svg {
                         path {
                             @include transitions;
