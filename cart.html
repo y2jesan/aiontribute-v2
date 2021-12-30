@@ -134,14 +134,18 @@
     <!-- EMPTY CART START -->
     <section class="emptycart d-none">
         <div class="container">
-            <div class="emptycart-header">
-                <h1 class="emptytitle">Shopping Cart</h1>
-            </div>
-            
-            <div class="emptycart-content">
-                <div class="emptybox">                    
-                    <p class="emptytext">Your cart is empty <span>!</span></p>
-                    <a href="create.html" class="btn-create">Create Your Momento</a>
+            <div class="row">
+                <div class="col-lg-10 mx-lg-auto col-12">
+                    <div class="emptycart-header">
+                        <h1 class="emptytitle">Shopping Cart</h1>
+                    </div>
+                    
+                    <div class="emptycart-content">
+                        <div class="emptybox">                    
+                            <p class="emptytext">Your cart is empty <span>!</span></p>
+                            <a href="create.html" class="btn-create">Create Your Momento</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -151,11 +155,11 @@
     <!-- CART SECTION START -->
     <section class="cart">
         <div class="container">
-            <div class="cart-content">
-                <h1 class="cart-title">Your Cart</h1>
-                
-                <div class="row">
-                    <div class="col-lg-10 mx-lg-auto col-12">
+            <div class="row">
+                <div class="col-lg-10 mx-lg-auto col-12">
+                    <div class="cart-content">
+                        <h1 class="cart-title">Your Cart</h1>
+                        
                         <!-- CART CONTENT START -->
                         <div class="cart-table">
                             <div class="tablehead">
@@ -384,10 +388,32 @@
                             
                             <div class="tablefooter">
                                 <div class="couponbox">
-                                    <input type="text" placeholder="" class="couponfield">
-                                    <button class="btn-apply">
+                                    <h4 class="couponbox-title">Promotional Coupon</h4>
+
+                                    <div class="applycoupon error">
+                                        <div class="coupon">
+                                            <input type="text" placeholder="Enter Coupon Code" class="coupon-field">
+
+                                            <button class="btn-apply">
+                                                <span class="text">Apply</span>
+                                                <span class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
                                         
-                                    </button>
+                                        <div class="error-message">
+                                            <div class="icon">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.7708 7.07823L7.11135 2.41623C6.99053 2.29469 6.84687 2.19824 6.68864 2.13242C6.5304 2.06661 6.36072 2.03273 6.18935 2.03273C6.16085 2.03273 6.13235 2.03273 6.10385 2.03523L2.73435 2.25773C2.55691 2.26991 2.3899 2.34596 2.26424 2.47181C2.13857 2.59766 2.06276 2.76478 2.05085 2.94223L1.97035 4.13873C1.79431 4.03685 1.63243 3.91229 1.48885 3.76823C1.14037 3.43148 0.918139 2.98525 0.859346 2.50423C0.831913 2.30823 0.849145 2.10856 0.909754 1.92015C0.970362 1.73175 1.07278 1.55948 1.20935 1.41623C1.78135 0.844231 2.83535 0.971231 3.56335 1.69623C3.62198 1.75357 3.70086 1.78547 3.78287 1.78501C3.86489 1.78456 3.94341 1.75177 4.0014 1.69378C4.05939 1.63579 4.09217 1.55727 4.09263 1.47526C4.09309 1.39325 4.06118 1.31437 4.00385 1.25573C3.02985 0.288731 1.57935 0.165731 0.766346 0.979231C0.564031 1.18723 0.411396 1.43831 0.319872 1.71366C0.228347 1.98901 0.200305 2.28151 0.237846 2.56923C0.310283 3.19321 0.595654 3.77314 1.04585 4.21123C1.29936 4.46529 1.59794 4.66994 1.92635 4.81473L1.82635 6.31473C1.8139 6.5005 1.84142 6.68677 1.90706 6.861C1.9727 7.03523 2.07492 7.19336 2.20685 7.32473L6.86885 11.9867C7.0135 12.1319 7.18551 12.247 7.37493 12.3253C7.56434 12.4035 7.7674 12.4435 7.97235 12.4427C8.17723 12.443 8.38016 12.4029 8.56951 12.3246C8.75887 12.2464 8.93093 12.1316 9.07585 11.9867L11.7758 9.28673C11.9208 9.14174 12.0357 8.96955 12.1139 8.78005C12.1921 8.59054 12.2321 8.38746 12.2317 8.18244C12.2312 7.97743 12.1903 7.77453 12.1112 7.58538C12.0321 7.39623 11.9164 7.22457 11.7708 7.08023V7.07823ZM11.3333 8.84173L8.62935 11.5457C8.54244 11.633 8.4391 11.7022 8.32531 11.7493C8.21151 11.7964 8.08951 11.8205 7.96635 11.8202C7.84318 11.8205 7.72118 11.7964 7.60738 11.7493C7.49359 11.7022 7.39025 11.633 7.30335 11.5457L2.64135 6.88423C2.5722 6.81553 2.51858 6.73281 2.48408 6.64165C2.44958 6.55049 2.43501 6.453 2.44135 6.35573L2.53235 4.99873C2.58235 5.00673 2.63585 5.01423 2.68785 5.01923C2.76535 5.02723 2.84335 5.03223 2.91835 5.03223C3.16918 5.03763 3.41856 4.99276 3.65179 4.90028C3.88502 4.8078 4.09737 4.66957 4.27635 4.49373C4.33369 4.4351 4.36559 4.35621 4.36513 4.2742C4.36467 4.19219 4.33189 4.11367 4.2739 4.05568C4.21591 3.99769 4.13739 3.96491 4.05537 3.96445C3.97336 3.96399 3.89448 3.99589 3.83585 4.05323C3.6926 4.1898 3.52033 4.29221 3.33193 4.35282C3.14352 4.41343 2.94385 4.43066 2.74785 4.40323C2.68785 4.39773 2.63085 4.38873 2.57635 4.37673L2.66735 2.98873C2.66922 2.96123 2.68098 2.93535 2.70047 2.91586C2.71996 2.89637 2.74585 2.8846 2.77335 2.88273L6.14285 2.66023C6.15835 2.66023 6.17385 2.65773 6.18935 2.65773C6.37091 2.65786 6.54506 2.72975 6.67385 2.85773L11.3328 7.51673C11.5086 7.69262 11.6073 7.93109 11.6073 8.17973C11.6073 8.42837 11.5086 8.66685 11.3328 8.84273L11.3333 8.84173Z" fill="#FF705B"/>
+                                                </svg>
+                                            </div>
+
+                                            <span class="message">Coupon code is invalid!</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

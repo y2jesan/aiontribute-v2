@@ -3117,6 +3117,232 @@ h6 {
   width: 50%;
 }
 
+.cart-table .tablefooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1.25rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .cart-table .tablefooter {
+    padding: 1.25rem 0rem;
+  }
+}
+
+.cart-table .tablefooter .couponbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .cart-table .tablefooter .couponbox {
+    width: 100%;
+  }
+}
+
+.cart-table .tablefooter .couponbox-title {
+  color: #212529;
+  font-weight: 500;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon {
+  width: 17.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .cart-table .tablefooter .couponbox .applycoupon {
+    width: 100%;
+  }
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon-field {
+  width: calc(100% - 6.0625rem);
+  border: solid 0.0625rem #F8F8F9;
+  border-right: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart-table .tablefooter .couponbox .applycoupon .coupon-field {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon-field::-webkit-input-placeholder {
+  color: #707070;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon-field:-ms-input-placeholder {
+  color: #707070;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon-field::-ms-input-placeholder {
+  color: #707070;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon-field::placeholder {
+  color: #707070;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon .btn-apply {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8125rem 1rem;
+  background: #e0dbdb;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon .btn-apply .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #B32122;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart-table .tablefooter .couponbox .applycoupon .coupon .btn-apply .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon .btn-apply .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-top: 0.125rem;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon .btn-apply .icon svg path {
+  stroke: #B32122;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon .btn-apply:not([disabled]):hover {
+  background: #B32122;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon .btn-apply:not([disabled]):hover .text {
+  color: #e0dbdb;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .coupon .btn-apply:not([disabled]):hover .icon svg path {
+  stroke: #e0dbdb;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .error-message {
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #FCE5D0;
+  padding: 0.25rem 0.5rem;
+  width: 11.25rem;
+  display: none;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .error-message .icon {
+  height: 0.875rem;
+  width: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-top: -0.0625rem;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon .error-message .message {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #FF705B;
+}
+
+.cart-table .tablefooter .couponbox .applycoupon.error .error-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .privacy-policy {
   min-height: calc(100vh - 4.25rem);
   padding: 3rem 0rem;

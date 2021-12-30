@@ -404,6 +404,137 @@
                 }
             }
         }
+
+        .tablefooter {
+            @include flex-end;
+            padding: length(20);
+
+            @include breakpoint(phone575) {
+                padding: length(20) length(0);
+            }
+
+            .couponbox {
+                @include flex-column;
+                gap: length(12);
+
+                @include breakpoint(phone575) {
+                    @include w100;
+                }
+
+                &-title {
+                    color: $textPrimary;
+                    font-weight: 500;
+                }
+
+                .applycoupon {
+                    width: length(280);
+                    @include flex-column;
+                    gap: length(8);
+
+                    @include breakpoint(phone575) {
+                        @include w100;
+                    }
+
+                    .coupon {
+                        @include flex-center-vert;
+                        @include w100;
+                        overflow: hidden;
+
+                        &-field {
+                            width: calc(100% - 6.0625rem);
+                            @include border(solid, 1, $grayBg);
+                            border-right: 0;
+                            @include double-radius(top, left, 4, bottom, left, 4);
+                            padding: length(12) length(16);
+                            @include font-24-14-normal;
+
+                            @include breakpoint(phone768) {
+                                @include font-12-12-normal;
+                            }
+
+                            &::placeholder {
+                                color: $textSecondary;
+                            }
+                        }
+
+                        .btn-apply {
+                            @include flex-center;
+                            gap: length(8);
+                            padding: length(13) length(16);
+                            background: $buttonHover;
+                            @include double-radius(top, right, 4, bottom, right, 4);
+
+                            .text {
+                                @include font-24-14-medium;
+                                color: $primary;
+                                @include transitions;
+
+                                @include breakpoint(phone768) {
+                                    @include font-12-12-medium;
+                                }
+                            }
+
+                            .icon {
+                                @include square(length(16));
+                                @include flex-center;
+                                overflow: hidden;
+                                margin-top: length(2);
+
+                                svg {
+                                    path {
+                                        stroke: $primary;
+                                        @include transitions;
+                                    }
+                                }
+                            }
+
+                            @include hover {
+                                background: $primary;
+
+                                .text {
+                                    color: $buttonHover;
+                                }
+
+                                .icon {
+                                    svg {
+                                        path {
+                                            stroke: $buttonHover;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .error-message {
+                        gap: length(8);
+                        @include radius(8);
+                        background: $dangerBg;
+                        padding: length(4) length(8);
+                        width: length(180);
+                        display: none;
+
+                        .icon {
+                            @include square(length(14));
+                            @include flex-center;
+                            overflow: hidden;
+                            margin-top: length(-1);
+                        }
+
+                        .message {
+                            @include font-12-12-medium;
+                            color: $textDanger;
+                        }
+                    }
+
+                    &.error {
+                        .error-message {
+                            @include flex-center;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
