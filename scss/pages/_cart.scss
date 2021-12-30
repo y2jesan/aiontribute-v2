@@ -409,7 +409,7 @@
             @include flex-end;
             padding: length(20);
 
-            @include breakpoint(phone575) {
+            @include breakpoint(phone768) {
                 padding: length(20) length(0);
             }
 
