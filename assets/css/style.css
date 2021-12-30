@@ -2486,6 +2486,7 @@ h6 {
 
 .emptycart {
   min-height: calc(100vh - 4.25rem);
+  padding: 3rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2495,8 +2496,54 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
-  padding: 3rem 0rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.emptycart-header {
+  position: absolute;
+  top: 3rem;
+  left: auto;
+  right: auto;
+}
+
+@media screen and (max-width: 48rem) {
+  .emptycart-header {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.emptycart-header .emptytitle {
+  font-weight: 500;
+  color: #0D111B;
+}
+
+@media screen and (max-width: 48rem) {
+  .emptycart-header .emptytitle {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .emptycart-header .emptytitle {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+    text-align: center;
+  }
 }
 
 .emptycart-content {
@@ -2509,6 +2556,8 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .emptycart-content .emptybox {
@@ -2528,68 +2577,19 @@ h6 {
           flex-direction: column;
 }
 
-.emptycart-content .emptybox .emptythumbnail {
-  height: 8.75rem;
-  width: 8.75rem;
-  padding: 1.25rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 48rem) {
-  .emptycart-content .emptybox .emptythumbnail {
-    max-width: 12.5rem;
-  }
-}
-
-.emptycart-content .emptybox .emptythumbnail img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-left: -1.875rem;
-}
-
-.emptycart-content .emptybox .emptytitle {
-  font-family: "FuturaPT";
+.emptycart-content .emptybox .emptytext {
+  font-family: "Montserrat";
   font-style: normal;
-  font-size: 1.75rem;
-  font-weight: 600;
-  line-height: 1.36;
-  font-weight: 500;
-  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  line-height: 2;
+  margin-bottom: 0.5rem;
+}
+
+.emptycart-content .emptybox .emptytext span {
   color: #B32122;
-  margin-bottom: 1.5rem;
-}
-
-@media screen and (max-width: 48rem) {
-  .emptycart-content .emptybox .emptytitle {
-    font-family: "FuturaPT";
-    font-style: normal;
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.36;
-    font-weight: 500;
-  }
-}
-
-@media screen and (max-width: 22.4375rem) {
-  .emptycart-content .emptybox .emptytitle {
-    font-family: "FuturaPT";
-    font-style: normal;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.36;
-    font-weight: 500;
-  }
+  font-weight: 600;
 }
 
 .cart {
@@ -2623,6 +2623,7 @@ h6 {
     font-weight: 600;
     line-height: 1.36;
     font-weight: 500;
+    text-align: center;
   }
 }
 
@@ -2634,7 +2635,12 @@ h6 {
     font-weight: 600;
     line-height: 1.36;
     font-weight: 500;
+    text-align: center;
   }
+}
+
+.cart-table {
+  background: white;
 }
 
 .cart-table .tablehead {
@@ -2647,7 +2653,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.625rem 1.25rem;
+  padding: 1.25rem;
   background: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.03) 0rem 0.625rem 1.875rem 0rem;
           box-shadow: rgba(0, 0, 0, 0.03) 0rem 0.625rem 1.875rem 0rem;
@@ -2655,7 +2661,7 @@ h6 {
 }
 
 .cart-table .tablehead .tablecol {
-  width: 33%;
+  width: 25%;
 }
 
 .cart-table .tablehead .tablecol .tabletitle {
@@ -2669,6 +2675,36 @@ h6 {
   text-align: center;
 }
 
+@media screen and (max-width: 48rem) {
+  .cart-table .tablehead .tablecol {
+    width: 30%;
+  }
+}
+
+.cart-table .tablehead .productcol {
+  width: 50%;
+}
+
+.cart-table .tablehead .productcol .tabletitle {
+  text-align: left;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart-table .tablehead .productcol {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .cart-table .tablehead .pricecol .tabletitle {
+    text-align: right;
+  }
+}
+
+.cart-table .tablebody {
+  background: white;
+}
+
 .cart-table .tablebody .tablerow {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2679,10 +2715,50 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1.25rem;
+  border-bottom: solid 0.0625rem #F0F0F0;
+  position: relative;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart-table .tablebody .tablerow {
+    padding: 0.875rem 0.5rem;
+  }
+}
+
+.cart-table .tablebody .tablerow .btn-delete {
+  position: absolute;
+  top: 10%;
+  -webkit-transform: translateY(-10%);
+  transform: translateY(-10%);
+  right: 0;
+  background: transparent;
+  border: none;
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.cart-table .tablebody .tablerow .btn-delete svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cart-table .tablebody .tablerow .btn-delete:not([disabled]):hover svg path {
+  stroke: #B32122;
 }
 
 .cart-table .tablebody .tablerow .tablecol {
-  width: 33%;
+  width: 25%;
 }
 
 .cart-table .tablebody .tablerow .tablecol .productinfo {
@@ -2693,6 +2769,16 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart-table .tablebody .tablerow .tablecol .productinfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.75rem;
+  }
 }
 
 .cart-table .tablebody .tablerow .tablecol .productinfo .product-thumbnail {
@@ -2749,6 +2835,16 @@ h6 {
 }
 
 .cart-table .tablebody .tablerow .tablecol .productinfo .productname {
+  width: calc(100% - 6.25rem);
+}
+
+@media screen and (max-width: 48rem) {
+  .cart-table .tablebody .tablerow .tablecol .productinfo .productname {
+    width: 100%;
+  }
+}
+
+.cart-table .tablebody .tablerow .tablecol .productinfo .productname .name {
   font-family: "Montserrat";
   font-style: normal;
   font-size: 1rem;
@@ -2757,23 +2853,135 @@ h6 {
   color: black;
 }
 
-.cart-table .tablebody .tablerow .tablecol .priceinfo {
-  position: relative;
+@media screen and (max-width: 48rem) {
+  .cart-table .tablebody .tablerow .tablecol .productinfo .productname .name {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-decrement,
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-increment {
+  background: transparent;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-decrement svg circle,
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-increment svg circle {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-decrement svg path,
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-increment svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-decrement:not([disabled]):hover svg circle {
+  fill: #B32122;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-decrement:not([disabled]):hover svg path {
+  stroke: #e0dbdb;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-increment:not([disabled]):hover svg circle {
+  fill: rgba(26, 11, 91, 0.3);
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .btn-increment:not([disabled]):hover svg path {
+  stroke: white;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .counterfield {
+  width: 2.5rem;
+  padding: 0.5rem 0.125rem;
   text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  background: transparent;
+  color: black;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .counterfield::-webkit-input-placeholder {
+  color: #707070;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .counterfield:-ms-input-placeholder {
+  color: #707070;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .counterfield::-ms-input-placeholder {
+  color: #707070;
+}
+
+.cart-table .tablebody .tablerow .tablecol .quantitybox .counterfield::placeholder {
+  color: #707070;
+}
+
+.cart-table .tablebody .tablerow .tablecol .priceinfo {
+  text-align: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart-table .tablebody .tablerow .tablecol .priceinfo {
+    text-align: right;
+  }
 }
 
 .cart-table .tablebody .tablerow .tablecol .priceinfo .price {
-  margin-left: -1rem;
-  text-align: center;
   display: inline-block;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
-.cart-table .tablebody .tablerow .tablecol .priceinfo .btn-delete {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 0;
+@media screen and (max-width: 48rem) {
+  .cart-table .tablebody .tablerow .tablecol .priceinfo .price {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+  }
+}
+
+.cart-table .tablebody .tablerow .productcol {
+  width: 50%;
 }
 
 .privacy-policy {
