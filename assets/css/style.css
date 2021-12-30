@@ -2593,9 +2593,16 @@ h6 {
 }
 
 .cart {
-  min-height: calc(100vh - 4.25rem);
   overflow: hidden;
   padding: 3rem 0rem;
+  margin-bottom: 3.75rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart {
+    padding: 0rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .cart-content {

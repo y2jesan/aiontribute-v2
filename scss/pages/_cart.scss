@@ -65,9 +65,14 @@
 // CART START
 
 .cart {
-    min-height: calc(100vh - 4.25rem);
     overflow: hidden;
     padding: length(48) length(0);
+    margin-bottom: length(60);
+
+    @include breakpoint(phone768) {
+        padding: length(0);
+        margin-bottom: length(32);
+    }
 
     &-content {
         @include flex-column;
