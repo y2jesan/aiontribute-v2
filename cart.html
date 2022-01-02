@@ -424,13 +424,471 @@
 
                     <!-- BILLING-SHIPPING START -->
                     <div class="billing-shipping">
-                        
+                        <!-- BILLING INFO START -->
+                        <div class="billing">
+                            <h1 class="billing-title">Billing</h1>
+
+                            <!-- BILLING FORM START -->
+                            <form class="billing-form">
+                                <!-- BILLING NAMES START -->
+                                <div class="row g-3">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="billingFirstName" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" id="billingFirstName" placeholder="Enter First Name" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="billingLastName" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" id="billingLastName" placeholder="Enter Last Name" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- BILLING NAMES END -->
+
+                                <!-- BILLING ADDRESS START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="billingHouse" class="form-label">House Number &amp; Street Name</label>
+                                                <input type="text" class="form-control" id="billingHouse" placeholder="Enter House &amp; Street" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- BILLING ADDRESS END -->
+
+                                <!-- BILLING UNIT START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="billingUnit" class="form-label">Apt, Suite, Unit, Etc (Optional)</label>
+                                                <input type="text" class="form-control" id="billingUnit" placeholder="Enter Apt, Suite, Unit" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- BILLING UNIT END -->
+
+                                <!-- BILLING CITY START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="billingCity" class="form-label">City</label>
+                                                <input type="text" class="form-control" id="billingCity" placeholder="Enter City" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- BILLING CITY END -->
+
+                                <!-- BILLING PROVINCE/STATE START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="billingState" class="form-label">Province / State</label>
+                                                <select class="form-select" id="billingState">
+                                                    <option selected>Select a state</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- BILLING PROVINCE/STATE END -->
+
+                                <!-- BILLING POSTAL / ZIP CODE START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="billingPost" class="form-label">Postal / Zip Code</label>
+                                                <input type="text" class="form-control" id="billingPost" placeholder="Enter Postal / Zip" autocomplete="off">
+                                            </div>
+                                            
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- BILLING POSTAL / ZIP CODE END -->
+
+                                <!-- BILLING PHONE NUMBER START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="billingPhoneNumber" class="form-label">Phone Number</label>
+                                                <input type="tel" class="form-control" id="billingPhoneNumber" placeholder="Enter Phone Number" autocomplete="off">
+                                            </div>
+                                            
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- BILLING PHONE NUMBER END -->
+
+                                <!-- BILLING EMAIL ADDRESS START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="billingEmail" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control" id="billingEmail" placeholder="Enter Email Address" autocomplete="off">
+                                            </div>
+                                            
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- BILLING EMAIL ADDRESS END -->
+                            </form>
+                            <!-- BILLING FORM END -->
+                        </div>
+                        <!-- BILLING INFO END -->
+
+                        <!-- SHIPPING INFO START -->
+                        <div class="shipping">
+                            <div class="shipping-title">
+                                <input type="checkbox" class="checkinput" id="checkShipping" hidden>
+                                <label class="checklabel" for="checkShipping">Ship to Different Address</label>
+                            </div>
+
+                            <!-- SHIPPING FORM START -->
+                            <form class="shipping-form">
+                                <!-- SHIPPING NAMES START -->
+                                <div class="row g-3">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="shippingFirstName" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" id="shippingFirstName" placeholder="Enter First Name" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="shippingLastName" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" id="shippingLastName" placeholder="Enter Last Name" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SHIPPING NAMES END -->
+
+                                <!-- SHIPPING ADDRESS START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="shippingHouse" class="form-label">House Number &amp; Street Name</label>
+                                                <input type="text" class="form-control" id="shippingHouse" placeholder="Enter House &amp; Street" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SHIPPING ADDRESS END -->
+
+                                <!-- SHIPPING UNIT START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="shippingUnit" class="form-label">Apt, Suite, Unit, Etc (Optional)</label>
+                                                <input type="text" class="form-control" id="shippingUnit" placeholder="Enter Apt, Suite, Unit" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SHIPPING UNIT END -->
+
+                                <!-- SHIPPING CITY START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="shippingCity" class="form-label">City</label>
+                                                <input type="text" class="form-control" id="shippingCity" placeholder="Enter City" autocomplete="off">
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SHIPPING CITY END -->
+
+                                <!-- SHIPPING PROVINCE/STATE START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="shippingState" class="form-label">Province / State</label>
+                                                <select class="form-select" id="shippingState">
+                                                    <option selected>Select a state</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SHIPPING PROVINCE/STATE END -->
+
+                                <!-- SHIPPING POSTAL / ZIP CODE START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="shippingPost" class="form-label">Postal / Zip Code</label>
+                                                <input type="text" class="form-control" id="shippingPost" placeholder="Enter Postal / Zip" autocomplete="off">
+                                            </div>
+                                            
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SHIPPING POSTAL / ZIP CODE END -->
+
+                                <!-- SHIPPING PHONE NUMBER START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="shippingPhoneNumber" class="form-label">Phone Number</label>
+                                                <input type="tel" class="form-control" id="shippingPhoneNumber" placeholder="Enter Phone Number" autocomplete="off">
+                                            </div>
+                                            
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SHIPPING PHONE NUMBER END -->
+
+                                <!-- SHIPPING EMAIL ADDRESS START -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="inputbox">
+                                            <div class="forminfo">
+                                                <label for="shippingEmail" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control" id="shippingEmail" placeholder="Enter Email Address" autocomplete="off">
+                                            </div>
+                                            
+                                            <p class="error-message">This field is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- SHIPPING EMAIL ADDRESS END -->
+                            </form>
+                            <!-- SHIPPING FORM END -->
+                        </div>
+                        <!-- SHIPPING INFO END -->
                     </div>
                     <!-- BILLING-SHIPPING END -->
 
                     <!-- ORDERLIST START -->
                     <div class="orderlist">
+                        <div class="orderlist-header">
+                            <h1 class="orderlist-title">Your Order</h1>
+                        </div>
+                        
+                        <div class="orderlist-body">
+                            <div class="order-table">
+                                <div class="order-table-header">
+                                    <div class="tablecol productcol">
+                                        <h3 class="tabletitle">Product</h3>
+                                    </div>
 
+                                    <div class="tablecol imagecol d-none">
+                                        <h3 class="tabletitle">Image</h3>
+                                    </div>
+
+                                    <div class="tablecol">
+                                        <h3 class="tabletitle">Price</h3>
+                                    </div>
+
+                                    <div class="tablecol">
+                                        <h3 class="tabletitle">Total</h3>
+                                    </div>
+                                </div>
+
+                                <div class="order-table-body">
+                                    <div class="tablerow">
+                                        <div class="tablecol productcol">
+                                            <div class="orderproductinfo">
+                                                <div class="productinfo">
+                                                    <div class="medallion-thumbnail">
+                                                        <!-- BACKGROUND FRAME -->
+                                                        <img src="assets/images/frames/front.svg" class="frame" alt="front-side">
+                                                        
+                                                        <!-- PRODUCT IMAGE -->
+                                                        <div class="medallion">
+                                                            <img src="assets/images/accessories.svg" alt="product-image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="productdetails">
+                                                    <div class="detailsinfo">
+                                                        <span class="title">Style:</span>
+                                                        <span class="text">Solid Piece Momento</span>
+                                                    </div>
+                                                    
+                                                    <div class="detailsinfo">
+                                                        <span class="title">Material:</span>
+                                                        <span class="text">High-Grade Stainless Steel</span>
+                                                    </div>
+
+                                                    <div class="detailsinfo">
+                                                        <span class="title">Font:</span>
+                                                        <span class="text">POIRET ONE</span>
+                                                    </div>
+
+                                                    <div class="detailsinfo">
+                                                        <span class="title">Date of Birth:</span>
+                                                        <span class="text">2009-02-03</span>
+                                                    </div>
+
+                                                    <div class="detailsinfo">
+                                                        <span class="title">Date of Death:</span>
+                                                        <span class="text">2020-01-06</span>
+                                                    </div>
+
+                                                    <div class="detailsinfo">
+                                                        <span class="title">Color:</span>
+                                                        <span class="text">Black &amp; White</span>
+                                                    </div>
+
+                                                    <div class="detailsinfo">
+                                                        <span class="title">Quantity:</span>
+                                                        <span class="text">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tablecol imagecol d-none">
+                                            <div class="productinfo">
+                                                <div class="medallion-thumbnail">
+                                                    <!-- BACKGROUND FRAME -->
+                                                    <img src="assets/images/frames/front.svg" class="frame" alt="front-side">
+                                                    
+                                                    <!-- PRODUCT IMAGE -->
+                                                    <div class="medallion">
+                                                        <img src="assets/images/accessories.svg" alt="product-image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tablecol">
+                                            <div class="priceinfo">
+                                                <p class="price">$800.00</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="tablecol">
+                                            <div class="priceinfo">
+                                                <p class="price">$800.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-table-footer">
+                                    <div class="infobox">
+                                        <div class="footeinfo">
+                                            <div class="info">
+                                                <div class="titlebox">
+                                                    <h4 class="title">Subtotal</h4>
+                                                </div>
+
+                                                <div class="pricebox">
+                                                    <p class="price">$1600</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="infobox">
+                                        <div class="footeinfo">
+                                            <div class="info">
+                                                <div class="titlebox">
+                                                    <h4 class="title">Tax</h4>
+                                                </div>
+
+                                                <div class="pricebox">
+                                                    <p class="price">$0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="infobox">
+                                        <div class="footeinfo">
+                                            <div class="info">
+                                                <div class="titlebox">
+                                                    <h4 class="title">Shipping Cost</h4>
+                                                </div>
+
+                                                <div class="pricebox">
+                                                    <p class="price">$0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="infobox">
+                                        <div class="footeinfo">
+                                            <div class="info">
+                                                <div class="titlebox">
+                                                    <h4 class="title">Total</h4>
+                                                </div>
+
+                                                <div class="pricebox">
+                                                    <p class="price">$1600</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- ORDERLIST END -->
                 </div>

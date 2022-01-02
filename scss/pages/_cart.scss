@@ -78,6 +78,7 @@
         @include flex-column;
         gap: length(24);
         padding: length(20) length(0);
+        margin-bottom: length(12);
 
         .cart-title {
             font-weight: 500;
@@ -546,6 +547,643 @@
             }
         }
     }
+
+    // BILLING-SHIPPING START
+
+    .billing-shipping {
+        display: flex;
+        gap: length(24);
+        margin-bottom: length(48);
+
+        @include breakpoint(tablet991) {
+            flex-direction: column;
+            gap: length(32);
+            margin-bottom: length(32);
+        }
+
+        .billing,
+        .shipping {
+            width: 50%;
+            @include flex-column;
+            gap: length(48);
+
+            @include breakpoint(phone768) {
+                gap: length(16);
+            }
+
+            @include breakpoint(tablet991) {
+                @include w100;
+            }
+        }
+
+        .billing {
+            &-title {
+                font-weight: 500;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-4;
+                    font-weight: 500;
+                }
+            }
+
+            &-form {
+                @include flex-column;
+                gap: length(16);
+
+                .inputbox {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .forminfo {
+                        @include flex-column;
+
+                        .form-label {
+                            @include font-24-14-medium;
+                            color: $secondaryDark;
+                        }
+
+                        .form-control {
+                            padding: length(14) length(16);
+                            @include transitions;
+                            @include font-14-14-normal;
+                            color: $textPrimary;
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                                border-color: $textDesignation;
+                            }
+
+                            &::placeholder {
+                                color: $textActiveLink;
+                            }
+                        }
+
+                        .form-select {
+                            padding: length(14) length(16);
+                            @include transitions;
+                            @include font-14-14-normal;
+                            color: $textPrimary;
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                                border-color: $textDesignation;
+                            }
+                        }
+                    }
+
+                    .error-message {
+                        @include font-12-12-medium;
+                        color: $primary;
+                        display: none;
+                    }
+
+                    &.error {
+                        .forminfo {
+                            .form-control {
+                                border-color: $primary;
+                            }
+
+                            .form-select {
+                                border-color: $primary;
+                            }
+                        }
+
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .shipping {
+            &-title {
+                @include flex-center-vert;
+
+                .checkinput {
+                    &:checked~.checklabel {
+                        &::after {
+                            border-color: $textPrimary;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                .checklabel {
+                    @include heading-1;
+                    font-weight: 500;
+                    color: $textPrimary;
+                    cursor: pointer;
+                    position: relative;
+                    padding-left: length(36);
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        @include square(length(24));
+                        @include border(solid, 2, $textPrimary);
+                        @include transform(translateY(-50%));
+                        background: $white;
+                        padding: length(4);
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 45%;
+                        left: length(8);
+                        width: length(8);
+                        height: length(16);
+                        @include border(solid, 2, $white);
+                        border-top: 0;
+                        border-left: 0;
+                        @include transform(translateY(-45%) rotate(45deg));
+                        opacity: 0;
+                        visibility: hidden;
+                        @include transitions;
+                    }
+
+                    @include breakpoint(phone768) {
+                        @include heading-3;
+                        font-weight: 500;
+                    }
+
+                    @include breakpoint(phone359) {
+                        @include heading-4;
+                        font-weight: 500;
+                    }
+
+                    &::selection {
+                        background: transparent;
+                        color: $textPrimary;
+                    }
+                }
+            }
+
+            &-form {
+                @include flex-column;
+                gap: length(16);
+
+                .inputbox {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .forminfo {
+                        @include flex-column;
+
+                        .form-label {
+                            @include font-24-14-medium;
+                            color: $secondaryDark;
+                        }
+
+                        .form-control {
+                            padding: length(14) length(16);
+                            @include transitions;
+                            @include font-14-14-normal;
+                            color: $textPrimary;
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                                border-color: $textDesignation;
+                            }
+
+                            &::placeholder {
+                                color: $textActiveLink;
+                            }
+                        }
+
+                        .form-select {
+                            padding: length(14) length(16);
+                            @include transitions;
+                            @include font-14-14-normal;
+                            color: $textPrimary;
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                                border-color: $textDesignation;
+                            }
+                        }
+                    }
+
+                    .error-message {
+                        @include font-12-12-medium;
+                        color: $primary;
+                        display: none;
+                    }
+
+                    &.error {
+                        .forminfo {
+                            .form-control {
+                                border-color: $primary;
+                            }
+
+                            .form-select {
+                                border-color: $primary;
+                            }
+                        }
+
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // BILLING-SHIPPING END
+
+
+    // ORDER LIST START
+    .orderlist {
+        @include flex-column;
+        gap: length(24);
+
+        &-header {
+            .orderlist-title {
+                font-weight: 500;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-4;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &-body {
+            .order-table {
+                @include border(solid, 1, $header-border);
+
+                &-header {
+                    @include flex-center-between;
+                    @include border-single(bottom, solid, 1, $header-border);
+                    position: relative;
+
+                    .tablecol {
+                        width: 25%;
+                        @include border-single(right, solid, 1, $header-border);
+                        padding: length(20);
+
+                        &:last-child {
+                            border-right: 0;
+                        }
+
+                        .tabletitle {
+                            @include heading-4;
+                            font-weight: 500;
+                            color: $textPrimary;
+                            text-align: center;
+
+                            @include breakpoint(phone768) {
+                                // margin-left: length(12);
+                            }
+                        }
+                    }
+
+                    .productcol {
+                        flex-grow: 100;
+                    }
+                }
+
+                &-body {
+                    @include flex-column;
+
+                    .tablerow {
+                        display: flex;
+                        @include border-single(bottom, solid, 1, $header-border);
+                        position: relative;
+
+                        .tablecol {
+                            width: 25%;
+                            @include border-single(right, solid, 1, $header-border);
+                            padding: length(20);
+
+                            &:last-child {
+                                border-right: 0;
+                            }
+
+                            .orderproductinfo {
+                                @include flex-column;
+                                gap: length(14);
+
+                                .productdetails {
+                                    @include flex-column;
+
+                                    .detailsinfo {
+                                        .title {
+                                            @include font-12-12-medium;
+                                        }
+
+                                        .text {
+                                            @include font-12-12-normal;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .productinfo {
+                                @include flex-center-vert;
+                                @include h100;
+
+                                .medallion-thumbnail {
+                                    position: relative;
+                                    @include square(length(80));
+                                    overflow: hidden;
+                                    @include flex-center;
+
+                                    .frame {
+                                        @include wh100;
+                                        position: relative;
+                                    }
+
+                                    .medallion {
+                                        width: length(68);
+                                        height: length(61);
+                                        @include circle;
+                                        @include flex-center;
+                                        position: absolute;
+                                        left: length(6);
+                                        top: length(5);
+                                        transform: skew(-7deg);
+                                        overflow: hidden;
+                                        z-index: 100;
+
+                                        img {
+                                            @include wh100;
+                                            @include circle;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+
+                                .product-thumb {
+                                    position: relative;
+                                    @include square(length(80));
+                                    overflow: hidden;
+                                    @include flex-center;
+
+                                    .frame {
+                                        @include wh100;
+                                        position: relative;
+                                        object-fit: cover;
+                                    }
+
+                                    .productimage {
+                                        width: length(16);
+                                        height: length(16);
+                                        @include circle;
+                                        @include flex-center;
+                                        position: absolute;
+                                        left: 50%;
+                                        top: length(8);
+                                        transform: translateX(-50%);
+                                        overflow: hidden;
+                                        z-index: 100;
+                                        z-index: 100;
+
+                                        img {
+                                            @include wh100;
+                                            @include circle;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+
+                                .product-thumbnail {
+                                    position: relative;
+                                    @include square(length(80));
+                                    overflow: hidden;
+                                    @include flex-center;
+
+                                    .frame {
+                                        @include wh100;
+                                        position: relative;
+                                        object-fit: cover;
+                                    }
+
+                                    .productimage {
+                                        width: length(25);
+                                        height: length(25);
+                                        @include circle;
+                                        @include flex-center;
+                                        position: absolute;
+                                        left: 50.5%;
+                                        top: length(5);
+                                        transform: translateX(-50.5%);
+                                        overflow: hidden;
+                                        z-index: 100;
+
+                                        img {
+                                            @include wh100;
+                                            @include circle;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .priceinfo {
+                                text-align: center;
+                                height: 100%;
+                                @include flex-center;
+
+                                @include breakpoint(phone768) {
+                                    text-align: right;
+                                }
+
+                                .price {
+                                    display: inline-block;
+                                    @include font-24-16-medium;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-14-medium;
+                                    }
+                                }
+                            }
+                        }
+
+                        .productcol {
+                            flex-grow: 100;
+
+                            .productinfo {
+                                @include flex-center-vert;
+
+                                .medallion-thumbnail {
+                                    position: relative;
+                                    @include square(length(80));
+                                    overflow: hidden;
+                                    @include flex-center;
+
+                                    .frame {
+                                        @include wh100;
+                                        position: relative;
+                                    }
+
+                                    .medallion {
+                                        width: length(68);
+                                        height: length(61);
+                                        @include circle;
+                                        @include flex-center;
+                                        position: absolute;
+                                        left: length(6);
+                                        top: length(5);
+                                        transform: skew(-7deg);
+                                        overflow: hidden;
+                                        z-index: 100;
+
+                                        img {
+                                            @include wh100;
+                                            @include circle;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+
+                                .product-thumb {
+                                    position: relative;
+                                    @include square(length(80));
+                                    overflow: hidden;
+                                    @include flex-center;
+
+                                    .frame {
+                                        @include wh100;
+                                        position: relative;
+                                        object-fit: cover;
+                                    }
+
+                                    .productimage {
+                                        width: length(16);
+                                        height: length(16);
+                                        @include circle;
+                                        @include flex-center;
+                                        position: absolute;
+                                        left: 50%;
+                                        top: length(8);
+                                        transform: translateX(-50%);
+                                        overflow: hidden;
+                                        z-index: 100;
+                                        z-index: 100;
+
+                                        img {
+                                            @include wh100;
+                                            @include circle;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+
+                                .product-thumbnail {
+                                    position: relative;
+                                    @include square(length(80));
+                                    overflow: hidden;
+                                    @include flex-center;
+
+                                    .frame {
+                                        @include wh100;
+                                        position: relative;
+                                        object-fit: cover;
+                                    }
+
+                                    .productimage {
+                                        width: length(25);
+                                        height: length(25);
+                                        @include circle;
+                                        @include flex-center;
+                                        position: absolute;
+                                        left: 50.5%;
+                                        top: length(5);
+                                        transform: translateX(-50.5%);
+                                        overflow: hidden;
+                                        z-index: 100;
+
+                                        img {
+                                            @include wh100;
+                                            @include circle;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .imagecol {}
+                    }
+                }
+
+                &-footer {
+                    @include flex-column;
+
+                    .infobox {
+                        @include border-single(bottom, solid, 1, $header-border);
+
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+
+                    .footeinfo {
+                        width: 50%;
+                        margin-left: auto;
+
+                        @include breakpoint(phone768) {
+                            margin-left: length(0);
+                            @include w100;
+                        }
+
+                        .info {
+                            @include flex-center-between;
+
+                            .titlebox {
+                                width: 50%;
+                                padding: length(20);
+                                @include border-single(right, solid, 1, $header-border);
+
+                                .title {
+                                    @include heading-4;
+                                    font-weight: 500;
+                                    color: $textPrimary;
+                                    text-align: right;
+                                }
+                            }
+
+                            .pricebox {
+                                width: 50%;
+                                padding: length(20);
+
+                                .price {
+                                    @include heading-4;
+                                    font-weight: 500;
+                                    color: $textPrimary;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ORDER LIST END
 }
 
 // CART END
