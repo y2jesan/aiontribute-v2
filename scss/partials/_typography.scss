@@ -326,6 +326,41 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 }
 
 /*------------------------------------*\
+		28/20 FONT SIZES
+\*------------------------------------*/
+@mixin font-28-20-normal {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s20'),
+		weight('normal'),
+		line-height(28, size('s20')));
+}
+
+@mixin font-28-20-medium {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s20'),
+		weight('medium'),
+		line-height(28, size('s20')));
+}
+
+@mixin font-28-20-semibold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s20'),
+		weight('semibold'),
+		line-height(28, size('s20')));
+}
+
+@mixin font-28-20-bold {
+	@include font(family($montserrat),
+		style('normal'),
+		size('s20'),
+		weight('bold'),
+		line-height(28, size('s20')));
+}
+
+/*------------------------------------*\
 		24/12 FONT SIZES ((FuturaPT))
 \*------------------------------------*/
 @mixin font-24-14-normal-futuraPT {

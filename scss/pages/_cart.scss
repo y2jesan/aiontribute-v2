@@ -1,5 +1,4 @@
 // EMPTY CART START
-
 .emptycart {
     min-height: calc(100vh - 4.25rem);
     padding: length(48) length(0);
@@ -43,8 +42,6 @@
             max-width: length(480);
             @include flex-center-column;
 
-
-
             .emptytext {
                 @include font-24-16-normal;
                 line-height: 2;
@@ -58,12 +55,10 @@
         }
     }
 }
-
 //  EMPTY CART END
 
 
 // CART START
-
 .cart {
     overflow: hidden;
     padding: length(48) length(0);
@@ -802,9 +797,7 @@
             }
         }
     }
-
     // BILLING-SHIPPING END
-
 
     // ORDER LIST START
     .orderlist {
@@ -1218,7 +1211,6 @@
             }
         }
     }
-
     // ORDER LIST END
 
     // SUGGESTED PRODUCTS START
@@ -1261,8 +1253,321 @@
             }
         }
     }
-
     // SUGGESTED PRODUCTS END
-}
 
+    // SHIPPING ADDRESS START
+    .shipping-method {
+        max-width: 50%;
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(phone768) {
+            max-width: 100%;
+        }
+
+        &-header {
+            @include flex-column;
+            gap: length(8);
+
+            .shipping-title {
+                font-weight: 500;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-4;
+                    font-weight: 500;
+                }
+            }
+
+            .shipping-text {
+                @include font-24-16-normal;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include font-24-14-normal;
+                }
+
+                @include breakpoint(phone359) {
+                    @include font-12-12-normal;
+                }
+            }
+        }
+
+        &-body {
+            @include flex-column;
+            gap: length(24);
+
+            .paymentcard {
+                @include w100;
+                background: $primary;
+                padding: length(40);
+                @include radius(20);
+                @include flex-column;
+                gap: length(14);
+
+                @include breakpoint(phone768) {
+                    padding: length(24);
+                }
+
+                &-header {
+                    .paytitle {
+                        @include font-28-20-semibold;
+                        color: $white;
+                    }
+                }
+
+                &-body {
+                    @include flex-column;
+                    gap: length(20);
+
+                    .paymethod {
+                        @include flex-center-vert;
+                        gap: length(16);
+
+                        .cardtext {
+                            @include font-24-16-medium;
+                            color: $buttonHover;
+                            cursor: pointer;
+                            text-transform: uppercase;
+                            width: length(114);
+    
+                            @include breakpoint(phone768) {
+                                @include font-24-14-medium;
+                            }
+            
+                            @include breakpoint(phone359) {
+                                @include font-12-12-medium;
+                            }
+                        }
+
+                        .paymentimage {
+                            width: calc(100% - 8.125rem);
+                            height: length(32);
+                            @include flex-center-vert;
+                            overflow: hidden;
+
+                            img {
+                                @include breakpoint(phone768) {
+                                    @include wh100;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+
+                    .paycard {
+                        @include flex-center-vert;
+                        background: $buttonHover;
+                        @include radius(4);
+
+                        .cardnumber {
+                            @include flex-center-vert;
+                            width: 50%;
+
+                            .icon {
+                                @include square(length(36));
+                                @include flex-center;
+                                overflow: hidden;
+                            }
+
+                            .inputfield {
+                                width: calc(100% - 2.25rem);
+                                background: transparent;
+                                padding: length(8);
+                                @include font-24-14-normal;
+                                color: $black;
+    
+                                @include breakpoint(phone768) {
+                                    @include font-12-12-normal;
+                                }
+
+                                &::placeholder {
+                                    color: $secondaryDark;
+    
+                                    @include breakpoint(phone768) {
+                                        @include font-12-12-normal;
+                                    }
+                                }
+                            }
+                        }
+
+                        .duration-cvv {
+                            @include flex-center-vert;
+                            width: 50%;
+                            overflow: hidden;
+
+                            .duration {
+                                width: 50%;
+
+                                .inputfield {
+                                    background: transparent;
+                                    @include w100;
+                                    text-align: center;
+                                    padding: length(8);
+                                    @include font-24-14-normal;
+                                    color: $black;
+        
+                                    @include breakpoint(phone768) {
+                                        @include font-12-12-normal;
+                                    }
+    
+                                    &::placeholder {
+                                        color: $secondaryDark;
+        
+                                        @include breakpoint(phone768) {
+                                            @include font-12-12-normal;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .cvv {
+                                width: 50%;
+
+                                .inputfield {
+                                    @include w100;
+                                    background: transparent;
+                                    text-align: center;
+                                    padding: length(8);
+                                    @include font-24-14-normal;
+                                    color: $black;
+        
+                                    @include breakpoint(phone768) {
+                                        @include font-12-12-normal;
+                                    }
+    
+                                    &::placeholder {
+                                        color: $secondaryDark;
+        
+                                        @include breakpoint(phone768) {
+                                            @include font-12-12-normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .paymentinfo {
+                @include flex-column;
+                gap: length(16);
+
+                .text {
+                    @include font-24-14-normal;
+                    color: $textSecondary;
+
+                    @include breakpoint(phone480) {
+                        @include font-12-12-normal;
+                        line-height: 1.5;
+                    }
+                }
+
+                .info {
+                    @include font-24-14-normal;
+                    color: $textSecondary;
+
+                    @include breakpoint(phone480) {
+                        @include font-12-12-normal;
+                        line-height: 1.5;
+                    }
+
+                    .link {
+                        @include font-24-14-medium;
+                        color: $textSecondary;
+                        text-decoration: underline;
+                        @include transitions;
+
+                        @include breakpoint(phone480) {
+                            @include font-12-12-medium;
+                            line-height: 1.5;
+                        }
+
+                        @include hover {
+                            color: $black;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                .agreement {
+                    margin-bottom: length(16);
+
+                    .inputbox {
+                        @include flex-center-vert;
+        
+                        .checkinput {
+                            &:checked~.checklabel {
+                                color: $black;
+
+                                &::after {
+                                    border-color: $textPrimary;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+        
+                        .checklabel {
+                            @include font-24-14-medium;
+                            color: $textPrimary;
+                            cursor: pointer;
+                            position: relative;
+                            padding-left: length(36);
+
+                            @include breakpoint(phone480) {
+                                @include font-12-12-medium;
+                                line-height: 1.5;
+                            }
+
+                            @include breakpoint(mobile400) {
+                                @include font-10-10-medium;
+                                line-height: 1.5;
+                            }
+        
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                @include square(length(24));
+                                @include border(solid, 2, $textPrimary);
+                                @include transform(translateY(-50%));
+                                background: $white;
+                            }
+        
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 32%;
+                                left: length(9);
+                                width: length(7);
+                                height: length(14);
+                                @include border(solid, 2, $white);
+                                border-top: 0;
+                                border-left: 0;
+                                @include transform(translateY(-32%) rotate(45deg));
+                                opacity: 0;
+                                visibility: hidden;
+                                @include transitions;
+                            }
+        
+                            &::selection {
+                                background: transparent;
+                                color: $textPrimary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // SHIPPING ADDRESS END
+}
 // CART END

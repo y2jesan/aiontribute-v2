@@ -1046,20 +1046,24 @@
                     <div class="shipping-method">
                         <div class="shipping-method-header">
                             <h1 class="shipping-title">Choose Shipping Method</h1>
-                            <p class="shipping-text">Your shipping prices will be calculated after you enter your shipping address</p>
+                            <p class="shipping-text">Your shipping prices will be calculated after you enter your shipping address.</p>
                         </div>
 
                         <div class="shipping-method-body">
                             <div class="paymentcard">
                                 <div class="paymentcard-header">
-                                    <h5 class="cardtext">CREDIT CARD</h5>
-
-                                    <div class="paymentimage">
-                                        <img src="assets/images/payment-getway.svg" alt="payment-image">
-                                    </div>
+                                    <h3 class="paytitle">Billing</h3>
                                 </div>
 
                                 <div class="paymentcard-body">
+                                    <div class="paymethod">
+                                        <h5 class="cardtext">CREDIT CARD</h5>
+    
+                                        <div class="paymentimage">
+                                            <img src="assets/images/payment-getway.svg" alt="payment-image">
+                                        </div>
+                                    </div>
+
                                     <div class="paycard">
                                         <div class="cardnumber">
                                             <div class="icon">
@@ -1069,34 +1073,38 @@
                                                 </svg>
                                             </div>
 
-                                            <input type="number" class="inputfield" placeholder="Enter Card Number">
+                                            <input type="number" class="inputfield" placeholder="Card Number">
                                         </div>
 
-                                        <div class="cardduration">
-                                            <input type="text" placeholder="MM/YY" class="inputfield">
-                                        </div>
-
-                                        <div class="cardcvv">
-                                            <input type="number" placeholder="CVV" class="inputfield">
-                                        </div>
-                                    </div>
-
-                                    <p class="text">
-                                        Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.
-                                    </p>
-
-                                    <p class="info">(MORE INFO ON OUR <a href="privacy-policy.html" class="link">PRIVACY POLICY</a>)</p>
-
-                                    <div class="agreement">
-                                        <div class="inputbox">
-                                            <input type="checkbox" id="agreed" hidden>
-                                            <label for="agreed" class="checklabel">I have read and agree to the website terms and conditions</label>
+                                        <div class="duration-cvv">
+                                            <div class="duration">
+                                                <input type="text" placeholder="MM/YY" class="inputfield">
+                                            </div>
+    
+                                            <div class="cvv">
+                                                <input type="number" placeholder="CVV" class="inputfield">
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <div class="orderbox">
-                                        <button class="btn-order" type="button">Place Order</button>
+                            <div class="paymentinfo">
+                                <p class="text">
+                                    Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.
+                                </p>
+
+                                <p class="info">(MORE INFO ON OUR <a href="privacy-policy.html" class="link">PRIVACY-POLICY</a>)</p>
+
+                                <div class="agreement">
+                                    <div class="inputbox">
+                                        <input type="checkbox" class="checkinput" id="agreed" hidden>
+                                        <label for="agreed" class="checklabel">I have read and agree to the website terms and conditions</label>
                                     </div>
+                                </div>
+
+                                <div class="orderbox">
+                                    <button class="btn-submit" type="button">Place Order</button>
                                 </div>
                             </div>
                         </div>

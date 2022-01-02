@@ -295,6 +295,9 @@
 		24/16 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		28/20 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		24/12 FONT SIZES ((FuturaPT))
 \*------------------------------------*/
 /*------------------------------------*\
@@ -4712,6 +4715,649 @@ h6 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.cart .shipping-method {
+  max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method {
+    max-width: 100%;
+  }
+}
+
+.cart .shipping-method-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cart .shipping-method-header .shipping-title {
+  font-weight: 500;
+  color: #212529;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-header .shipping-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .cart .shipping-method-header .shipping-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.cart .shipping-method-header .shipping-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #212529;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-header .shipping-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .cart .shipping-method-header .shipping-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.cart .shipping-method-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart .shipping-method-body .paymentcard {
+  width: 100%;
+  background: #B32122;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  border-radius: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-body .paymentcard {
+    padding: 1.5rem;
+  }
+}
+
+.cart .shipping-method-body .paymentcard-header .paytitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: white;
+}
+
+.cart .shipping-method-body .paymentcard-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cart .shipping-method-body .paymentcard-body .paymethod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.cart .shipping-method-body .paymentcard-body .paymethod .cardtext {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #e0dbdb;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 7.125rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-body .paymentcard-body .paymethod .cardtext {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .cart .shipping-method-body .paymentcard-body .paymethod .cardtext {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
+.cart .shipping-method-body .paymentcard-body .paymethod .paymentimage {
+  width: calc(100% - 8.125rem);
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-body .paymentcard-body .paymethod .paymentimage img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #e0dbdb;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .cardnumber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .cardnumber .icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield {
+  width: calc(100% - 2.25rem);
+  background: transparent;
+  padding: 0.5rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: black;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield::-webkit-input-placeholder {
+  color: #3A3A3A;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield:-ms-input-placeholder {
+  color: #3A3A3A;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield::-ms-input-placeholder {
+  color: #3A3A3A;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield::placeholder {
+  color: #3A3A3A;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield::-webkit-input-placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield:-ms-input-placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield::-ms-input-placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .cart .shipping-method-body .paymentcard-body .paycard .cardnumber .inputfield::placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  overflow: hidden;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration {
+  width: 50%;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield {
+  background: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: black;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield::-webkit-input-placeholder {
+  color: #3A3A3A;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield:-ms-input-placeholder {
+  color: #3A3A3A;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield::-ms-input-placeholder {
+  color: #3A3A3A;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield::placeholder {
+  color: #3A3A3A;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield::-webkit-input-placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield:-ms-input-placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield::-ms-input-placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .duration .inputfield::placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv {
+  width: 50%;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield {
+  width: 100%;
+  background: transparent;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: black;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield::-webkit-input-placeholder {
+  color: #3A3A3A;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield:-ms-input-placeholder {
+  color: #3A3A3A;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield::-ms-input-placeholder {
+  color: #3A3A3A;
+}
+
+.cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield::placeholder {
+  color: #3A3A3A;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield::-webkit-input-placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield:-ms-input-placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield::-ms-input-placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .cart .shipping-method-body .paymentcard-body .paycard .duration-cvv .cvv .inputfield::placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.cart .shipping-method-body .paymentinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.cart .shipping-method-body .paymentinfo .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #707070;
+}
+
+@media screen and (max-width: 30rem) {
+  .cart .shipping-method-body .paymentinfo .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.cart .shipping-method-body .paymentinfo .info {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #707070;
+}
+
+@media screen and (max-width: 30rem) {
+  .cart .shipping-method-body .paymentinfo .info {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.cart .shipping-method-body .paymentinfo .info .link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #707070;
+  text-decoration: underline;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 30rem) {
+  .cart .shipping-method-body .paymentinfo .info .link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.cart .shipping-method-body .paymentinfo .info .link:not([disabled]):hover {
+  color: black;
+  text-decoration: none;
+}
+
+.cart .shipping-method-body .paymentinfo .agreement {
+  margin-bottom: 1rem;
+}
+
+.cart .shipping-method-body .paymentinfo .agreement .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart .shipping-method-body .paymentinfo .agreement .inputbox .checkinput:checked ~ .checklabel {
+  color: black;
+}
+
+.cart .shipping-method-body .paymentinfo .agreement .inputbox .checkinput:checked ~ .checklabel::after {
+  border-color: #212529;
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #212529;
+  cursor: pointer;
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+@media screen and (max-width: 30rem) {
+  .cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  .cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: solid 0.125rem #212529;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: white;
+}
+
+.cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel::after {
+  content: '';
+  position: absolute;
+  top: 32%;
+  left: 0.5625rem;
+  width: 0.4375rem;
+  height: 0.875rem;
+  border: solid 0.125rem white;
+  border-top: 0;
+  border-left: 0;
+  -webkit-transform: translateY(-32%) rotate(45deg);
+  transform: translateY(-32%) rotate(45deg);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel::-moz-selection {
+  background: transparent;
+  color: #212529;
+}
+
+.cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel::selection {
+  background: transparent;
+  color: #212529;
 }
 
 .privacy-policy {
