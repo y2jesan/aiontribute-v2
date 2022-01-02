@@ -838,29 +838,83 @@
                     @include border-single(bottom, solid, 1, $header-border);
                     position: relative;
 
-                    .tablecol {
-                        width: 25%;
-                        @include border-single(right, solid, 1, $header-border);
+                    .productcol {
+                        flex-grow: 100;
+                        width: 60%;
                         padding: length(20);
+                        @include border-single(right, solid, 1, $header-border);
 
-                        &:last-child {
-                            border-right: 0;
+                        @include breakpoint(phone500) {
+                            padding: length(10);
                         }
 
-                        .tabletitle {
+                        .title {
                             @include heading-4;
                             font-weight: 500;
                             color: $textPrimary;
                             text-align: center;
 
-                            @include breakpoint(phone768) {
-                                // margin-left: length(12);
+                            @include breakpoint(phone500) {
+                                @include heading-6;
+                                font-weight: 500;
                             }
                         }
                     }
 
-                    .productcol {
-                        flex-grow: 100;
+                    .prices {
+                        width: 40%;
+                        display: flex;
+
+                        .price {
+                            @include border-single(right, solid, 1, $header-border);
+                            padding: length(20);
+                            width: 50%;
+
+                            @include breakpoint(phone768) {
+                                padding: length(10);
+                            }
+
+                            .title {
+                                @include heading-4;
+                                font-weight: 500;
+                                color: $textPrimary;
+                                text-align: center;
+
+                                @include breakpoint(phone500) {
+                                    @include heading-6;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            @include breakpoint(phone500) {
+                                padding: length(10);
+                            }
+                        }
+
+                        .total {
+                            padding: length(20);
+                            width: 50%;
+
+                            @include breakpoint(phone768) {
+                                padding: length(10);
+                            }
+
+                            .title {
+                                @include heading-4;
+                                font-weight: 500;
+                                color: $textPrimary;
+                                text-align: center;
+
+                                @include breakpoint(phone500) {
+                                    @include heading-6;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            @include breakpoint(phone500) {
+                                padding: length(10);
+                            }
+                        }
                     }
                 }
 
@@ -872,260 +926,222 @@
                         @include border-single(bottom, solid, 1, $header-border);
                         position: relative;
 
-                        .tablecol {
-                            width: 25%;
+                        .productcol {
+                            flex-grow: 100;
+                            width: 60%;
                             @include border-single(right, solid, 1, $header-border);
                             padding: length(20);
 
-                            &:last-child {
-                                border-right: 0;
+                            @include breakpoint(phone768) {
+                                padding: length(10);
                             }
 
                             .orderproductinfo {
                                 @include flex-column;
                                 gap: length(14);
 
+                                .productinfo {
+                                    @include flex-center-vert;
+
+                                    .medallion-thumbnail {
+                                        position: relative;
+                                        @include square(length(80));
+                                        overflow: hidden;
+                                        @include flex-center;
+
+                                        .frame {
+                                            @include wh100;
+                                            position: relative;
+                                        }
+
+                                        .medallion {
+                                            width: length(68);
+                                            height: length(61);
+                                            @include circle;
+                                            @include flex-center;
+                                            position: absolute;
+                                            left: length(6);
+                                            top: length(5);
+                                            transform: skew(-7deg);
+                                            overflow: hidden;
+                                            z-index: 100;
+
+                                            img {
+                                                @include wh100;
+                                                @include circle;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+
+                                    .product-thumb {
+                                        position: relative;
+                                        @include square(length(80));
+                                        overflow: hidden;
+                                        @include flex-center;
+
+                                        .frame {
+                                            @include wh100;
+                                            position: relative;
+                                            object-fit: cover;
+                                        }
+
+                                        .productimage {
+                                            width: length(16);
+                                            height: length(16);
+                                            @include circle;
+                                            @include flex-center;
+                                            position: absolute;
+                                            left: 50%;
+                                            top: length(8);
+                                            transform: translateX(-50%);
+                                            overflow: hidden;
+                                            z-index: 100;
+                                            z-index: 100;
+
+                                            img {
+                                                @include wh100;
+                                                @include circle;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+
+                                    .product-thumbnail {
+                                        position: relative;
+                                        @include square(length(80));
+                                        overflow: hidden;
+                                        @include flex-center;
+
+                                        .frame {
+                                            @include wh100;
+                                            position: relative;
+                                            object-fit: cover;
+                                        }
+
+                                        .productimage {
+                                            width: length(25);
+                                            height: length(25);
+                                            @include circle;
+                                            @include flex-center;
+                                            position: absolute;
+                                            left: 50.5%;
+                                            top: length(5);
+                                            transform: translateX(-50.5%);
+                                            overflow: hidden;
+                                            z-index: 100;
+
+                                            img {
+                                                @include wh100;
+                                                @include circle;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+                                }
+
                                 .productdetails {
                                     @include flex-column;
+                                    gap: length(12);
 
                                     .detailsinfo {
+                                        @include flex-center-vert;
+                                        gap: length(6);
+
                                         .title {
                                             @include font-12-12-medium;
+                                            line-height: 1.5;
+
+                                            @include breakpoint(phone500) {
+                                                @include font-10-10-medium;
+                                                line-height: 1.5;
+                                            }
                                         }
 
                                         .text {
                                             @include font-12-12-normal;
+                                            line-height: 1.5;
+                                            @include text-overflow;
+
+                                            @include breakpoint(phone500) {
+                                                @include font-10-10-normal;
+                                                line-height: 1.5;
+                                            }
                                         }
                                     }
                                 }
                             }
+                        }
 
-                            .productinfo {
-                                @include flex-center-vert;
-                                @include h100;
+                        .prices {
+                            width: 40%;
+                            display: flex;
 
-                                .medallion-thumbnail {
-                                    position: relative;
-                                    @include square(length(80));
-                                    overflow: hidden;
-                                    @include flex-center;
-
-                                    .frame {
-                                        @include wh100;
-                                        position: relative;
-                                    }
-
-                                    .medallion {
-                                        width: length(68);
-                                        height: length(61);
-                                        @include circle;
-                                        @include flex-center;
-                                        position: absolute;
-                                        left: length(6);
-                                        top: length(5);
-                                        transform: skew(-7deg);
-                                        overflow: hidden;
-                                        z-index: 100;
-
-                                        img {
-                                            @include wh100;
-                                            @include circle;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                }
-
-                                .product-thumb {
-                                    position: relative;
-                                    @include square(length(80));
-                                    overflow: hidden;
-                                    @include flex-center;
-
-                                    .frame {
-                                        @include wh100;
-                                        position: relative;
-                                        object-fit: cover;
-                                    }
-
-                                    .productimage {
-                                        width: length(16);
-                                        height: length(16);
-                                        @include circle;
-                                        @include flex-center;
-                                        position: absolute;
-                                        left: 50%;
-                                        top: length(8);
-                                        transform: translateX(-50%);
-                                        overflow: hidden;
-                                        z-index: 100;
-                                        z-index: 100;
-
-                                        img {
-                                            @include wh100;
-                                            @include circle;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                }
-
-                                .product-thumbnail {
-                                    position: relative;
-                                    @include square(length(80));
-                                    overflow: hidden;
-                                    @include flex-center;
-
-                                    .frame {
-                                        @include wh100;
-                                        position: relative;
-                                        object-fit: cover;
-                                    }
-
-                                    .productimage {
-                                        width: length(25);
-                                        height: length(25);
-                                        @include circle;
-                                        @include flex-center;
-                                        position: absolute;
-                                        left: 50.5%;
-                                        top: length(5);
-                                        transform: translateX(-50.5%);
-                                        overflow: hidden;
-                                        z-index: 100;
-
-                                        img {
-                                            @include wh100;
-                                            @include circle;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                }
-                            }
-
-                            .priceinfo {
-                                text-align: center;
-                                height: 100%;
+                            .price {
+                                width: 50%;
+                                @include border-single(right, solid, 1, $header-border);
+                                padding: length(20);
                                 @include flex-center;
+                                overflow: hidden;
 
                                 @include breakpoint(phone768) {
-                                    text-align: right;
+                                    padding: length(10);
                                 }
 
-                                .price {
-                                    display: inline-block;
+                                .singleprice {
                                     @include font-24-16-medium;
+                                    line-height: 1.5;
+                                    text-align: center;
 
                                     @include breakpoint(phone768) {
                                         @include font-24-14-medium;
+                                        line-height: 1.5;
+                                    }
+
+                                    @include breakpoint(phone500) {
+                                        @include font-12-12-medium;
+                                        line-height: 1.5;
+                                    }
+
+                                    @include breakpoint(mobile400) {
+                                        @include font-10-10-medium;
+                                        line-height: 1.5;
+                                    }
+                                }
+                            }
+
+                            .total {
+                                width: 50%;
+                                padding: length(20);
+                                @include flex-center;
+                                overflow: hidden;
+
+                                @include breakpoint(phone768) {
+                                    padding: length(10);
+                                }
+
+                                .totalprice {
+                                    @include font-24-16-medium;
+                                    line-height: 1.5;
+                                    text-align: center;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-14-medium;
+                                        line-height: 1.5;
+                                    }
+
+                                    @include breakpoint(phone500) {
+                                        @include font-12-12-medium;
+                                        line-height: 1.5;
+                                    }
+
+                                    @include breakpoint(mobile400) {
+                                        @include font-10-10-medium;
+                                        line-height: 1.5;
                                     }
                                 }
                             }
                         }
-
-                        .productcol {
-                            flex-grow: 100;
-
-                            .productinfo {
-                                @include flex-center-vert;
-
-                                .medallion-thumbnail {
-                                    position: relative;
-                                    @include square(length(80));
-                                    overflow: hidden;
-                                    @include flex-center;
-
-                                    .frame {
-                                        @include wh100;
-                                        position: relative;
-                                    }
-
-                                    .medallion {
-                                        width: length(68);
-                                        height: length(61);
-                                        @include circle;
-                                        @include flex-center;
-                                        position: absolute;
-                                        left: length(6);
-                                        top: length(5);
-                                        transform: skew(-7deg);
-                                        overflow: hidden;
-                                        z-index: 100;
-
-                                        img {
-                                            @include wh100;
-                                            @include circle;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                }
-
-                                .product-thumb {
-                                    position: relative;
-                                    @include square(length(80));
-                                    overflow: hidden;
-                                    @include flex-center;
-
-                                    .frame {
-                                        @include wh100;
-                                        position: relative;
-                                        object-fit: cover;
-                                    }
-
-                                    .productimage {
-                                        width: length(16);
-                                        height: length(16);
-                                        @include circle;
-                                        @include flex-center;
-                                        position: absolute;
-                                        left: 50%;
-                                        top: length(8);
-                                        transform: translateX(-50%);
-                                        overflow: hidden;
-                                        z-index: 100;
-                                        z-index: 100;
-
-                                        img {
-                                            @include wh100;
-                                            @include circle;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                }
-
-                                .product-thumbnail {
-                                    position: relative;
-                                    @include square(length(80));
-                                    overflow: hidden;
-                                    @include flex-center;
-
-                                    .frame {
-                                        @include wh100;
-                                        position: relative;
-                                        object-fit: cover;
-                                    }
-
-                                    .productimage {
-                                        width: length(25);
-                                        height: length(25);
-                                        @include circle;
-                                        @include flex-center;
-                                        position: absolute;
-                                        left: 50.5%;
-                                        top: length(5);
-                                        transform: translateX(-50.5%);
-                                        overflow: hidden;
-                                        z-index: 100;
-
-                                        img {
-                                            @include wh100;
-                                            @include circle;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .imagecol {}
                     }
                 }
 
@@ -1141,12 +1157,12 @@
                     }
 
                     .footeinfo {
-                        width: 50%;
+                        width: 40%;
                         margin-left: auto;
 
-                        @include breakpoint(phone768) {
-                            margin-left: length(0);
-                            @include w100;
+                        @include breakpoint(tablet991) {
+                            margin-left: auto;
+                            width: 80%;
                         }
 
                         .info {
@@ -1156,24 +1172,40 @@
                                 width: 50%;
                                 padding: length(20);
                                 @include border-single(right, solid, 1, $header-border);
+                                overflow: hidden;
+
+                                @include breakpoint(phone500) {
+                                    padding: length(10);
+                                }
 
                                 .title {
-                                    @include heading-4;
-                                    font-weight: 500;
+                                    @include font-24-16-medium;
                                     color: $textPrimary;
                                     text-align: right;
+
+                                    @include breakpoint(phone500) {
+                                        @include font-24-14-medium;
+                                    }
                                 }
                             }
 
                             .pricebox {
                                 width: 50%;
                                 padding: length(20);
+                                overflow: hidden;
+
+                                @include breakpoint(phone500) {
+                                    padding: length(10);
+                                }
 
                                 .price {
-                                    @include heading-4;
-                                    font-weight: 500;
+                                    @include font-24-16-medium;
                                     color: $textPrimary;
                                     text-align: center;
+
+                                    @include breakpoint(phone500) {
+                                        @include font-24-14-medium;
+                                    }
                                 }
                             }
                         }

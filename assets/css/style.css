@@ -3818,17 +3818,22 @@ h6 {
   position: relative;
 }
 
-.cart .orderlist-body .order-table-header .tablecol {
-  width: 25%;
-  border-right: solid 0.0625rem #F0F0F0;
+.cart .orderlist-body .order-table-header .productcol {
+  -webkit-box-flex: 100;
+      -ms-flex-positive: 100;
+          flex-grow: 100;
+  width: 60%;
   padding: 1.25rem;
+  border-right: solid 0.0625rem #F0F0F0;
 }
 
-.cart .orderlist-body .order-table-header .tablecol:last-child {
-  border-right: 0;
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-header .productcol {
+    padding: 0.625rem;
+  }
 }
 
-.cart .orderlist-body .order-table-header .tablecol .tabletitle {
+.cart .orderlist-body .order-table-header .productcol .title {
   font-family: "FuturaPT";
   font-style: normal;
   font-size: 1.25rem;
@@ -3839,10 +3844,101 @@ h6 {
   text-align: center;
 }
 
-.cart .orderlist-body .order-table-header .productcol {
-  -webkit-box-flex: 100;
-      -ms-flex-positive: 100;
-          flex-grow: 100;
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-header .productcol .title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.cart .orderlist-body .order-table-header .prices {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart .orderlist-body .order-table-header .prices .price {
+  border-right: solid 0.0625rem #F0F0F0;
+  padding: 1.25rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .orderlist-body .order-table-header .prices .price {
+    padding: 0.625rem;
+  }
+}
+
+.cart .orderlist-body .order-table-header .prices .price .title {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  font-weight: 500;
+  color: #212529;
+  text-align: center;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-header .prices .price .title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-header .prices .price {
+    padding: 0.625rem;
+  }
+}
+
+.cart .orderlist-body .order-table-header .prices .total {
+  padding: 1.25rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .orderlist-body .order-table-header .prices .total {
+    padding: 0.625rem;
+  }
+}
+
+.cart .orderlist-body .order-table-header .prices .total .title {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  font-weight: 500;
+  color: #212529;
+  text-align: center;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-header .prices .total .title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-header .prices .total {
+    padding: 0.625rem;
+  }
 }
 
 .cart .orderlist-body .order-table-body {
@@ -3863,17 +3959,22 @@ h6 {
   position: relative;
 }
 
-.cart .orderlist-body .order-table-body .tablerow .tablecol {
-  width: 25%;
+.cart .orderlist-body .order-table-body .tablerow .productcol {
+  -webkit-box-flex: 100;
+      -ms-flex-positive: 100;
+          flex-grow: 100;
+  width: 60%;
   border-right: solid 0.0625rem #F0F0F0;
   padding: 1.25rem;
 }
 
-.cart .orderlist-body .order-table-body .tablerow .tablecol:last-child {
-  border-right: 0;
+@media screen and (max-width: 48rem) {
+  .cart .orderlist-body .order-table-body .tablerow .productcol {
+    padding: 0.625rem;
+  }
 }
 
-.cart .orderlist-body .order-table-body .tablerow .tablecol .orderproductinfo {
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3884,7 +3985,177 @@ h6 {
   gap: 0.875rem;
 }
 
-.cart .orderlist-body .order-table-body .tablerow .tablecol .orderproductinfo .productdetails {
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .medallion-thumbnail {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .medallion-thumbnail .frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .medallion-thumbnail .medallion {
+  width: 4.25rem;
+  height: 3.8125rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0.375rem;
+  top: 0.3125rem;
+  -webkit-transform: skew(-7deg);
+          transform: skew(-7deg);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .medallion-thumbnail .medallion img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .product-thumb {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .product-thumb .frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .product-thumb .productimage {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 0.5rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  overflow: hidden;
+  z-index: 100;
+  z-index: 100;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .product-thumb .productimage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .product-thumbnail {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .product-thumbnail .frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .product-thumbnail .productimage {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 50.5%;
+  top: 0.3125rem;
+  -webkit-transform: translateX(-50.5%);
+          transform: translateX(-50.5%);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productinfo .product-thumbnail .productimage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productdetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3892,275 +4163,138 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 0.75rem;
 }
 
-.cart .orderlist-body .order-table-body .tablerow .tablecol .orderproductinfo .productdetails .detailsinfo .title {
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productdetails .detailsinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.375rem;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productdetails .detailsinfo .title {
   font-family: "Montserrat";
   font-style: normal;
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1;
+  line-height: 1.5;
 }
 
-.cart .orderlist-body .order-table-body .tablerow .tablecol .orderproductinfo .productdetails .detailsinfo .text {
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productdetails .detailsinfo .title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productdetails .detailsinfo .text {
   font-family: "Montserrat";
   font-style: normal;
   font-size: 0.75rem;
   font-weight: normal;
   line-height: 1;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .medallion-thumbnail {
-  position: relative;
-  height: 5rem;
-  width: 5rem;
+  line-height: 1.5;
+  max-width: 99%;
+  white-space: nowrap;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-overflow: ellipsis;
 }
 
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .medallion-thumbnail .frame {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .medallion-thumbnail .medallion {
-  width: 4.25rem;
-  height: 3.8125rem;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  left: 0.375rem;
-  top: 0.3125rem;
-  -webkit-transform: skew(-7deg);
-          transform: skew(-7deg);
-  overflow: hidden;
-  z-index: 100;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .medallion-thumbnail .medallion img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .product-thumb {
-  position: relative;
-  height: 5rem;
-  width: 5rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .product-thumb .frame {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .product-thumb .productimage {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  left: 50%;
-  top: 0.5rem;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  overflow: hidden;
-  z-index: 100;
-  z-index: 100;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .product-thumb .productimage img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .product-thumbnail {
-  position: relative;
-  height: 5rem;
-  width: 5rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .product-thumbnail .frame {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .product-thumbnail .productimage {
-  width: 1.5625rem;
-  height: 1.5625rem;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  left: 50.5%;
-  top: 0.3125rem;
-  -webkit-transform: translateX(-50.5%);
-          transform: translateX(-50.5%);
-  overflow: hidden;
-  z-index: 100;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .productinfo .product-thumbnail .productimage img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .tablecol .priceinfo {
-  text-align: center;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 48rem) {
-  .cart .orderlist-body .order-table-body .tablerow .tablecol .priceinfo {
-    text-align: right;
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productdetails .detailsinfo .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.625rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
   }
 }
 
-.cart .orderlist-body .order-table-body .tablerow .tablecol .priceinfo .price {
-  display: inline-block;
+.cart .orderlist-body .order-table-body .tablerow .prices {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .prices .price {
+  width: 50%;
+  border-right: solid 0.0625rem #F0F0F0;
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .orderlist-body .order-table-body .tablerow .prices .price {
+    padding: 0.625rem;
+  }
+}
+
+.cart .orderlist-body .order-table-body .tablerow .prices .price .singleprice {
   font-family: "Montserrat";
   font-style: normal;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+  line-height: 1.5;
+  text-align: center;
 }
 
 @media screen and (max-width: 48rem) {
-  .cart .orderlist-body .order-table-body .tablerow .tablecol .priceinfo .price {
+  .cart .orderlist-body .order-table-body .tablerow .prices .price .singleprice {
     font-family: "Montserrat";
     font-style: normal;
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.71429;
+    line-height: 1.5;
   }
 }
 
-.cart .orderlist-body .order-table-body .tablerow .productcol {
-  -webkit-box-flex: 100;
-      -ms-flex-positive: 100;
-          flex-grow: 100;
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-body .tablerow .prices .price .singleprice {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 1.5;
+  }
 }
 
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (max-width: 25rem) {
+  .cart .orderlist-body .order-table-body .tablerow .prices .price .singleprice {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 1.5;
+  }
 }
 
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .medallion-thumbnail {
-  position: relative;
-  height: 5rem;
-  width: 5rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .medallion-thumbnail .frame {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .medallion-thumbnail .medallion {
-  width: 4.25rem;
-  height: 3.8125rem;
-  border-radius: 100%;
+.cart .orderlist-body .order-table-body .tablerow .prices .total {
+  width: 50%;
+  padding: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4170,130 +4304,56 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  left: 0.375rem;
-  top: 0.3125rem;
-  -webkit-transform: skew(-7deg);
-          transform: skew(-7deg);
   overflow: hidden;
-  z-index: 100;
 }
 
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .medallion-thumbnail .medallion img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media screen and (max-width: 48rem) {
+  .cart .orderlist-body .order-table-body .tablerow .prices .total {
+    padding: 0.625rem;
+  }
 }
 
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .product-thumb {
-  position: relative;
-  height: 5rem;
-  width: 5rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.cart .orderlist-body .order-table-body .tablerow .prices .total .totalprice {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  line-height: 1.5;
+  text-align: center;
 }
 
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .product-thumb .frame {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media screen and (max-width: 48rem) {
+  .cart .orderlist-body .order-table-body .tablerow .prices .total .totalprice {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+    line-height: 1.5;
+  }
 }
 
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .product-thumb .productimage {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  left: 50%;
-  top: 0.5rem;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  overflow: hidden;
-  z-index: 100;
-  z-index: 100;
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-body .tablerow .prices .total .totalprice {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 1.5;
+  }
 }
 
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .product-thumb .productimage img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .product-thumbnail {
-  position: relative;
-  height: 5rem;
-  width: 5rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .product-thumbnail .frame {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .product-thumbnail .productimage {
-  width: 1.5625rem;
-  height: 1.5625rem;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  left: 50.5%;
-  top: 0.3125rem;
-  -webkit-transform: translateX(-50.5%);
-          transform: translateX(-50.5%);
-  overflow: hidden;
-  z-index: 100;
-}
-
-.cart .orderlist-body .order-table-body .tablerow .productcol .productinfo .product-thumbnail .productimage img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media screen and (max-width: 25rem) {
+  .cart .orderlist-body .order-table-body .tablerow .prices .total .totalprice {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 1.5;
+  }
 }
 
 .cart .orderlist-body .order-table-footer {
@@ -4315,14 +4375,14 @@ h6 {
 }
 
 .cart .orderlist-body .order-table-footer .footeinfo {
-  width: 50%;
+  width: 40%;
   margin-left: auto;
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 61.9375rem) {
   .cart .orderlist-body .order-table-footer .footeinfo {
-    margin-left: 0rem;
-    width: 100%;
+    margin-left: auto;
+    width: 80%;
   }
 }
 
@@ -4342,33 +4402,65 @@ h6 {
   width: 50%;
   padding: 1.25rem;
   border-right: solid 0.0625rem #F0F0F0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-footer .footeinfo .info .titlebox {
+    padding: 0.625rem;
+  }
 }
 
 .cart .orderlist-body .order-table-footer .footeinfo .info .titlebox .title {
-  font-family: "FuturaPT";
+  font-family: "Montserrat";
   font-style: normal;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.36;
+  font-size: 1rem;
   font-weight: 500;
+  line-height: 1.5;
   color: #212529;
   text-align: right;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-footer .footeinfo .info .titlebox .title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+  }
 }
 
 .cart .orderlist-body .order-table-footer .footeinfo .info .pricebox {
   width: 50%;
   padding: 1.25rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-footer .footeinfo .info .pricebox {
+    padding: 0.625rem;
+  }
 }
 
 .cart .orderlist-body .order-table-footer .footeinfo .info .pricebox .price {
-  font-family: "FuturaPT";
+  font-family: "Montserrat";
   font-style: normal;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.36;
+  font-size: 1rem;
   font-weight: 500;
+  line-height: 1.5;
   color: #212529;
   text-align: center;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .cart .orderlist-body .order-table-footer .footeinfo .info .pricebox .price {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+  }
 }
 
 .privacy-policy {
