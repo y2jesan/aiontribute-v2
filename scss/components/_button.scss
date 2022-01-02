@@ -41,3 +41,20 @@
         @include font-12-12-medium;
     }
 }
+
+.btn-add {
+    padding: length(8) length(48);
+    @include radius(48);
+    @include font-24-14-medium;
+    @include setBgColor($primary, $buttonHover);
+    @include transitions;
+    text-align: center;
+
+    @include hover {
+        @include setBgColor($buttonHover, $primary);
+    }
+
+    @include breakpoint(phone768) {
+        @include font-12-12-medium;
+    }
+}

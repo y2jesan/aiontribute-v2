@@ -549,7 +549,6 @@
     }
 
     // BILLING-SHIPPING START
-
     .billing-shipping {
         display: flex;
         gap: length(24);
@@ -811,6 +810,11 @@
     .orderlist {
         @include flex-column;
         gap: length(24);
+        margin-bottom: length(48);
+
+        @include breakpoint(tablet991) {
+            margin-bottom: length(32);
+        }
 
         &-header {
             .orderlist-title {
@@ -1216,6 +1220,49 @@
     }
 
     // ORDER LIST END
+
+    // SUGGESTED PRODUCTS START
+    .suggested-products {
+        @include flex-column;
+        gap: length(24);
+        margin-bottom: length(48);
+
+        @include breakpoint(tablet991) {
+            margin-bottom: length(32);
+        }
+
+        &-header {
+            @include breakpoint(phone480) {
+                text-align: center;
+            }
+
+            .suggested-title {
+                font-weight: 500;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-4;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &-body {
+            @include flex-center-vert;
+            gap: length(16);
+
+            @include breakpoint(phone480) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    // SUGGESTED PRODUCTS END
 }
 
 // CART END

@@ -326,6 +326,76 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 }
 
 /*------------------------------------*\
+		24/12 FONT SIZES ((FuturaPT))
+\*------------------------------------*/
+@mixin font-24-14-normal-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('s12'),
+		weight('normal'),
+		line-height(24, size('s12')));
+}
+
+@mixin font-24-12-medium-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('s12'),
+		weight('medium'),
+		line-height(24, size('s12')));
+}
+
+@mixin font-24-12-semibold-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('s12'),
+		weight('semibold'),
+		line-height(24, size('s12')));
+}
+
+@mixin font-24-14-bold-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('s12'),
+		weight('bold'),
+		line-height(24, size('s12')));
+}
+
+/*------------------------------------*\
+		24/14 FONT SIZES ((FuturaPT))
+\*------------------------------------*/
+@mixin font-24-14-normal-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('s14'),
+		weight('normal'),
+		line-height(24, size('s14')));
+}
+
+@mixin font-24-14-medium-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('s14'),
+		weight('medium'),
+		line-height(24, size('s14')));
+}
+
+@mixin font-24-14-semibold-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('s14'),
+		weight('semibold'),
+		line-height(24, size('s14')));
+}
+
+@mixin font-24-14-bold-futuraPT {
+	@include font(family($futuraPT),
+		style('normal'),
+		size('s14'),
+		weight('bold'),
+		line-height(24, size('s14')));
+}
+
+/*------------------------------------*\
 		24/15 FONT SIZES ((FuturaPT))
 \*------------------------------------*/
 @mixin font-24-15-normal-futuraPT {

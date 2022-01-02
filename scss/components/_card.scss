@@ -1,0 +1,64 @@
+.card-suggested {
+    @include flex-center-column;
+    background: $white;
+    @include border(solid, 1, $primary);
+    @include radius(10);
+    padding: length(20);
+    box-shadow: $box-shadow-7;
+    max-width: length(260);
+    gap: length(16);
+
+    @include breakpoint(phone768) {
+        padding: length(16);
+        max-width: length(220);
+    }
+
+    &-header {
+        @include flex-center;
+        overflow: hidden;
+        padding-bottom: length(0);
+
+        .card-thumbnail {
+            @include square(length(160));
+            @include flex-center;
+            overflow: hidden;
+
+            @include breakpoint(phone768) {
+                @include square(length(130));
+            }
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(14);
+
+        .cardtitle {
+            @include font-24-14-medium-futuraPT;
+            color: $black;
+            text-align: center;
+            text-transform: uppercase;
+            @include line-clamp;
+            height: length(48);
+
+            @include breakpoint(phone768) {
+                @include font-24-12-medium-futuraPT;
+            }
+        }
+
+        .cardprice {
+            @include font-24-16-semibold;
+            color: $textPrimary;
+            text-align: center;
+
+            @include breakpoint(phone768) {
+                @include font-24-14-semibold;
+            }
+        }
+    }
+}

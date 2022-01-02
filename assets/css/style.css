@@ -295,6 +295,12 @@
 		24/16 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		24/12 FONT SIZES ((FuturaPT))
+\*------------------------------------*/
+/*------------------------------------*\
+		24/14 FONT SIZES ((FuturaPT))
+\*------------------------------------*/
+/*------------------------------------*\
 		24/15 FONT SIZES ((FuturaPT))
 \*------------------------------------*/
 /*------------------------------------*\
@@ -1402,6 +1408,175 @@ h6 {
   }
 }
 
+.btn-add {
+  padding: 0.5rem 3rem;
+  border-radius: 3rem;
+  border-radius: 3rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  background: #B32122;
+  color: #e0dbdb;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  text-align: center;
+}
+
+.btn-add:not([disabled]):hover {
+  background: #e0dbdb;
+  color: #B32122;
+}
+
+@media screen and (max-width: 48rem) {
+  .btn-add {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
+.card-suggested {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  border: solid 0.0625rem #B32122;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+  -webkit-box-shadow: 0rem 0.5rem 2.5rem rgba(49, 32, 138, 0.05);
+          box-shadow: 0rem 0.5rem 2.5rem rgba(49, 32, 138, 0.05);
+  max-width: 16.25rem;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-suggested {
+    padding: 1rem;
+    max-width: 13.75rem;
+  }
+}
+
+.card-suggested-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding-bottom: 0rem;
+}
+
+.card-suggested-header .card-thumbnail {
+  height: 10rem;
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-suggested-header .card-thumbnail {
+    height: 8.125rem;
+    width: 8.125rem;
+  }
+}
+
+.card-suggested-header .card-thumbnail img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-suggested-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.card-suggested-body .cardtitle {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  height: 3rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-suggested-body .cardtitle {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 2;
+  }
+}
+
+.card-suggested-body .cardprice {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-suggested-body .cardprice {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
 .offcanvas-end {
   border-left: 0;
 }
@@ -1451,14 +1626,13 @@ h6 {
 }
 
 .offcanvas-header .brandlink-text {
-  font-family: "Montserrat";
+  font-family: "FuturaPT";
   font-style: normal;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 500;
   line-height: 1.5;
   color: black;
   text-transform: uppercase;
-  text-shadow: 0rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.66);
 }
 
 .offcanvas-header .btn-close {
@@ -3771,6 +3945,13 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .cart .orderlist {
+    margin-bottom: 2rem;
+  }
 }
 
 .cart .orderlist-header .orderlist-title {
@@ -4460,6 +4641,76 @@ h6 {
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.71429;
+  }
+}
+
+.cart .suggested-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .cart .suggested-products {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .cart .suggested-products-header {
+    text-align: center;
+  }
+}
+
+.cart .suggested-products-header .suggested-title {
+  font-weight: 500;
+  color: #212529;
+}
+
+@media screen and (max-width: 48rem) {
+  .cart .suggested-products-header .suggested-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .cart .suggested-products-header .suggested-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.cart .suggested-products-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 30rem) {
+  .cart .suggested-products-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

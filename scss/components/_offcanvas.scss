@@ -29,10 +29,9 @@
             }
 
             &-text {
-                @include font-24-16-normal;
+                @include font-24-16-medium-futuraPT;
                 color: $black;
                 text-transform: uppercase;
-                text-shadow: $text-shadow;
             }
         }
 
