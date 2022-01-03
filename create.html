@@ -122,11 +122,225 @@
     <!-- HEADER SECTION END -->
 
     <!-- CREATE SECTION START -->
-    <section class="products">
+    <section class="create">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-lg-auto col-12">
-                    
+                    <div class="create-content">
+                        <!-- CARD CREATE START -->
+                        <div class="create-card">
+                            <!-- CARD HEADER START -->
+                            <div class="create-card-header">
+                                <!-- FRONT THUMBNAIL START -->
+                                <div class="front-thumbnail">
+                                    <!-- BACKGROUND FRAME START -->
+                                    <img src="assets/images/frames/front.svg" class="frame" alt="card-thumbnail">
+                                    <!-- BACKGROUND FRAME END -->
+
+                                    <!-- MEDALLION START -->
+                                    <div class="medallion">
+                                        <img src="assets/images/frames/frame-4.svg" alt="medallion-thumbnail">
+                                    </div>
+                                    <!-- MEDALLION END -->
+                                </div>
+                                <!-- FRONT THUMBNAIL END -->
+
+                                <!-- CARD HEADER DESCRIPTION START -->
+                                <div class="description">
+                                    <p class="text">Space is limited on the medallion.</p>
+
+                                    <div class="rangeinfo">
+                                        <div class="rangebox">
+                                            <div class="ranger">
+                                                <span class="bar">
+                                                    <span class="fill"></span>
+                                                </span>
+                                                <input type="range" class="custom-range">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="black-white-switch">
+                                            <label class="form-check-label" for="black-white-switch">Convert to black &amp; white</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="buttonbox">
+                                        <button type="button" class="btn-adjust">Adjust Image size &amp; position</button>
+                                    </div>
+
+                                    <div class="commentbox">
+                                        <label for="comment" class="form-label">Comment</label>
+                                        <textarea class="form-control" id="comment" rows="3" name="comment"></textarea>
+                                        <input type="hidden" id="is_black" value="true">
+                                    </div>
+                                </div>
+                                    <!-- CARD HEADER DESCRIPTION END -->
+                            </div>
+                            <!-- CARD HEADER END -->
+                            
+                            <!-- CARD BODY START -->
+                            <div class="create-card-body">
+                                <h2 class="create-title">Personalize Your Memento</h2>
+
+                                <div class="createinfobox">
+                                    <!-- CREATE FORM START -->
+                                    <form class="createform">
+                                        <!-- QUANTITY START -->
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label for="quantity" class="formlabel">Quantity</label>
+
+                                                <div class="quantitybox">
+                                                    <p class="quantitytitle">Quantity</p>
+
+                                                    <div class="counterbox">
+                                                        <!-- BUTTON DECREMENT START -->
+                                                        <button class="btn-decrement" type="button">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-square" viewBox="0 0 16 16">
+                                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                                            </svg>
+                                                        </button>
+                                                        <!-- BUTTON DECREMENT END -->
+                                                        
+                                                        <!-- COUNTER FIELD START -->
+                                                        <input type="number" value="1" class="inputfield">
+                                                        <!-- COUNTER FIELD END -->
+                                                        
+                                                        <!-- BUTTON INCREMENT START -->
+                                                        <button class="btn-increment" type="button">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                                            </svg>
+                                                        </button>
+                                                        <!-- BUTTON INCREMENT END -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- QUANTITY END -->
+
+                                        <!-- STYLE START -->
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label for="styleitem" class="formlabel">Style</label>
+
+                                                <select class="form-select" id="styleitem">
+                                                    <option selected>Select Style</option>
+                                                    <option value="1">Solid Piece Momento</option>
+                                                    <option value="2">Three Piece Momento</option>
+                                                </select>
+                                            </div>
+
+                                            <p class="error-message">This field is required.</p>
+                                        </div>
+                                        <!-- STYLE END -->
+
+                                        <!-- MATERIAL START -->
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label for="materialitem" class="formlabel">Material</label>
+
+                                                <select class="form-select" id="materialitem">
+                                                    <option selected>Select Material</option>
+                                                    <option value="1">High-Grade Stainless Steel</option>
+                                                    <option value="2">Nickel-Plated Stainless Steel</option>
+                                                    <option value="3">Gold-Plated Stainless Steel</option>
+                                                </select>
+                                            </div>
+
+                                            <p class="error-message">This field is required.</p>
+                                        </div>
+                                        <!-- MATERIAL END -->
+
+                                        <!-- PICK FONT START -->
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label for="materialitem" class="formlabel">Pick Your Font</label>
+
+                                                <select class="form-select" id="materialitem">
+                                                    <option selected>Select Font</option>
+                                                    <option value="1">Alex Brush</option>
+                                                    <option value="2">Poiret One</option>
+                                                </select>
+                                            </div>
+
+                                            <p class="error-message">This field is required.</p>
+                                        </div>
+                                        <!-- PICK FONT END -->
+
+                                        <!-- FONT FACE TEXT START -->
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label for="front-text" class="formlabel">Front Face Text</label>
+
+                                                <div class="info">
+                                                    <input type="text" id="front-text" placeholder="Write your memory" class="inputfield">
+
+                                                    <p class="text">Max: 50 characters</p>
+                                                </div>
+                                            </div>
+
+                                            <p class="error-message">This field is required.</p>
+                                        </div>
+                                        <!-- FONT FACE TEXT END -->
+
+                                        <!-- IMAGE COLOR START -->
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label class="formlabel">Image Color</label>
+
+                                                <div class="checkinfo">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="momentcolor" id="momentcolor">
+                                                        <label class="form-check-label" for="momentcolor">
+                                                            Color
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="momentcolor" id="momentblackwhite" checked>
+                                                        <label class="form-check-label" for="momentblackwhite">
+                                                            Black &amp; White
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- IMAGE COLOR END -->
+
+                                        <!-- UPLOAD IMAGE START -->
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <div class="uploadbox">
+                                                    <label for="uploadMoment" class="form-label">Upload Image</label>
+                                                    <input class="form-control" type="file" id="uploadMoment" hidden>
+                                                </div>
+
+                                                <div class="uploadinfo">
+                                                    <p class="size">Max file size: 10 MB</p>
+                                                    <p class="type">Permitted file types: jpg, png, gif</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- UPLOAD IMAGE END -->
+                                    </form>
+                                    <!-- CREATE FORM END -->
+                                    
+                                    <!-- CREATE INFO START -->
+                                    <div class="createinfo">
+                                        <p class="infotext">
+                                            We Request For Uploaded Picture Resolution To Be Clear For The Best Laser Etching Outcome. Keep In Mind Background Image Will Be Cleared, And We Will Contact You If The Uploaded Picture Is Not Compatible With Our Laser Process.
+                                        </p>
+                                    </div>
+                                    <!-- CREATE INFO END -->
+                                </div>
+                            </div>
+                            <!-- CARD BODY END -->
+                        </div>
+                    </div>
+                    <!-- CARD CREATE START -->
                 </div>
             </div>
         </div>

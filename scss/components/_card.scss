@@ -1,3 +1,4 @@
+// CARD SUGGESTED START
 .card-suggested {
     @include flex-center-column;
     background: $white;
@@ -61,3 +62,86 @@
         }
     }
 }
+
+// CARD SUGGESTED END
+
+// CARD CREATE START
+.create-card {
+    background: $white;
+    @include radius(10);
+    padding: length(24);
+    display: flex;
+    gap: length(24);
+
+    @include breakpoint(tablet991) {
+        flex-direction: column;
+        padding: length(16);
+    }
+
+    &-header {
+        width: 40%;
+        @include flex-column;
+        gap: length(20);
+
+        @include breakpoint(tablet991) {
+            @include w100;
+        }
+
+        .front-thumbnail {
+            position: relative;
+            @include square(length(320));
+            overflow: hidden;
+            @include flex-center;
+            margin-inline: auto;
+
+            @include breakpoint(phone768) {
+                @include square(length(280));
+            }
+
+            .frame {
+                @include wh100;
+                position: relative;
+            }
+
+            .medallion {
+                @include circle;
+                @include flex-center;
+                position: absolute;
+                left: length(24);
+                top: length(24);
+                transform: skew(-5deg);
+                overflow: hidden;
+                z-index: 100;
+                width: length(268);
+                height: length(240);
+
+                @include breakpoint(phone768) {
+                    left: length(21);
+                    top: length(20);
+                    width: length(235);
+                    height: length(212);
+                }
+
+                img {
+                    @include wh100;
+                    @include circle;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .description {
+            .text {}
+        }
+    }
+
+    &-body {
+        width: calc(60% - 1.25rem);
+
+        @include breakpoint(tablet991) {
+            @include w100;
+        }
+    }
+}
+
+// CARD CREATE END

@@ -1,5 +1,13 @@
 // CREATE STYLES START
 
+.create {
+    background: $productBg;
+    overflow: hidden;
+    padding: length(48) length(0) length(60);
 
+    @include breakpoint(phone768) {
+        padding: length(32) length(0);
+    }
+}
 
 // CREATE STYLES END

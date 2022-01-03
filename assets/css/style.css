@@ -1579,6 +1579,124 @@ h6 {
   }
 }
 
+.create-card {
+  background: white;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .create-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+.create-card-header {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .create-card-header {
+    width: 100%;
+  }
+}
+
+.create-card-header .front-thumbnail {
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 48rem) {
+  .create-card-header .front-thumbnail {
+    height: 17.5rem;
+    width: 17.5rem;
+  }
+}
+
+.create-card-header .front-thumbnail .frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.create-card-header .front-thumbnail .medallion {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  -webkit-transform: skew(-5deg);
+          transform: skew(-5deg);
+  overflow: hidden;
+  z-index: 100;
+  width: 16.75rem;
+  height: 15rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .create-card-header .front-thumbnail .medallion {
+    left: 1.3125rem;
+    top: 1.25rem;
+    width: 14.6875rem;
+    height: 13.25rem;
+  }
+}
+
+.create-card-header .front-thumbnail .medallion img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.create-card-body {
+  width: calc(60% - 1.25rem);
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .create-card-body {
+    width: 100%;
+  }
+}
+
 .slick-arrow {
   height: 2rem;
   width: 2rem;
@@ -1926,6 +2044,124 @@ h6 {
   transform: translateY(-0.5rem) rotate(-45deg);
 }
 
+.ranger {
+  position: relative;
+  height: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ranger .bar {
+  position: absolute;
+  top: 0.8125rem;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: #E3DDDD;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.ranger .bar .fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #595959;
+}
+
+.custom-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.5rem;
+  outline: none;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  background: #E3DDDD;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0 rgba(227, 221, 221, 0.1);
+          box-shadow: 0 0 0 0 rgba(227, 221, 221, 0.1);
+  -webkit-transition: box-shadow 250ms ease-in-out;
+  -webkit-transition: -webkit-box-shadow 250ms ease-in-out;
+  transition: -webkit-box-shadow 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out, -webkit-box-shadow 250ms ease-in-out;
+}
+
+.custom-range::-webkit-slider-thumb:hover {
+  -webkit-box-shadow: 0 0 0 0.625rem rgba(186, 186, 186, 0.1);
+          box-shadow: 0 0 0 0.625rem rgba(186, 186, 186, 0.1);
+}
+
+.custom-range:active::-webkit-slider-thumb:hover {
+  -webkit-box-shadow: 0 0 0 0.625rem rgba(186, 186, 186, 0.2);
+          box-shadow: 0 0 0 0.625rem rgba(186, 186, 186, 0.2);
+}
+
+.custom-range::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  background: #E3DDDD;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 0 0 rgba(227, 221, 221, 0.1);
+  -webkit-transition: box-shadow 250ms ease-in-out;
+  -webkit-transition: -webkit-box-shadow 250ms ease-in-out;
+  transition: -webkit-box-shadow 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out, -webkit-box-shadow 250ms ease-in-out;
+}
+
+.custom-range::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 0.625rem rgba(186, 186, 186, 0.1);
+}
+
+.custom-range:active::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 0.625rem rgba(186, 186, 186, 0.2);
+}
+
+.custom-range::-ms-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  background: #E3DDDD;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 0 0 rgba(227, 221, 221, 0.1);
+  -webkit-transition: box-shadow 250ms ease-in-out;
+  -webkit-transition: -webkit-box-shadow 250ms ease-in-out;
+  transition: -webkit-box-shadow 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out, -webkit-box-shadow 250ms ease-in-out;
+}
+
+.custom-range::-ms-thumb:hover {
+  box-shadow: 0 0 0 0.625rem rgba(186, 186, 186, 0.1);
+}
+
+.custom-range:active::-ms-thumb:hover {
+  box-shadow: 0 0 0 0.625rem rgba(186, 186, 186, 0.2);
+}
+
 .home-section {
   min-height: calc(100vh - 4.25rem);
   display: -webkit-box;
@@ -2257,6 +2493,18 @@ h6 {
     font-weight: normal;
     line-height: 1;
     line-height: 2;
+  }
+}
+
+.create {
+  background: #f4f4f4;
+  overflow: hidden;
+  padding: 3rem 0rem 3.75rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .create {
+    padding: 2rem 0rem;
   }
 }
 
