@@ -12,15 +12,7 @@ $(document).ready(function() {
         fade: false,
         asNavFor: '.product-solidpiece-nav',
         prevArrow: solidBackButton,
-        nextArrow: solidNextButton,
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    vertical: true
-                }
-            }
-        ]
+        nextArrow: solidNextButton
     });
 
     const sliderSolidePieceNav = $('.product-solidpiece-nav');
@@ -52,15 +44,7 @@ $(document).ready(function() {
         fade: false,
         asNavFor: '.product-threepiece-nav',
         prevArrow: threeBackButton,
-        nextArrow: threeNextButton,
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    vertical: true
-                }
-            }
-        ]
+        nextArrow: threeNextButton
     });
 
     const threeSliderNav = $('.product-threepiece-nav');
@@ -92,15 +76,7 @@ $(document).ready(function() {
         fade: false,
         asNavFor: '.product-accessories-nav',
         prevArrow: accessoriesBackButton,
-        nextArrow: accessoriesNextButton,
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    vertical: true
-                }
-            }
-        ]
+        nextArrow: accessoriesNextButton
     });
 
     const accessoriesSliderNav = $('.product-accessories-nav');
