@@ -5407,6 +5407,17 @@ h6 {
   padding-left: 2.25rem;
 }
 
+.cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel .link {
+  color: #0D111B;
+  font-weight: bold;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel .link:not([disabled]):hover {
+  color: #B32122;
+}
+
 @media screen and (max-width: 30rem) {
   .cart .shipping-method-body .paymentinfo .agreement .inputbox .checklabel {
     font-family: "Montserrat";

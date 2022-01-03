@@ -1564,6 +1564,16 @@
                             position: relative;
                             padding-left: length(36);
 
+                            .link {
+                                color: $primaryDark;
+                                font-weight: bold;
+                                @include transitions;
+
+                                @include hover {
+                                    color: $primary;
+                                }
+                            }
+
                             @include breakpoint(phone480) {
                                 @include font-12-12-medium;
                                 line-height: 1.5;
