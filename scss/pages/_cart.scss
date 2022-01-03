@@ -66,14 +66,18 @@
     padding: length(48) length(0) length(60);
 
     @include breakpoint(phone768) {
-        padding: length(0);
+        padding: length(0) length(0) length(32);
     }
 
     &-content {
         @include flex-column;
         gap: length(24);
         padding: length(20) length(0);
-        margin-bottom: length(12);
+        margin-bottom: length(60);
+
+        @include breakpoint(tablet991) {
+            margin-bottom: length(32);
+        }
 
         .cart-title {
             font-weight: 500;
@@ -551,10 +555,9 @@
     // BILLING-SHIPPING START
     .billing-shipping {
         @include radius(10);
-        // padding: length(24) length(24) length(40);
         display: flex;
         gap: length(24);
-        margin-bottom: length(48);
+        margin-bottom: length(60);
 
         @include breakpoint(tablet991) {
             flex-direction: column;
@@ -825,7 +828,7 @@
     .shippingdescript {
         background: $white;
         padding: length(20);
-        margin-bottom: length(48);
+        margin-bottom: length(60);
         @include radius(10);
 
         @include breakpoint(tablet991) {
@@ -872,7 +875,7 @@
     .orderlist {
         @include flex-column;
         gap: length(24);
-        margin-bottom: length(48);
+        margin-bottom: length(60);
 
         @include breakpoint(tablet991) {
             margin-bottom: length(32);
@@ -901,6 +904,7 @@
 
             .order-table {
                 @include border(solid, 1, $header-border);
+                @include radius(10);
 
                 &-header {
                     @include flex-center-between;
@@ -1290,7 +1294,7 @@
     .suggested-products {
         @include flex-column;
         gap: length(24);
-        margin-bottom: length(48);
+        margin-bottom: length(60);
 
         @include breakpoint(tablet991) {
             margin-bottom: length(32);
@@ -1506,36 +1510,25 @@
                     @include font-24-14-normal;
                     color: $textSecondary;
 
-                    @include breakpoint(phone480) {
-                        @include font-12-12-normal;
-                        line-height: 1.5;
-                    }
-                }
-
-                .info {
-                    @include font-24-14-normal;
-                    color: $textSecondary;
-
-                    @include breakpoint(phone480) {
-                        @include font-12-12-normal;
-                        line-height: 1.5;
-                    }
-
                     .link {
-                        @include font-24-14-medium;
-                        color: $textSecondary;
-                        text-decoration: underline;
+                        @include font-24-14-semibold;
+                        color: $textPrimary;
                         @include transitions;
 
                         @include breakpoint(phone480) {
-                            @include font-12-12-medium;
+                            @include font-12-12-semibold;
                             line-height: 1.5;
                         }
 
                         @include hover {
-                            color: $black;
+                            color: $primary;
                             text-decoration: none;
                         }
+                    }
+
+                    @include breakpoint(phone480) {
+                        @include font-12-12-normal;
+                        line-height: 1.5;
                     }
                 }
 

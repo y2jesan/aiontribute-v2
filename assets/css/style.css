@@ -2119,6 +2119,19 @@ h6 {
           justify-content: center;
   overflow: hidden;
   padding: 3rem 0rem;
+  background: #f4f4f4;
+}
+
+.about-section .aboutinfo {
+  background: white;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .about-section .aboutinfo {
+    background: transparent;
+  }
 }
 
 .about-section .aboutvideobox {
@@ -2131,7 +2144,12 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 1.5rem;
   overflow: hidden;
+  height: 100%;
+  background: white;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
 }
 
 @media screen and (max-width: 48rem) {
@@ -2143,11 +2161,14 @@ h6 {
 .about-section .aboutvideobox video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .about-section .aboutcontent {
+  background: white;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2155,12 +2176,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-}
-
-@media screen and (min-width: 75rem) {
-  .about-section .aboutcontent {
-    padding-left: 1.5rem;
-  }
+  padding: 1.5rem;
 }
 
 .about-section .aboutcontent .aboutinfo {
@@ -2245,6 +2261,7 @@ h6 {
 }
 
 .contact {
+  background: #f4f4f4;
   min-height: calc(100vh - 4.25rem);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2274,6 +2291,16 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+  background: white;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .contact-content {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .contact-content .contact-title {
@@ -2315,6 +2342,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+  height: 100%;
 }
 
 .contact-content .contactdetails .contactinfo {
@@ -2833,7 +2861,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .cart {
-    padding: 0rem;
+    padding: 0rem 0rem 2rem;
   }
 }
 
@@ -2847,7 +2875,13 @@ h6 {
           flex-direction: column;
   gap: 1.5rem;
   padding: 1.25rem 0rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 3.75rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .cart-content {
+    margin-bottom: 2rem;
+  }
 }
 
 .cart-content .cart-title {
@@ -3609,7 +3643,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.75rem;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -4026,7 +4060,7 @@ h6 {
 .cart .shippingdescript {
   background: white;
   padding: 1.25rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.75rem;
   border-radius: 0.625rem;
   border-radius: 0.625rem;
 }
@@ -4113,7 +4147,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.75rem;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -4157,6 +4191,8 @@ h6 {
 
 .cart .orderlist-body .order-table {
   border: solid 0.0625rem #F0F0F0;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
 }
 
 .cart .orderlist-body .order-table-header {
@@ -4827,7 +4863,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.75rem;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -5312,6 +5348,33 @@ h6 {
   color: #707070;
 }
 
+.cart .shipping-method-body .paymentinfo .text .link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #212529;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 30rem) {
+  .cart .shipping-method-body .paymentinfo .text .link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.cart .shipping-method-body .paymentinfo .text .link:not([disabled]):hover {
+  color: #B32122;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 30rem) {
   .cart .shipping-method-body .paymentinfo .text {
     font-family: "Montserrat";
@@ -5321,54 +5384,6 @@ h6 {
     line-height: 1;
     line-height: 1.5;
   }
-}
-
-.cart .shipping-method-body .paymentinfo .info {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.71429;
-  color: #707070;
-}
-
-@media screen and (max-width: 30rem) {
-  .cart .shipping-method-body .paymentinfo .info {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: normal;
-    line-height: 1;
-    line-height: 1.5;
-  }
-}
-
-.cart .shipping-method-body .paymentinfo .info .link {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.71429;
-  color: #707070;
-  text-decoration: underline;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-@media screen and (max-width: 30rem) {
-  .cart .shipping-method-body .paymentinfo .info .link {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1;
-    line-height: 1.5;
-  }
-}
-
-.cart .shipping-method-body .paymentinfo .info .link:not([disabled]):hover {
-  color: black;
-  text-decoration: none;
 }
 
 .cart .shipping-method-body .paymentinfo .agreement {
