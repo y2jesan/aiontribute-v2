@@ -25,7 +25,7 @@
                 @include flex-center-vert;
                 gap: length(40);
                 padding: length(40) length(24);
-                @include radius(5);
+                @include radius(10);
                 background: $white;
 
                 @include breakpoint(tablet991) {
@@ -106,7 +106,7 @@
 
                                 .slidertitle {
                                     @include font-24-16-medium;
-                                    color: $black;
+                                    color: $primaryDark;
 
                                     @include breakpoint(phone768) {
                                         @include font-24-14-medium;
@@ -123,7 +123,7 @@
 
                                 .sliderprice {
                                     @include font-24-16-medium;
-                                    color: $black;
+                                    color: $primaryDark;
 
                                     @include breakpoint(phone768) {
                                         @include font-24-14-medium;

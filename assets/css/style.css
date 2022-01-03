@@ -5466,8 +5466,8 @@ h6 {
           align-items: center;
   gap: 2.5rem;
   padding: 2.5rem 1.5rem;
-  border-radius: 0.3125rem;
-  border-radius: 0.3125rem;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
   background: white;
 }
 
@@ -5619,7 +5619,7 @@ h6 {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
-  color: black;
+  color: #0D111B;
 }
 
 @media screen and (max-width: 48rem) {
@@ -5654,7 +5654,7 @@ h6 {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
-  color: black;
+  color: #0D111B;
 }
 
 @media screen and (max-width: 48rem) {
