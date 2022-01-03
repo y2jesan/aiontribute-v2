@@ -2887,6 +2887,12 @@ h6 {
   overflow: hidden;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .cart-table {
+    padding: 1.25rem 0rem;
+  }
+}
+
 .cart-table .tablehead {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3387,7 +3393,8 @@ h6 {
 
 @media screen and (max-width: 35.9375rem) {
   .cart-table .tablefooter .couponbox {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -3686,6 +3693,12 @@ h6 {
   border-radius: 0.625rem;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .cart .billing-shipping .billing-form {
+    padding: 1.25rem 1rem 2rem;
+  }
+}
+
 .cart .billing-shipping .billing-form .inputbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3897,6 +3910,12 @@ h6 {
   padding: 1rem;
   border-radius: 0.625rem;
   border-radius: 0.625rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .cart .billing-shipping .shipping-form {
+    padding: 1.25rem 1rem 2rem;
+  }
 }
 
 .cart .billing-shipping .shipping-form .inputbox {

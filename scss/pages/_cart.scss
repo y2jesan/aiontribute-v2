@@ -98,6 +98,10 @@
         @include radius(10);
         overflow: hidden;
 
+        @include breakpoint(phone575) {
+            padding: length(20) length(0);
+        }
+
         .tablehead {
             @include flex-center-between;
             padding: length(20);
@@ -419,7 +423,8 @@
                 gap: length(12);
 
                 @include breakpoint(phone575) {
-                    @include w100;
+                    width: 90%;
+                    margin: 0 auto;
                 }
 
                 @include breakpoint(mobile768) {
@@ -595,6 +600,10 @@
                 padding: length(16);
                 @include radius(10);
 
+                @include breakpoint(phone575) {
+                    padding: length(20) length(16) length(32);
+                }
+
                 .inputbox {
                     @include flex-column;
                     gap: length(8);
@@ -736,6 +745,10 @@
                 background: $white;
                 padding: length(16);
                 @include radius(10);
+
+                @include breakpoint(phone575) {
+                    padding: length(20) length(16) length(32);
+                }
 
                 .inputbox {
                     @include flex-column;
