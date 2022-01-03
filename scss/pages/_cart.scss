@@ -55,6 +55,7 @@
         }
     }
 }
+
 //  EMPTY CART END
 
 
@@ -797,6 +798,7 @@
             }
         }
     }
+
     // BILLING-SHIPPING END
 
     // ORDER LIST START
@@ -1211,6 +1213,7 @@
             }
         }
     }
+
     // ORDER LIST END
 
     // SUGGESTED PRODUCTS START
@@ -1253,6 +1256,7 @@
             }
         }
     }
+
     // SUGGESTED PRODUCTS END
 
     // SHIPPING ADDRESS START
@@ -1335,11 +1339,11 @@
                             cursor: pointer;
                             text-transform: uppercase;
                             width: length(114);
-    
+
                             @include breakpoint(phone768) {
                                 @include font-24-14-medium;
                             }
-            
+
                             @include breakpoint(phone359) {
                                 @include font-12-12-medium;
                             }
@@ -1381,14 +1385,14 @@
                                 padding: length(8);
                                 @include font-24-14-normal;
                                 color: $black;
-    
+
                                 @include breakpoint(phone768) {
                                     @include font-12-12-normal;
                                 }
 
                                 &::placeholder {
                                     color: $secondaryDark;
-    
+
                                     @include breakpoint(phone768) {
                                         @include font-12-12-normal;
                                     }
@@ -1411,21 +1415,21 @@
                                     padding: length(8);
                                     @include font-24-14-normal;
                                     color: $black;
-        
+
                                     @include breakpoint(phone768) {
                                         @include font-12-12-normal;
                                     }
-    
+
                                     &::placeholder {
                                         color: $secondaryDark;
-        
+
                                         @include breakpoint(phone768) {
                                             @include font-12-12-normal;
                                         }
                                     }
                                 }
                             }
-    
+
                             .cvv {
                                 width: 50%;
 
@@ -1436,14 +1440,14 @@
                                     padding: length(8);
                                     @include font-24-14-normal;
                                     color: $black;
-        
+
                                     @include breakpoint(phone768) {
                                         @include font-12-12-normal;
                                     }
-    
+
                                     &::placeholder {
                                         color: $secondaryDark;
-        
+
                                         @include breakpoint(phone768) {
                                             @include font-12-12-normal;
                                         }
@@ -1501,7 +1505,7 @@
 
                     .inputbox {
                         @include flex-center-vert;
-        
+
                         .checkinput {
                             &:checked~.checklabel {
                                 color: $black;
@@ -1513,7 +1517,7 @@
                                 }
                             }
                         }
-        
+
                         .checklabel {
                             @include font-24-14-medium;
                             color: $textPrimary;
@@ -1530,7 +1534,7 @@
                                 @include font-10-10-medium;
                                 line-height: 1.5;
                             }
-        
+
                             &::before {
                                 content: '';
                                 position: absolute;
@@ -1541,7 +1545,7 @@
                                 @include transform(translateY(-50%));
                                 background: $white;
                             }
-        
+
                             &::after {
                                 content: '';
                                 position: absolute;
@@ -1557,7 +1561,7 @@
                                 visibility: hidden;
                                 @include transitions;
                             }
-        
+
                             &::selection {
                                 background: transparent;
                                 color: $textPrimary;
@@ -1568,6 +1572,8 @@
             }
         }
     }
+
     // SHIPPING ADDRESS END
 }
+
 // CART END
