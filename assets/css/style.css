@@ -5563,6 +5563,7 @@ h6 {
 
 .products-content .productdetails .product-slider .slider-descriptions .slider-navigation .nametinfo .product-title {
   font-weight: 500;
+  color: black;
 }
 
 @media screen and (max-width: 48rem) {
