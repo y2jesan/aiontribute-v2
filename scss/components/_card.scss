@@ -1,7 +1,6 @@
 .card-suggested {
     @include flex-center-column;
     background: $white;
-    @include border(solid, 1, $primary);
     @include radius(10);
     padding: length(20);
     box-shadow: $box-shadow-7;
