@@ -46,12 +46,12 @@
     padding: length(8) length(48);
     @include radius(48);
     @include font-24-14-medium;
-    @include setBgColor($primary, $buttonHover);
+    @include setBgColor($buttonHover, $primary);
     @include transitions;
     text-align: center;
 
     @include hover {
-        @include setBgColor($buttonHover, $primary);
+        @include setBgColor($primary, $buttonHover);
     }
 
     @include breakpoint(phone768) {
