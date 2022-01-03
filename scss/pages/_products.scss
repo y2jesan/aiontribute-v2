@@ -2,12 +2,11 @@
 
 .products {
     overflow: hidden;
-    padding: length(48) length(0);
-    margin-bottom: length(60);
+    padding: length(48) length(0) length(60);
+    background: $productBg;
 
     @include breakpoint(phone768) {
         // padding: length(24);
-        margin-bottom: length(32);
     }
 
     &-content {
@@ -20,14 +19,14 @@
 
         .productdetails {
             @include flex-center-column;
-            gap: length(8);
+            gap: length(12);
 
             .product-slider {
                 @include flex-center-vert;
                 gap: length(40);
-                @include border(solid, 1, $textActiveLink);
                 padding: length(40) length(24);
                 @include radius(5);
+                background: $white;
 
                 @include breakpoint(tablet991) {
                     flex-direction: column;
