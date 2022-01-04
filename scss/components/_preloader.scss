@@ -1,40 +1,25 @@
 .preloader {
-    width: 100vw;
-    height: 100vh;
     background: $white;
     @include flex-center;
+    position: fixed;
     top: length(0);
     left: length(0);
-    background: red;
-    z-index: 100;
+    @include w100;
+    height: 100vh;
     overflow: hidden;
+    z-index: 9999;
 }
 
 .preloader-orbit-loading {
     position: relative;
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    -o-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    perspective: 780px;
+    @include square(length(62));
+    @include circle;
+    perspective: length(780);
 
     .cssload-inner {
         position: absolute;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        -o-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        border-radius: 50%;
-        -o-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
+        @include wh100;
+        @include circle;
 
         &.cssload-one {
             left: 0%;
@@ -44,7 +29,7 @@
             -ms-animation: cssload-rotate-one 1.15s linear infinite;
             -webkit-animation: cssload-rotate-one 1.15s linear infinite;
             -moz-animation: cssload-rotate-one 1.15s linear infinite;
-            border-bottom: 3px solid rgb(0, 0, 0);
+            @include border-single(bottom, solid, 3, $primary);
         }
 
         &.cssload-two {
@@ -55,7 +40,7 @@
             -ms-animation: cssload-rotate-two 1.15s linear infinite;
             -webkit-animation: cssload-rotate-two 1.15s linear infinite;
             -moz-animation: cssload-rotate-two 1.15s linear infinite;
-            border-right: 3px solid rgb(0, 0, 0);
+            @include border-single(right, solid, 3, $primary);
         }
 
         &.cssload-three {
@@ -66,18 +51,18 @@
             -ms-animation: cssload-rotate-three 1.15s linear infinite;
             -webkit-animation: cssload-rotate-three 1.15s linear infinite;
             -moz-animation: cssload-rotate-three 1.15s linear infinite;
-            border-top: 3px solid rgb(0, 0, 0);
+            @include border-single(top, solid, 3, $primary);
         }
     }
 }
 
 @keyframes cssload-rotate-one {
     0% {
-        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+        @include transform(rotateX(35deg) rotateY(-45deg) rotateZ(0deg));
     }
 
     100% {
-        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+        @include transform(rotateX(35deg) rotateY(-45deg) rotateZ(360deg));
     }
 }
 
@@ -128,11 +113,11 @@
 
 @keyframes cssload-rotate-two {
     0% {
-        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+        @include transform(rotateX(50deg) rotateY(10deg) rotateZ(0deg));
     }
 
     100% {
-        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+        @include transform(rotateX(50deg) rotateY(10deg) rotateZ(360deg));
     }
 }
 
@@ -183,11 +168,11 @@
 
 @keyframes cssload-rotate-three {
     0% {
-        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+        @include transform(rotateX(35deg) rotateY(55deg) rotateZ(0deg));
     }
 
     100% {
-        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+        @include transform(rotateX(35deg) rotateY(55deg) rotateZ(360deg));
     }
 }
 
