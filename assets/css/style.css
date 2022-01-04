@@ -1328,7 +1328,7 @@ h6 {
 .btn-create {
   background: #B32122;
   color: #e0dbdb;
-  padding: 0.75rem 2.25rem;
+  padding: 0.625rem 2.25rem;
   font-family: "Montserrat";
   font-style: normal;
   font-size: 1rem;
@@ -1339,6 +1339,7 @@ h6 {
   border-radius: 3rem;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 48rem) {
@@ -1369,7 +1370,7 @@ h6 {
 }
 
 .btn-submit {
-  padding: 0.75rem 3rem;
+  padding: 0.625rem 3rem;
   border-radius: 3rem;
   border-radius: 3rem;
   font-family: "Montserrat";
@@ -1382,6 +1383,7 @@ h6 {
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
   text-align: center;
+  cursor: pointer;
 }
 
 .btn-submit:not([disabled]):hover {
@@ -1412,7 +1414,7 @@ h6 {
 }
 
 .btn-add {
-  padding: 0.5rem 3rem;
+  padding: 0.625rem 3rem;
   border-radius: 3rem;
   border-radius: 3rem;
   font-family: "Montserrat";
@@ -1425,6 +1427,7 @@ h6 {
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
   text-align: center;
+  cursor: pointer;
 }
 
 .btn-add:not([disabled]):hover {
@@ -1433,6 +1436,16 @@ h6 {
 }
 
 @media screen and (max-width: 48rem) {
+  .btn-add {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
   .btn-add {
     font-family: "Montserrat";
     font-style: normal;
@@ -1687,13 +1700,1047 @@ h6 {
      object-fit: cover;
 }
 
+.create-card-header .description .limitedtext {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #212529;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.create-card-header .description .rangeinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.create-card-header .description .rangeinfo .rangebox {
+  width: 100%;
+}
+
+.create-card-header .description .rangeinfo .form-check {
+  padding-left: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.875rem;
+}
+
+.create-card-header .description .rangeinfo .form-check-input {
+  cursor: pointer;
+  width: 3rem;
+  height: 1.5rem;
+  border-color: #BABABA;
+  margin: 0rem;
+}
+
+.create-card-header .description .rangeinfo .form-check-input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #B32122;
+  background-color: #B32122;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.create-card-header .description .rangeinfo .form-check-input:checked {
+  border-color: #B32122;
+  background-color: #B32122;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.create-card-header .description .rangeinfo .form-check-input:checked ~ .form-check-label {
+  color: #0D111B;
+}
+
+.create-card-header .description .rangeinfo .form-check-label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  cursor: pointer;
+  color: #707070;
+}
+
+.create-card-header .description .rangeinfo .form-check-label::-moz-selection {
+  color: #0D111B;
+  background: transparent;
+}
+
+.create-card-header .description .rangeinfo .form-check-label::selection {
+  color: #0D111B;
+  background: transparent;
+}
+
+.create-card-header .description .buttonbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.create-card-header .description .commentbox .form-label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #0D111B;
+}
+
+.create-card-header .description .commentbox .form-control {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #212529;
+}
+
+.create-card-header .description .commentbox .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border-color: #BABABA;
+}
+
+.create-card-header .back-thumbnail {
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 48rem) {
+  .create-card-header .back-thumbnail {
+    height: 17.5rem;
+    width: 17.5rem;
+  }
+}
+
+.create-card-header .back-thumbnail .frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.create-card-header .back-thumbnail .backinfo {
+  position: absolute;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+  transform: translateY(-45%);
+  left: auto;
+  right: auto;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.create-card-header .back-thumbnail .backinfo .namebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.create-card-header .back-thumbnail .backinfo .namebox .name {
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #212529;
+  text-align: center;
+  text-shadow: 0.0625rem 0 0 #cdccca;
+}
+
+.create-card-header .back-thumbnail .backinfo .birthinfo .birthdate {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #212529;
+  text-shadow: 0.0625rem 0 0 #cdccca;
+  text-align: center;
+}
+
+.create-card-header .back-thumbnail .backinfo .backpattern {
+  width: 12.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create-card-header .back-thumbnail .backinfo .backpattern img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.create-card-header .back-thumbnail .backinfo .deathinfo .deathdate {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #212529;
+  text-shadow: 0.0625rem 0 0 #cdccca;
+  text-align: center;
+}
+
+.create-card-header .back-thumbnail .circumferenceinfo {
+  position: absolute;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+  transform: translateY(-45%);
+  left: auto;
+  right: auto;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rebeccapurple;
+}
+
+.create-card-header .back-thumbnail .circumferenceinfo .circumferencetext {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #212529;
+  text-align: center;
+  text-shadow: 0.0625rem 0 0 #cdccca;
+}
+
+.create-card-header .circumference-thumbnail {
+  position: relative;
+  width: 20rem;
+  height: 6.125rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-inline: auto;
+  background-color: green;
+}
+
+@media screen and (max-width: 48rem) {
+  .create-card-header .circumference-thumbnail {
+    width: 17.5rem;
+    height: 6.125rem;
+  }
+}
+
+.create-card-header .circumference-thumbnail .frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.create-card-header .circumference-thumbnail .circumferenceinfo {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: auto;
+  right: auto;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create-card-header .circumference-thumbnail .circumferenceinfo .circumferencetext {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #212529;
+  text-align: center;
+  text-shadow: 0.0625rem 0 0 #cdccca;
+}
+
 .create-card-body {
   width: calc(60% - 1.25rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
 }
 
 @media screen and (max-width: 61.9375rem) {
   .create-card-body {
     width: 100%;
+  }
+}
+
+.create-card-body .create-title {
+  font-weight: 500;
+  color: #212529;
+}
+
+@media screen and (max-width: 48rem) {
+  .create-card-body .create-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .create-card-body .create-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+    font-weight: 500;
+  }
+}
+
+.create-card-body .createinfobox .createform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .formlabel {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #707070;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 0.0625rem #BABABA;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitytitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #212529;
+  width: 20%;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5.625rem;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement,
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement svg,
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment svg {
+  width: 100%;
+  height: 100%;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement svg path,
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment svg path {
+  fill: #707070;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement:not([disabled]):hover svg path {
+  fill: #B32122;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .inputfield {
+  width: calc(100% - 3rem);
+  text-align: center;
+  background: transparent;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #212529;
+  height: 100%;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment:not([disabled]):hover svg path {
+  fill: #4AB247;
+}
+
+.create-card-body .createinfobox .createform .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .formlabel {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #707070;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .form-select {
+  padding: 0.5rem 1rem;
+  border: solid 0.0625rem #BABABA;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #212529;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .form-select:focus {
+  border-color: #707070;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .info .inputfield {
+  padding: 0.5rem 1rem;
+  border: solid 0.0625rem #BABABA;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #212529;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .info .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #999999;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .checkinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .checkinfo .form-check {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .checkinfo .form-check-input:checked ~ .form-check-label::before {
+  border-color: #B32122;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .checkinfo .form-check-input:checked ~ .form-check-label:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .checkinfo .form-check-label {
+  margin: 0rem;
+  padding: 0rem;
+  padding-left: 1.625rem;
+  position: relative;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #212529;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .checkinfo .form-check-label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0rem;
+  height: 1.125rem;
+  width: 1.125rem;
+  background: white;
+  border: solid 0.09375rem #DFE3EA;
+  border-radius: 100%;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .checkinfo .form-check-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0.25rem;
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 100%;
+  background: #B32122;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .checkinfo .form-check-label::-moz-selection {
+  background: transparent;
+  color: #212529;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .checkinfo .form-check-label::selection {
+  background: transparent;
+  color: #212529;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .uploadinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .create-card-body .createinfobox .createform .inputbox .inputinfo .uploadinfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .uploadinfo .upload-descript .size {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #999999;
+}
+
+.create-card-body .createinfobox .createform .inputbox .inputinfo .uploadinfo .upload-descript .type {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #999999;
+}
+
+.create-card-body .createinfobox .createform .inputbox .error-message {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 2;
+  color: #B32122;
+  display: none;
+}
+
+.create-card-body .createinfobox .createform .inputbox.error .inputinfo .form-select {
+  border-color: #B32122;
+}
+
+.create-card-body .createinfobox .createform .inputbox.error .inputinfo .info .inputfield {
+  border-color: #B32122;
+}
+
+.create-card-body .createinfobox .createform .inputbox.error .error-message {
+  display: block;
+}
+
+.create-card-body .createinfobox .createinfo .infotext {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #999999;
+}
+
+.create-card-body .userinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.create-card-body .userinfo .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.create-card-body .userinfo .inputbox .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.create-card-body .userinfo .inputbox .inputinfo .formlabel {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #707070;
+}
+
+.create-card-body .userinfo .inputbox .inputinfo .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.create-card-body .userinfo .inputbox .inputinfo .info .inputfield {
+  padding: 0.5rem 1rem;
+  border: solid 0.0625rem #BABABA;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #212529;
+}
+
+.create-card-body .userinfo .inputbox .inputinfo .info .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #999999;
+}
+
+.create-card-body .userinfo .inputbox .inputinfo .uploadinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.create-card-body .userinfo .inputbox .inputinfo .uploadinfo .upload-descript .size {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #999999;
+}
+
+.create-card-body .userinfo .inputbox .inputinfo .uploadinfo .upload-descript .type {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #999999;
+}
+
+.create-card-body .userinfo .inputbox .error-message {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 2;
+  color: #B32122;
+  display: none;
+}
+
+.create-card-body .userinfo .inputbox.error .inputinfo .info .inputfield {
+  border-color: #B32122;
+}
+
+.create-card-body .userinfo .inputbox.error .error-message {
+  display: block;
+}
+
+.modal-content {
+  border-radius: 1.25rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.modal-header {
+  border-bottom: 0rem;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .modal-header {
+    padding: 1rem;
+  }
+}
+
+.modal-header .btn-close {
+  background: transparent;
+  border: none;
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.modal-header .btn-close:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal-header .btn-close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-header .btn-close svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.modal-header .btn-close:not([disabled]):hover svg path {
+  fill: #B32122;
+}
+
+.modal-body {
+  padding: 2rem 2rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .modal-body {
+    padding: 1rem 1rem 3rem;
+  }
+}
+
+.modal-body .uploadbox {
+  height: 16.25rem;
+  width: 16.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: solid 0.0625rem #BABABA;
+}
+
+.modal-body .uploadbox .default-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  text-align: center;
+  color: #BABABA;
+}
+
+.modal-body .upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.modal-body .upload-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #0D111B;
+  text-align: center;
+}
+
+.modal-body .upload-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .modal-body .upload-description {
+    gap: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .modal-body .upload-description .btn-create,
+  .modal-body .upload-description .btn-add {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -2162,6 +3209,57 @@ h6 {
   box-shadow: 0 0 0 0.625rem rgba(186, 186, 186, 0.2);
 }
 
+.mc-display__header {
+  background: #88191a;
+}
+
+.mc-display__body {
+  background: #B32122;
+}
+
+.mc-picker__body {
+  background: white;
+}
+
+#mc-btn__cancel {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+#mc-btn__ok {
+  color: #B32122;
+}
+
+.mc-table__weekday {
+  color: #707070;
+}
+
+#mc-current--month,
+#mc-current--year {
+  color: #707070;
+}
+
+.mc-date--active.mc-date--today {
+  background: #e0dbdb;
+  color: #B32122;
+}
+
+.mc-date--active.mc-date--picked {
+  background: #B32122;
+  color: #e0dbdb;
+}
+
+.icon-angle--left path {
+  fill: #8A8FB9;
+}
+
+.icon-angle--right path {
+  fill: #8A8FB9;
+}
+
+.mc-calendar {
+  background: #e46f70 !important;
+}
+
 .home-section {
   min-height: calc(100vh - 4.25rem);
   display: -webkit-box;
@@ -2506,6 +3604,26 @@ h6 {
   .create {
     padding: 2rem 0rem;
   }
+}
+
+.create-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.create-content .addtocartinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .contact {
