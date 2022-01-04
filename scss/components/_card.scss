@@ -70,7 +70,7 @@
     background: $white;
     @include radius(10);
     padding: length(24);
-    display: flex;
+    @include flex-center-vert;
     gap: length(24);
 
     @include breakpoint(tablet991) {
@@ -149,6 +149,9 @@
             }
 
             .commentbox {
+                max-width: length(400);
+                margin-inline: auto;
+
                 .form-label {
                     @include font-24-14-medium;
                     color: $primaryDark;
@@ -346,15 +349,17 @@
 
                                     .btn-decrement,
                                     .btn-increment {
-                                        @include square(length(24));
+                                        @include transparent-button;
+                                        @include square(length(32));
                                         @include flex-center;
-                                        overflow: hidden;
+                                        @include circle;
 
                                         svg {
-                                            @include wh100;
+                                            circle {
+                                                @include transitions;
+                                            }
 
                                             path {
-                                                fill: $textSecondary;
                                                 @include transitions;
                                             }
                                         }
@@ -363,15 +368,19 @@
                                     .btn-decrement {
                                         @include hover {
                                             svg {
-                                                path {
+                                                circle {
                                                     fill: $primary;
+                                                }
+
+                                                path {
+                                                    stroke: $buttonHover;
                                                 }
                                             }
                                         }
                                     }
 
                                     .inputfield {
-                                        width: calc(100% - 3rem);
+                                        width: calc(100% - 4rem);
                                         text-align: center;
                                         background: transparent;
                                         @include font-24-14-medium;
@@ -382,8 +391,12 @@
                                     .btn-increment {
                                         @include hover {
                                             svg {
+                                                circle {
+                                                    fill: $textFeature;
+                                                }
+
                                                 path {
-                                                    fill: $checkBoxBg;
+                                                    stroke: $white;
                                                 }
                                             }
                                         }

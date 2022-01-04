@@ -299,6 +299,9 @@
 		28/20 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		32/24 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		24/12 FONT SIZES ((FuturaPT))
 \*------------------------------------*/
 /*------------------------------------*\
@@ -1601,6 +1604,9 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1.5rem;
 }
 
@@ -1723,6 +1729,11 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 1.5rem;
+}
+
+.create-card-header .description .commentbox {
+  max-width: 25rem;
+  margin-inline: auto;
 }
 
 .create-card-header .description .commentbox .form-label {
@@ -2040,8 +2051,10 @@ h6 {
 
 .create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement,
 .create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment {
-  height: 1.5rem;
-  width: 1.5rem;
+  background: transparent;
+  border: none;
+  height: 2rem;
+  width: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2051,28 +2064,31 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
+  border-radius: 100%;
 }
 
-.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement svg,
-.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment svg {
-  width: 100%;
-  height: 100%;
-}
-
-.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement svg path,
-.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment svg path {
-  fill: #707070;
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement svg circle,
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment svg circle {
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 
-.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement:not([disabled]):hover svg path {
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement svg path,
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement:not([disabled]):hover svg circle {
   fill: #B32122;
 }
 
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-decrement:not([disabled]):hover svg path {
+  stroke: #e0dbdb;
+}
+
 .create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .inputfield {
-  width: calc(100% - 3rem);
+  width: calc(100% - 4rem);
   text-align: center;
   background: transparent;
   font-family: "Montserrat";
@@ -2084,8 +2100,12 @@ h6 {
   height: 100%;
 }
 
+.create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment:not([disabled]):hover svg circle {
+  fill: rgba(26, 11, 91, 0.3);
+}
+
 .create-card-body .createinfobox .createform .inputbox .quantityinfo .quantitybox .quantitycount .counterbox .btn-increment:not([disabled]):hover svg path {
-  fill: #4AB247;
+  stroke: white;
 }
 
 .create-card-body .createinfobox .createform .inputbox {
@@ -7620,5 +7640,144 @@ h6 {
     font-weight: 600;
     line-height: 1.36;
     font-weight: 500;
+  }
+}
+
+.confirmation-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0rem;
+}
+
+.confirmation-details .confirmation-title {
+  font-weight: 500;
+  text-align: center;
+  color: #B32122;
+}
+
+@media screen and (max-width: 48rem) {
+  .confirmation-details .confirmation-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .confirmation-details .confirmation-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.confirmation-details .confirmation-table {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: white;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.confirmation-details .confirmation-table .confirmation {
+  width: 25%;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+  border-right: dashed 0.0625rem #BABABA;
+}
+
+.confirmation-details .confirmation-table .confirmation:last-of-type {
+  border-right: 0rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .confirmation-details .confirmation-table .confirmation {
+    width: 50%;
+    border-bottom: dashed 0.0625rem #BABABA;
+  }
+  .confirmation-details .confirmation-table .confirmation:nth-child(even) {
+    border-right: 0rem;
+  }
+  .confirmation-details .confirmation-table .confirmation:nth-child(3), .confirmation-details .confirmation-table .confirmation:nth-child(4) {
+    border-bottom: 0rem;
+  }
+}
+
+.confirmation-details .confirmation-table .confirmation-title {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #212529;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .confirmation-details .confirmation-table .confirmation-title {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 2;
+  }
+}
+
+.confirmation-details .confirmation-table .confirmation-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #323232;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .confirmation-details .confirmation-table .confirmation-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.71429;
   }
 }
