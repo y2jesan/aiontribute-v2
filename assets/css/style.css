@@ -1615,7 +1615,7 @@ h6 {
 }
 
 .create-card-header {
-  width: 40%;
+  width: 55%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1634,8 +1634,8 @@ h6 {
 
 .create-card-header .front-thumbnail {
   position: relative;
-  height: 20rem;
-  width: 20rem;
+  height: 25rem;
+  width: 25rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1674,14 +1674,14 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
+  left: 1.875rem;
+  top: 1.875rem;
   -webkit-transform: skew(-5deg);
           transform: skew(-5deg);
   overflow: hidden;
   z-index: 100;
-  width: 16.75rem;
-  height: 15rem;
+  width: 21rem;
+  height: 18.75rem;
 }
 
 @media screen and (max-width: 48rem) {
@@ -1710,89 +1710,6 @@ h6 {
   color: #212529;
   text-align: center;
   margin-bottom: 0.5rem;
-}
-
-.create-card-header .description .rangeinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.create-card-header .description .rangeinfo .rangebox {
-  width: 100%;
-}
-
-.create-card-header .description .rangeinfo .form-check {
-  padding-left: 0rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0.875rem;
-}
-
-.create-card-header .description .rangeinfo .form-check-input {
-  cursor: pointer;
-  width: 3rem;
-  height: 1.5rem;
-  border-color: #BABABA;
-  margin: 0rem;
-}
-
-.create-card-header .description .rangeinfo .form-check-input:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-color: #B32122;
-  background-color: #B32122;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-}
-
-.create-card-header .description .rangeinfo .form-check-input:checked {
-  border-color: #B32122;
-  background-color: #B32122;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-}
-
-.create-card-header .description .rangeinfo .form-check-input:checked ~ .form-check-label {
-  color: #0D111B;
-}
-
-.create-card-header .description .rangeinfo .form-check-label {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.71429;
-  cursor: pointer;
-  color: #707070;
-}
-
-.create-card-header .description .rangeinfo .form-check-label::-moz-selection {
-  color: #0D111B;
-  background: transparent;
-}
-
-.create-card-header .description .rangeinfo .form-check-label::selection {
-  color: #0D111B;
-  background: transparent;
 }
 
 .create-card-header .description .buttonbox {
@@ -1835,8 +1752,8 @@ h6 {
 
 .create-card-header .back-thumbnail {
   position: relative;
-  height: 20rem;
-  width: 20rem;
+  height: 25rem;
+  width: 25rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1945,7 +1862,7 @@ h6 {
 
 .create-card-header .circumference-thumbnail {
   position: relative;
-  width: 20rem;
+  width: 25rem;
   height: 6.125rem;
   overflow: hidden;
   display: -webkit-box;
@@ -2000,7 +1917,7 @@ h6 {
 }
 
 .create-card-body {
-  width: calc(60% - 1.25rem);
+  width: calc(45% - 1.25rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2361,6 +2278,20 @@ h6 {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .create-card-body .createinfobox .createform .inputbox .inputinfo .uploadinfo .btn-submit {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .create-card-body .createinfobox .createform .inputbox .inputinfo .uploadinfo .btn-submit {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
