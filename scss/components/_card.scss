@@ -256,7 +256,6 @@
 
                     .name {
                         @include text-overflow;
-                        @include font-24-14-semibold;
                         color: $textPrimary;
                         text-align: center;
                         text-shadow: length(1) 0 0 $textShadow;
@@ -265,13 +264,11 @@
 
                 .birthinfo {
                     .birthdate {
-                        @include font-24-14-semibold;
                         color: $textPrimary;
                         text-shadow: length(1) 0 0 $textShadow;
                         text-align: center;
                     }
                 }
-
 
                 .backpattern {
                     width: length(200);
@@ -286,29 +283,10 @@
 
                 .deathinfo {
                     .deathdate {
-                        @include font-24-14-semibold;
                         color: $textPrimary;
                         text-shadow: length(1) 0 0 $textShadow;
                         text-align: center;
                     }
-                }
-            }
-
-            .circumferenceinfo {
-                position: absolute;
-                top: 45%;
-                @include transform(translateY(-45%));
-                left: auto;
-                right: auto;
-                width: 90%;
-                @include flex-center;
-                background: rebeccapurple;
-
-                .circumferencetext {
-                    @include font-24-14-semibold;
-                    color: $textPrimary;
-                    text-align: center;
-                    text-shadow: length(1) 0 0 $textShadow;
                 }
             }
         }
@@ -345,7 +323,6 @@
                 @include flex-center;
 
                 .circumferencetext {
-                    @include font-24-14-semibold;
                     color: $textPrimary;
                     text-align: center;
                     text-shadow: length(1) 0 0 $textShadow;

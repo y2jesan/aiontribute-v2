@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poiret+One&display=swap");
 @font-face {
   font-family: 'FuturaPT';
   src: url("../fonts/FuturaPT/FuturaPT-Light.woff2") format("woff2"), url("../fonts/FuturaPT/FuturaPT-Light.woff") format("woff");
@@ -1905,22 +1906,12 @@ h6 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.71429;
   color: #212529;
   text-align: center;
   text-shadow: 0.0625rem 0 0 #cdccca;
 }
 
 .create-card-header .back-thumbnail .backinfo .birthinfo .birthdate {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.71429;
   color: #212529;
   text-shadow: 0.0625rem 0 0 #cdccca;
   text-align: center;
@@ -1947,45 +1938,9 @@ h6 {
 }
 
 .create-card-header .back-thumbnail .backinfo .deathinfo .deathdate {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.71429;
   color: #212529;
   text-shadow: 0.0625rem 0 0 #cdccca;
   text-align: center;
-}
-
-.create-card-header .back-thumbnail .circumferenceinfo {
-  position: absolute;
-  top: 45%;
-  -webkit-transform: translateY(-45%);
-  transform: translateY(-45%);
-  left: auto;
-  right: auto;
-  width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: rebeccapurple;
-}
-
-.create-card-header .back-thumbnail .circumferenceinfo .circumferencetext {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.71429;
-  color: #212529;
-  text-align: center;
-  text-shadow: 0.0625rem 0 0 #cdccca;
 }
 
 .create-card-header .circumference-thumbnail {
@@ -2039,11 +1994,6 @@ h6 {
 }
 
 .create-card-header .circumference-thumbnail .circumferenceinfo .circumferencetext {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.71429;
   color: #212529;
   text-align: center;
   text-shadow: 0.0625rem 0 0 #cdccca;
