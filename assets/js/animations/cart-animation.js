@@ -1,4 +1,5 @@
 // CART ANIMATION START
+
 TweenMax.from(".cart-content", 1, {
     delay: .7,
     opacity: 0,
@@ -47,4 +48,5 @@ TweenMax.from(".shipping-method", 6, {
     y: 20,
     ease: Expo.easeInOut
 });
+
 // CART ANIMATION END

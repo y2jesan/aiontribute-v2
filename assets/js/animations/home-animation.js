@@ -1,4 +1,5 @@
 // HOME PAGE START
+
 TweenMax.staggerFrom(".homeimage", 2, {
     delay: .5,
     opacity: 0,
@@ -26,4 +27,5 @@ TweenMax.from(".home-button", 5, {
     y: 20,
     ease: Expo.easeInOut
 });
+
 // HOME PAGE END

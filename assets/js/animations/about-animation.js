@@ -1,4 +1,5 @@
 // ABOUT PAGE START
+
 TweenMax.from(".aboutvideo", 1, {
     delay: 1,
     width: "0",
@@ -26,4 +27,5 @@ TweenMax.from(".about-button", 2, {
     y: 20,
     ease: Expo.easeInOut
 })
+
 // ABOUT PAGE END

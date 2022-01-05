@@ -1,4 +1,5 @@
 // CONTACT ANIMATION START
+
 TweenMax.from(".contact", 1, {
     delay: .5,
     opacity: 0,
@@ -19,4 +20,5 @@ TweenMax.from(".orderup", 3, {
     x: 20,
     ease: Expo.easeInOut
 });
+
 // CONTACT ANIMATION END

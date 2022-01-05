@@ -1,4 +1,6 @@
 
+// CONFIRMATION ANIMATION START
+
 TweenMax.from(".confirmation-details", 1, {
     opacity: 0,
     delay: 1.25,
@@ -12,3 +14,5 @@ TweenMax.from(".orderlist", 2, {
     y: 20,
     ease: Expo.easeInOut
 });
+
+// CONFIRMATION ANIMATION END
