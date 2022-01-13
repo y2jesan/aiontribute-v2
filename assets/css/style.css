@@ -2369,7 +2369,6 @@ h6 {
   font-weight: 500;
   line-height: 2;
   color: #999999;
-  text-transform: lowercase;
 }
 
 .create-card-body .userinfo {
@@ -4983,7 +4982,7 @@ h6 {
           flex-direction: column;
   gap: 1rem;
   background: white;
-  padding: 1rem;
+  padding: 2.5rem;
   border-radius: 0.625rem;
   border-radius: 0.625rem;
 }
@@ -5202,7 +5201,7 @@ h6 {
           flex-direction: column;
   gap: 1rem;
   background: white;
-  padding: 1rem;
+  padding: 2.5rem;
   border-radius: 0.625rem;
   border-radius: 0.625rem;
 }
@@ -5619,6 +5618,7 @@ h6 {
   width: 60%;
   border-right: solid 0.0625rem #F0F0F0;
   padding: 1.25rem;
+  position: relative;
 }
 
 @media screen and (max-width: 48rem) {
@@ -5829,6 +5829,14 @@ h6 {
   gap: 0.375rem;
 }
 
+@media screen and (max-width: 48rem) {
+  .cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productdetails .detailsinfo {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .cart .orderlist-body .order-table-body .tablerow .productcol .orderproductinfo .productdetails .detailsinfo .title {
   font-family: "Montserrat";
   font-style: normal;
@@ -5871,6 +5879,31 @@ h6 {
     line-height: 1;
     line-height: 1.5;
   }
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .btn-edit {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  border: solid 0.0625rem #F0F0F0;
+  padding: 0.625rem 1rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  color: #3A3A3A;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cart .orderlist-body .order-table-body .tablerow .productcol .btn-edit:not([disabled]):hover {
+  color: #EDA02F;
+  border-color: #EDA02F;
 }
 
 .cart .orderlist-body .order-table-body .tablerow .prices {

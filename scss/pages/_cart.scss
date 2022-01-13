@@ -600,7 +600,7 @@
                 @include flex-column;
                 gap: length(16);
                 background: $white;
-                padding: length(16);
+                padding: length(40);
                 @include radius(10);
 
                 @include breakpoint(phone575) {
@@ -746,7 +746,7 @@
                 @include flex-column;
                 gap: length(16);
                 background: $white;
-                padding: length(16);
+                padding: length(40);
                 @include radius(10);
 
                 @include breakpoint(phone575) {
@@ -1004,6 +1004,7 @@
                             width: 60%;
                             @include border-single(right, solid, 1, $header-border);
                             padding: length(20);
+                            position: relative;
 
                             @include breakpoint(phone768) {
                                 padding: length(10);
@@ -1121,6 +1122,10 @@
                                         @include flex-center-vert;
                                         gap: length(6);
 
+                                        @include breakpoint(phone768) {
+                                            align-items: flex-start;
+                                        }
+
                                         .title {
                                             @include font-12-12-medium;
                                             line-height: 1.5;
@@ -1142,6 +1147,25 @@
                                             }
                                         }
                                     }
+                                }
+                            }
+
+                            // BUTTON EDIT
+                            .btn-edit {
+                                position: absolute;
+                                top: length(8);
+                                right: length(8);
+                                @include transparent-button;
+                                @include border(solid, 1, $header-border);
+                                padding: length(10) length(16);
+                                @include font-12-12-semibold;
+                                @include radius(2);
+                                color: $secondaryDark;
+                                @include transitions;
+
+                                @include hover {
+                                    color: $textWarning;
+                                    border-color: $textWarning;
                                 }
                             }
                         }

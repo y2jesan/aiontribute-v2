@@ -595,7 +595,6 @@
                 .infotext {
                     @include font-24-12-medium;
                     color: $rateText;
-                    text-transform: lowercase;
                 }
             }
         }
