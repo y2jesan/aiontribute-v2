@@ -1942,6 +1942,13 @@ h6 {
 @media screen and (max-width: 61.9375rem) {
   .create-card-body {
     width: 100%;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .create-card-body {
+    padding: 0rem;
   }
 }
 
@@ -2362,6 +2369,7 @@ h6 {
   font-weight: 500;
   line-height: 2;
   color: #999999;
+  text-transform: lowercase;
 }
 
 .create-card-body .userinfo {
@@ -3548,7 +3556,7 @@ h6 {
   background: white;
   border-radius: 0.625rem;
   border-radius: 0.625rem;
-  padding: 1.5rem;
+  padding: 3rem;
 }
 
 @media screen and (max-width: 48rem) {

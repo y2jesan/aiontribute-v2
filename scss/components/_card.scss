@@ -293,6 +293,11 @@
 
         @include breakpoint(tablet991) {
             @include w100;
+            padding: length(32);
+        }
+
+        @include breakpoint(phone575) {
+            padding: length(0);
         }
 
         .create-title {
@@ -590,6 +595,7 @@
                 .infotext {
                     @include font-24-12-medium;
                     color: $rateText;
+                    text-transform: lowercase;
                 }
             }
         }

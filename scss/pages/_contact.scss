@@ -16,7 +16,7 @@
         gap: length(32);
         background: $white;
         @include radius(10);
-        padding: length(24);
+        padding: length(48);
 
         @include breakpoint(phone768) {
             padding: length(24) length(16);
