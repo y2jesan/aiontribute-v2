@@ -363,7 +363,7 @@
                             @include hover {
                                 svg {
                                     circle {
-                                        fill: $textFeature;
+                                        fill: $primary;
                                     }
 
                                     path {
@@ -870,6 +870,59 @@
     }
 
     // SHIPPING INFO END
+
+    // SPECIAL INSTRUCTIONS START
+    .special-instructions {
+        background: $white;
+        padding: length(20);
+        @include radius(10);
+        @include flex-column;
+        gap: length(16);
+
+        &-title {
+            font-weight: 500;
+            color: $textPrimary;
+
+            @include breakpoint(phone768) {
+                @include heading-3;
+                font-weight: 500;
+            }
+
+            @include breakpoint(phone359) {
+                @include heading-4;
+                font-weight: 500;
+            }
+        }
+
+        .specialinfo {
+            .inputbox {
+                @include w100;
+
+                textarea {
+                    resize: none;
+                    @include w100;
+                    padding: length(20);
+                    @include transitions;
+                    @include font-14-14-normal;
+                    color: $textPrimary;
+                    @include radius(4);
+                    @include border(solid, 1, $header-border);
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                        border-color: $textDesignation;
+                    }
+
+                    &::placeholder {
+                        color: $textActiveLink;
+                    }
+                }
+            }
+        }
+    }
+
+    // SPECIAL INSTRUCTIONS END
 
     // ORDER LIST START
     .orderlist {

@@ -86,11 +86,11 @@
                     }
 
                     &:hover:not(.active) {
-                        color: $textActiveLink;
+                        color: $primary;
                     }
 
                     &.active {
-                        color: $textActiveLink;
+                        color: $primary;
                     }
                 }
             }
@@ -149,24 +149,24 @@
                     &:hover:not(.active) {
                         svg {
                             path {
-                                stroke: $textActiveLink;
+                                stroke: $primary;
                             }
                         }
 
                         .cartcount {
-                            background: $textActiveLink;
+                            background: $primary;
                         }
                     }
 
                     &.active {
                         svg {
                             path {
-                                stroke: $textActiveLink;
+                                stroke: $primary;
                             }
                         }
 
                         .cartcount {
-                            background: $textActiveLink;
+                            background: $primary;
                         }
                     }
                 }

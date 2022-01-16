@@ -1,13 +1,44 @@
+.mc-display {}
+
 .mc-display__header {
     background: darken($primary, 10%);
+
+    @include breakpoint(phone768) {
+        display: none;
+    }
 }
 
 .mc-display__body {
     background: $primary;
+
+    @include breakpoint(phone768) {
+        display: none;
+    }
+}
+
+.mc-picker {
+    @include breakpoint(phone768) {
+        width: 90%;
+        margin-inline: auto;
+        background: $white;
+    }
+}
+
+.mc-calendar--modal {
+    .mc-display {
+        @include breakpoint(phone768) {
+            display: none;
+        }
+    }
 }
 
 .mc-picker__body {
     background: $white;
+
+    @include breakpoint(phone768) {
+        width: 90%;
+        margin-inline: auto;
+    }
 }
 
 #mc-btn__cancel {
@@ -49,4 +80,10 @@
 
 .mc-calendar {
     background: lighten($primary, 25%) !important;
+
+    @include breakpoint(phone768) {
+        background: $white !important;
+        width: 95%;
+        margin-inline: auto;
+    }
 }
