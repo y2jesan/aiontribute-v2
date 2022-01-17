@@ -109,18 +109,18 @@
                 @include circle;
                 @include flex-center;
                 position: absolute;
-                left: length(30);
-                top: length(30);
+                left: length(32);
+                top: length(25.6);
                 transform: skew(-5deg);
                 overflow: hidden;
                 z-index: 100;
-                width: length(336);
-                height: length(300);
+                width: length(332.32);
+                height: length(307.2);
 
                 @include breakpoint(phone768) {
-                    left: length(21);
+                    left: length(23.2);
                     top: length(20);
-                    width: length(235);
+                    width: length(231.68);
                     height: length(212);
                 }
 

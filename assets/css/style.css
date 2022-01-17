@@ -1680,21 +1680,21 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  left: 1.875rem;
-  top: 1.875rem;
+  left: 2rem;
+  top: 1.6rem;
   -webkit-transform: skew(-5deg);
           transform: skew(-5deg);
   overflow: hidden;
   z-index: 100;
-  width: 21rem;
-  height: 18.75rem;
+  width: 20.77rem;
+  height: 19.2rem;
 }
 
 @media screen and (max-width: 48rem) {
   .create-card-header .front-thumbnail .medallion {
-    left: 1.3125rem;
+    left: 1.45rem;
     top: 1.25rem;
-    width: 14.6875rem;
+    width: 14.48rem;
     height: 13.25rem;
   }
 }
@@ -7950,3 +7950,4 @@ h6 {
     line-height: 1.71429;
   }
 }
+/*# sourceMappingURL=style.css.map */
