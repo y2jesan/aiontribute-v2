@@ -28,21 +28,28 @@ TweenMax.from(".shippingdescript", 4, {
     ease: Expo.easeInOut
 });
 
-TweenMax.from(".orderlist", 5, {
+TweenMax.from(".special-instructions", 5, {
     opacity: 0,
     delay: 1.25,
     y: 20,
     ease: Expo.easeInOut
 });
 
-TweenMax.from(".suggested-products", 6, {
+TweenMax.from(".orderlist", 6, {
     opacity: 0,
     delay: 1.35,
     y: 20,
     ease: Expo.easeInOut
 });
 
-TweenMax.from(".shipping-method", 6, {
+TweenMax.from(".suggested-products", 7, {
+    opacity: 0,
+    delay: 1.45,
+    y: 20,
+    ease: Expo.easeInOut
+});
+
+TweenMax.from(".shipping-method", 8, {
     opacity: 0,
     delay: 1.5,
     y: 20,

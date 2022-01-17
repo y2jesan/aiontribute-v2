@@ -878,6 +878,7 @@
         @include radius(10);
         @include flex-column;
         gap: length(16);
+        margin-bottom: length(60);
 
         &-title {
             font-weight: 500;

@@ -5453,6 +5453,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  margin-bottom: 3.75rem;
 }
 
 .cart .special-instructions-title {
