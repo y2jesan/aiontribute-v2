@@ -358,12 +358,6 @@ figcaption,
 figure,
 footer,
 form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 header,
 hgroup,
 html,
@@ -415,6 +409,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: "Montserrat";
 }
 
 a::-moz-selection,
@@ -449,12 +444,6 @@ figcaption::-moz-selection,
 figure::-moz-selection,
 footer::-moz-selection,
 form::-moz-selection,
-h1::-moz-selection,
-h2::-moz-selection,
-h3::-moz-selection,
-h4::-moz-selection,
-h5::-moz-selection,
-h6::-moz-selection,
 header::-moz-selection,
 hgroup::-moz-selection,
 html::-moz-selection,
@@ -539,12 +528,6 @@ figcaption::selection,
 figure::selection,
 footer::selection,
 form::selection,
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
-h6::selection,
 header::selection,
 hgroup::selection,
 html::selection,
@@ -629,6 +612,7 @@ body {
   overflow-x: hidden;
   background: white;
   position: relative;
+  font-family: "Montserrat";
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -41,12 +41,6 @@ figcaption,
 figure,
 footer,
 form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 header,
 hgroup,
 html,
@@ -98,6 +92,7 @@ video {
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: $montserrat;
 
     &::selection {
         @include setBgColor($primary, $buttonHover);
@@ -136,6 +131,7 @@ body {
     overflow-x: hidden;
     background: $white;
     position: relative;
+    font-family: $montserrat;
 
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
