@@ -738,6 +738,11 @@ h6 {
 /**
 ** HEADING STYLES END
 **/
+p {
+  line-height: 2;
+  font-family: inherit;
+}
+
 /*------------------------------------*\
     breakpoint vars
 \*------------------------------------*/
