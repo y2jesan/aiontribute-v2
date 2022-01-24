@@ -1,5 +1,3 @@
-.mc-display {}
-
 .mc-display__header {
     background: darken($primary, 10%);
 
@@ -18,7 +16,7 @@
 
 .mc-picker {
     @include breakpoint(phone768) {
-        width: 90%;
+        max-width: 90%;
         margin-inline: auto;
         background: $white;
     }
@@ -36,7 +34,7 @@
     background: $white;
 
     @include breakpoint(phone768) {
-        width: 90%;
+        max-width: 90%;
         margin-inline: auto;
     }
 }
@@ -83,7 +81,7 @@
 
     @include breakpoint(phone768) {
         background: $white !important;
-        width: 95%;
+        max-width: 95%;
         margin-inline: auto;
     }
 }

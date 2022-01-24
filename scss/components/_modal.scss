@@ -54,8 +54,6 @@
             padding: length(16) length(16) length(48);
         }
 
-        .uploadbox {}
-
         .upload {
             @include flex-center-column;
             gap: length(14);

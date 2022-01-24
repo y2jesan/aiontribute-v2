@@ -3089,7 +3089,7 @@ p {
 
 @media screen and (max-width: 48rem) {
   .mc-picker {
-    width: 90%;
+    max-width: 90%;
     margin-inline: auto;
     background: white;
   }
@@ -3107,7 +3107,7 @@ p {
 
 @media screen and (max-width: 48rem) {
   .mc-picker__body {
-    width: 90%;
+    max-width: 90%;
     margin-inline: auto;
   }
 }
@@ -3154,7 +3154,7 @@ p {
 @media screen and (max-width: 48rem) {
   .mc-calendar {
     background: white !important;
-    width: 95%;
+    max-width: 95%;
     margin-inline: auto;
   }
 }
