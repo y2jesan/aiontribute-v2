@@ -2626,6 +2626,13 @@ h6 {
   }
 }
 
+.modal-body .cr-image {
+  -webkit-transform: translate3d(-389.619px, -352.697px, 0px) scale(0.3521);
+          transform: translate3d(-389.619px, -352.697px, 0px) scale(0.3521);
+  -webkit-transform-origin: 539.619px 502.697px;
+          transform-origin: 539.619px 502.697px;
+}
+
 .slick-arrow {
   height: 2rem;
   width: 2rem;

@@ -1,4 +1,4 @@
-let profileImage = 'face/face-1.jpg';
+let profileImage = 'medallion/medallion-thumbnail.png';
 
 /** INITIALIZATION CROPPIE JS */
 let basic = $('#uploadImage').croppie({
@@ -12,11 +12,11 @@ let basic = $('#uploadImage').croppie({
     showZoomer: true,
     enforceBoundary: true,
     url: profileImage,
+    points: [389.619,-352.697,0,0.3521]
 });
 
 /** ADD IMAGE TO CROPPIE JS */
 $('#uploadMoment').on('change', function(){
-    //debugger;
     let reader = new FileReader();
     reader.onload = function(event){
         basic.croppie('bind',{
