@@ -1,13 +1,370 @@
 .circleText {
-    font-family: $alexBrush;
-    font-size: length(16);
+    font-family: $futuraPT;
+    font-size: length(18);
     font-weight: 600;
     position: absolute;
-    top: 0;
+    top: length(2);
     left: 50%;
-    @include transform(translateX(-50%) rotate(0deg));
-    // @include transform(skew(-5deg) rotate(360deg));
+    left: 0;
+    // @include transform(translateX(-50%));
     z-index: 1000;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+
+    > div {
+        span {
+            @include breakpoint(phone768) {
+                font-size: length(13);
+            }
+            
+            &:nth-child(1) {
+                padding-top: length(2);
+                position: absolute;
+            }
+
+            &:nth-child(2) {
+                padding-top: length(2);
+            }
+
+            &:nth-child(3) {
+                padding-top: length(2);
+            }
+            &:nth-child(4) {
+                padding-top: length(2);
+            }
+
+            &:nth-child(5) {
+                padding-top: length(2);
+            }
+
+            &:nth-child(6) {
+                padding-top: length(2);
+            }
+
+            &:nth-child(7) {
+                padding-top: length(2);
+            }
+
+            &:nth-child(8) {
+                padding-top: length(2);
+            }
+
+            &:nth-child(9) {
+                padding-top: length(3);
+            }
+
+            &:nth-child(10) {
+                padding-top: length(3);
+            }
+
+            &:nth-child(11) {
+                padding-top: length(5);
+            }
+
+            &:nth-child(12) {
+                padding-top: length(5);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(13) {
+                padding-top: length(5);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(14) {
+                padding-top: length(5);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(15) {
+                padding-top: length(5);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(16) {
+                padding-top: length(5);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(17) {
+                padding-top: length(5);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(18) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(19) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(20) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(21) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(22) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(23) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(24) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(25) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(26) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+
+            &:nth-child(27) {
+                padding-top: length(4);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-2);
+                }
+            }
+            
+            &:nth-child(28) {
+                padding-top: length(5);
+            }
+
+            &:nth-child(29) {
+                padding-top: length(5);
+            }
+
+            &:nth-child(30) {
+                margin-top: length(2);
+            }
+
+            &:nth-child(31) {
+                margin-top: length(2);
+            }
+
+            &:nth-child(32) {
+                margin-top: length(-2);
+            }
+
+            &:nth-child(33) {
+                margin-top: length(-1);
+            }
+
+            &:nth-child(34) {
+                margin-top: length(-1);
+            }
+
+            &:nth-child(35) {
+                margin-top: length(-1);
+            }
+
+            &:nth-child(36) {
+                margin-top: length(-4);
+            }
+            
+            &:nth-child(37) {
+                margin-top: length(-3);
+            }
+
+            &:nth-child(38) {
+                margin-top: length(-4);
+            }
+
+            &:nth-child(39) {
+                margin-top: length(-4);
+            }
+
+            &:nth-child(40) {
+                margin-top: length(-4);
+            }
+
+            &:nth-child(41) {
+                margin-top: length(-4);
+            }
+
+            &:nth-child(42) {
+                margin-top: length(-6);
+            }
+
+            &:nth-child(43) {
+                margin-top: length(-4);
+            }
+
+            &:nth-child(44) {
+                margin-top: length(-7);
+            }
+
+            &:nth-child(45) {
+                margin-top: length(-7);
+            }
+
+            &:nth-child(46) {
+                margin-top: length(-7);
+            }
+
+            &:nth-child(47) {
+                margin-top: length(-7);
+            }
+
+            &:nth-child(48) {
+                margin-top: length(-10);
+            }
+
+            &:nth-child(49) {
+                margin-top: length(-6);
+            }
+
+            &:nth-child(50) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(51) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(52) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(53) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(54) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(55) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(56) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(57) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(58) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(59) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+
+            &:nth-child(60) {
+                margin-top: length(-12);
+
+                @include breakpoint(phone768) {
+                    margin-top: length(-9);
+                }
+            }
+        }
+    }
 }
