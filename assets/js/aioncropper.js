@@ -1,15 +1,42 @@
-var el = document.querySelector('.uploadbox');
-var vanilla = new Croppie(el, {
-    viewport: { width: 400, height: 400 },
-    boundary: { width: 260, height: 260 },
-    showZoomer: false,
-    enableOrientation: true
+let profileImage = 'face/face-1.jpg';
+
+/** INITIALIZATION CROPPIE JS */
+let basic = $('#uploadImage').croppie({
+    viewport: {
+        width: 300,
+        height: 300,
+        type: 'circle'
+    },
+    mouseWheelZoom: true,
+    boundary: { width: 300, height: 300 },
+    showZoomer: true,
+    enforceBoundary: true,
+    url: profileImage,
 });
-vanilla.bind({
-    url: '../images/face/face-4.jpg',
-    orientation: 4
+
+/** ADD IMAGE TO CROPPIE JS */
+$('#uploadMoment').on('change', function(){
+    //debugger;
+    let reader = new FileReader();
+    reader.onload = function(event){
+        basic.croppie('bind',{
+            url:event.target.result
+        }).then(function(){
+            console.log('jQuery bind complete');
+        });
+    }
+    reader.readAsDataURL(this.files[0]);
 });
-//on button click
-vanilla.result('blob').then(function(blob) {
-    // do something with cropped blob
+
+/** ADD IMAGE CROPPIE TO MEDALLION */
+$(document).on('click', '#addmedallion', function (ev) {
+    basic.croppie('result', {
+        type: 'base64',
+        format: 'jpeg',
+        size: 'original'
+    }).then(function (resp) {
+        $('#medallionImage').attr('src', resp);
+        $('.modal').modal('hide');
+    });
 });
+
