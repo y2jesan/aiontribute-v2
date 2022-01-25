@@ -3198,216 +3198,215 @@ h6 {
 }
 
 .circleText > div span:nth-child(1) {
-  padding-top: 0.125rem;
-  position: absolute;
+  margin-top: 0.125rem;
 }
 
 .circleText > div span:nth-child(2) {
-  padding-top: 0.125rem;
+  margin-top: 0.125rem;
 }
 
 .circleText > div span:nth-child(3) {
-  padding-top: 0.125rem;
+  margin-top: 0.125rem;
 }
 
 .circleText > div span:nth-child(4) {
-  padding-top: 0.125rem;
+  margin-top: 0.125rem;
 }
 
 .circleText > div span:nth-child(5) {
-  padding-top: 0.125rem;
+  margin-top: 0.125rem;
 }
 
 .circleText > div span:nth-child(6) {
-  padding-top: 0.125rem;
+  margin-top: 0.125rem;
 }
 
 .circleText > div span:nth-child(7) {
-  padding-top: 0.125rem;
+  margin-top: 0.125rem;
 }
 
 .circleText > div span:nth-child(8) {
-  padding-top: 0.125rem;
+  margin-top: 0.125rem;
 }
 
 .circleText > div span:nth-child(9) {
-  padding-top: 0.1875rem;
+  margin-top: 0.1875rem;
 }
 
 .circleText > div span:nth-child(10) {
-  padding-top: 0.1875rem;
+  margin-top: 0.1875rem;
 }
 
 .circleText > div span:nth-child(11) {
-  padding-top: 0.3125rem;
+  margin-top: 0.3125rem;
 }
 
 .circleText > div span:nth-child(12) {
-  padding-top: 0.3125rem;
+  margin-top: 0.3125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(12) {
-    margin-top: -0.125rem;
+    margin-top: 0.1875rem;
   }
 }
 
 .circleText > div span:nth-child(13) {
-  padding-top: 0.3125rem;
+  margin-top: 0.3125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(13) {
-    margin-top: -0.125rem;
+    margin-top: 0.1875rem;
   }
 }
 
 .circleText > div span:nth-child(14) {
-  padding-top: 0.3125rem;
+  margin-top: 0.3125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(14) {
-    margin-top: -0.125rem;
+    margin-top: 0.1875rem;
   }
 }
 
 .circleText > div span:nth-child(15) {
-  padding-top: 0.3125rem;
+  margin-top: 0.3125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(15) {
-    margin-top: -0.125rem;
+    margin-top: 0.1875rem;
   }
 }
 
 .circleText > div span:nth-child(16) {
-  padding-top: 0.3125rem;
+  margin-top: 0.3125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(16) {
-    margin-top: -0.125rem;
+    margin-top: 0.1875rem;
   }
 }
 
 .circleText > div span:nth-child(17) {
-  padding-top: 0.3125rem;
+  margin-top: 0.3125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(17) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(18) {
-  padding-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(18) {
-    margin-top: -0.125rem;
+    margin-top: 0.1875rem;
   }
 }
 
 .circleText > div span:nth-child(19) {
-  padding-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(19) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(20) {
-  padding-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(20) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(21) {
-  padding-top: 0.25rem;
+  margin-top: 0.125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(21) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(22) {
-  padding-top: 0.25rem;
+  margin-top: 0.125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(22) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(23) {
-  padding-top: 0.25rem;
+  margin-top: 0.125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(23) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(24) {
-  padding-top: 0.25rem;
+  margin-top: 0.125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(24) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(25) {
-  padding-top: 0.25rem;
+  margin-top: 0.125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(25) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(26) {
-  padding-top: 0.25rem;
+  margin-top: 0.125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(26) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(27) {
-  padding-top: 0.25rem;
+  margin-top: 0.125rem;
 }
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(27) {
-    margin-top: -0.125rem;
+    margin-top: 0.125rem;
   }
 }
 
 .circleText > div span:nth-child(28) {
-  padding-top: 0.3125rem;
+  margin-top: 0.125rem;
 }
 
 .circleText > div span:nth-child(29) {
-  padding-top: 0.3125rem;
+  margin-top: 0.3125rem;
 }
 
 .circleText > div span:nth-child(30) {
@@ -3423,7 +3422,7 @@ h6 {
 }
 
 .circleText > div span:nth-child(33) {
-  margin-top: -0.0625rem;
+  margin-top: 0rem;
 }
 
 .circleText > div span:nth-child(34) {
@@ -3439,15 +3438,15 @@ h6 {
 }
 
 .circleText > div span:nth-child(37) {
-  margin-top: -0.1875rem;
+  margin-top: -0.125rem;
 }
 
 .circleText > div span:nth-child(38) {
-  margin-top: -0.25rem;
+  margin-top: -0.1875rem;
 }
 
 .circleText > div span:nth-child(39) {
-  margin-top: -0.25rem;
+  margin-top: -0.1875rem;
 }
 
 .circleText > div span:nth-child(40) {
@@ -3459,7 +3458,7 @@ h6 {
 }
 
 .circleText > div span:nth-child(42) {
-  margin-top: -0.375rem;
+  margin-top: -0.25rem;
 }
 
 .circleText > div span:nth-child(43) {
@@ -3470,20 +3469,50 @@ h6 {
   margin-top: -0.4375rem;
 }
 
+@media screen and (max-width: 48rem) {
+  .circleText > div span:nth-child(44) {
+    margin-top: -0.3125rem;
+  }
+}
+
 .circleText > div span:nth-child(45) {
   margin-top: -0.4375rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .circleText > div span:nth-child(45) {
+    margin-top: -0.3125rem;
+  }
 }
 
 .circleText > div span:nth-child(46) {
   margin-top: -0.4375rem;
 }
 
+@media screen and (max-width: 48rem) {
+  .circleText > div span:nth-child(46) {
+    margin-top: -0.3125rem;
+  }
+}
+
 .circleText > div span:nth-child(47) {
   margin-top: -0.4375rem;
 }
 
+@media screen and (max-width: 48rem) {
+  .circleText > div span:nth-child(47) {
+    margin-top: -0.3125rem;
+  }
+}
+
 .circleText > div span:nth-child(48) {
   margin-top: -0.625rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .circleText > div span:nth-child(48) {
+    margin-top: -0.3125rem;
+  }
 }
 
 .circleText > div span:nth-child(49) {
@@ -3496,7 +3525,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(50) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3506,7 +3535,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(51) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3516,7 +3545,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(52) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3526,7 +3555,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(53) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3536,7 +3565,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(54) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3546,7 +3575,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(55) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3556,7 +3585,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(56) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3566,7 +3595,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(57) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3576,7 +3605,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(58) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3586,7 +3615,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(59) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
@@ -3596,7 +3625,7 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .circleText > div span:nth-child(60) {
-    margin-top: -0.5625rem;
+    margin-top: -0.375rem;
   }
 }
 
