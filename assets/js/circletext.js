@@ -1,1 +1,1 @@
-new CircleType(document.getElementById('curvedText')).dir(1).radius(200)
+new CircleType(document.getElementById('curvedText')).dir(1).radius(205)
