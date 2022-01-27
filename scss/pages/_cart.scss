@@ -837,7 +837,7 @@
 
         &-header {
             @include flex-column;
-            gap: length(8);
+            gap: length(14);
 
             .shipping-title {
                 font-weight: 500;
@@ -864,6 +864,84 @@
 
                 @include breakpoint(phone359) {
                     @include font-12-12-normal;
+                }
+            }
+
+            .choosemethod {
+                @include flex-center-vert;
+                gap: length(16);
+                flex-wrap: wrap;
+
+                @include breakpoint(tablet991) {
+                    justify-content: space-between;
+                    gap: length(8);
+                }
+
+                .choosecheck {
+                    margin: length(0);
+                    padding: length(0);
+
+                    &-input {
+                        &:checked~.choosecheck-label {
+                            &::before {
+                                border-color: $primary;
+                            }
+
+                            &:after {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+                    &-label {
+                        margin: length(0);
+                        padding: length(0);
+                        padding-left: length(36);
+                        position: relative;
+                        cursor: pointer;
+                        @include font-24-16-medium;
+                        color: $textPrimary;
+
+                        @include breakpoint(phone768) {
+                            @include font-24-14-medium;
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            left: length(0);
+                            @include square(length(20));
+                            background: $white;
+                            @include border(solid, 1.5, $submitBg);
+                            @include circle;
+                            @include transitions;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            left: length(4);
+                            @include square(length(12));
+                            @include circle;
+                            background: $primary;
+                            opacity: 0;
+                            visibility: hidden;
+                            @include transitions;
+                        }
+
+                        .price {
+                            font-weight: 600;
+                        }
+
+                        &::selection {
+                            @include setBgColor(transparent, $textPrimary);
+                        }
+                    }
                 }
             }
         }
